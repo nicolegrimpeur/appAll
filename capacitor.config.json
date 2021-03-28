@@ -1,9 +1,9 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "appAll",
   "appName": "appAll",
   "bundledWebRuntime": false,
   "npmClient": "npm",
-  "webDir": "www",
+  "webDir": "src",
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 0

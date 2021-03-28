@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-residences',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./residences.page.scss'],
 })
 export class ResidencesPage implements OnInit {
-
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit() {
   }
 
+  nextPage(residence: string) {
+      this.route.navigate(['/tabs/' + residence]);
+  }
 }

@@ -5,6 +5,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'sto',
+    loadChildren: () => import('./sto/sto.module').then( m => m.StoPageModule)
   }
 ];
 
