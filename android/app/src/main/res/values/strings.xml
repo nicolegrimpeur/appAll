@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">appAll</string>
+    <string name="title_activity_main">appAll</string>
+    <string name="package_name">appAll.ionic.all</string>
+    <string name="custom_url_scheme">appAll.ionic.all</string>
+</resources>

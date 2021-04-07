@@ -1,0 +1,2 @@
+npm run build
+ionic capacitor build android --prod --release

@@ -17,6 +17,10 @@ const routes: Routes = [
         loadChildren: () => import('../residences/residences.module').then(m => m.ResidencesPageModule)
       },
       {
+        path: 'sto',
+        loadChildren: () => import('../sto/sto.module').then(m => m.StoPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'
