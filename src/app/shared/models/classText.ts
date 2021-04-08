@@ -20,15 +20,15 @@ export class ClassText {
     const click = document.getElementById(this.idBarre);
     const that = this;
     click.addEventListener('click', (e) => {
-      e.stopPropagation();
-      e.preventDefault();
+      // e.stopPropagation();
+      // e.preventDefault();
       that.Texte();
     });
   }
 
   Texte(): void {
     if (document.getElementById(this.idTexte) == null) {
-      // réinitialise la div_liens et la div_infos a des barres vides, prêtes à accueillir le texte
+      // réinitialise la div_liens et la div_infos à des barres vides, prêtes à accueillir le texte
       CleanForm();
 
       // affiche le formulaire dans la div_infos
