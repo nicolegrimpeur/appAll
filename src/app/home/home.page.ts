@@ -16,9 +16,9 @@ export class HomePage implements OnInit {
 
   // ajoute les événements aux différents labels
   Add_event(): void {
-    const ucopia = new ClassText('ucopia', 'texte_ucopia', 'div_infos');
-    const covid = new ClassText('covid', 'texte_covid', 'div_infos');
-    const colis = new ClassText('colis', 'texte_colis', 'div_infos');
-    const ru = new ClassText('ru', 'texte_ru', 'div_infos');
+    const ucopia = new ClassText('ucopia', 'texte_ucopia', 'div_infosAll');
+    const covid = new ClassText('covid', 'texte_covid', 'div_infosAll');
+    const colis = new ClassText('colis', 'texte_colis', 'div_infosAll');
+    const ru = new ClassText('ru', 'texte_ru', 'div_infosAll');
   }
 }

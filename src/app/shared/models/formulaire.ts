@@ -7,6 +7,10 @@ export function CleanForm(): void {
   div = document.getElementById('div_infos');
   if (currentDiv !== null) { currentDiv.removeChild(div); }
 
+  currentDiv = document.getElementById('infosAll');
+  div = document.getElementById('div_infosAll');
+  if (currentDiv !== null) { currentDiv.removeChild(div); }
+
   DebutForm();
 }
 
@@ -24,6 +28,13 @@ export function DebutForm(): void {
   div = document.createElement('div');
   if (currentDiv !== null) { currentDiv.appendChild(div); }
   div.setAttribute('id', 'div_infos');
+
+
+  currentDiv = document.getElementById('infosAll');
+
+  div = document.createElement('div');
+  if (currentDiv !== null) { currentDiv.appendChild(div); }
+  div.setAttribute('id', 'div_infosAll');
 }
 
 // permet d'ajouter du texte au formulaire
