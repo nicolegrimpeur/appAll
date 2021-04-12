@@ -6,20 +6,14 @@
 }
 
 ion-toolbar {
-  //height: 10vh;
-  height: 8vh;
+  //height: 7vh;
 }
 
 #logo {
-  margin-bottom: 1vh;
-
-  @media (min-height: 800px) {
-    padding-top: 1vh;
-    width: 11vh;
-    height: 7vh;
-  }
-  @media (max-height: 800px) {
-    width: 13vh;
-    height: 7.5vh;
-  }
+  margin-bottom: 0.5vh;
+  padding-top: 0.5vh;
+  width: 11vh;
+  //width: 10vh;
+  height: 6.5vh;
+  //height: 6vh;
 }
