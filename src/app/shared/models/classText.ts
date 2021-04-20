@@ -5,42 +5,36 @@ import json from '../../../assets/json/textesSTO.json';
 export class ClassText {
   private readonly idBarre: string;
   private readonly idTexte: string;
-  private readonly idDiv: string;
+  private readonly idDiv: string[];
 
-  constructor(idBarre: string, idTexte: string, idDiv: string) {
+  constructor(idBarre: string, idTexte: string, idDiv: string[]) {
     this.idBarre = idBarre;
     this.idTexte = idTexte;
     this.idDiv = idDiv;
-    this.Event_click();
+    this.EventClick();
   }
 
-
-
-  Event_click(): void {
+  EventClick(): void {
     const click = document.getElementById(this.idBarre);
-    const that = this;
-    click.addEventListener('click', (e) => {
-      // e.stopPropagation();
-      // e.preventDefault();
-      that.Texte();
+    // lance Texte() au click
+    click.addEventListener('click', () => {
+      this.Texte();
     });
   }
 
   Texte(): void {
-    if (document.getElementById(this.idTexte) == null) {
-      // réinitialise la div_liens et la div_infos à des barres vides, prêtes à accueillir le texte
-      CleanForm();
+    // si le texte que l'on cherche à afficher n'a pas déjà été affiché
+    if (document.getElementById(this.idTexte) === null) {
+      // réinitialise les div contenus dans idDiv à des barres vides, prêtes à accueillir le texte
+      CleanForm(this.idDiv);
 
-      // affiche le formulaire dans la div_infos
+      // affiche le texte dans la div_infos
       for (const value of json[this.idBarre]) {
-        AjoutTexte(value, this.idTexte, this.idDiv);
+        AjoutTexte(value, this.idTexte, this.idDiv[0]);
       }
-
-      // passe la barre sélectionné en barre active
-      // const focus = document.getElementById(this.idBarre);
-      // focus.setAttribute('class', 'btn btn-secondary active');
     } else {
-      CleanForm();
+      // sinon c'est qu'il existe déjà, alors on le supprime
+      CleanForm(this.idDiv);
     }
   }
 }

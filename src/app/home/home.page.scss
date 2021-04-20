@@ -5,21 +5,15 @@
   background-size: cover;
 }
 
-ion-toolbar {
-  //height: 10vh;
-  height: 8vh;
+#logo {
+  width: 13.5vh;
+  height: 7.5vh;
+  margin: 0.5vh auto;
 }
 
-#logo {
-  margin-bottom: 1vh;
-
-  @media (min-height: 800px) {
-    padding-top: 1vh;
-    width: 11vh;
-    height: 7vh;
-  }
-  @media (max-height: 800px) {
-    width: 13vh;
-    height: 7.5vh;
-  }
+#gif {
+  width: 80vw;
+  height: auto;
+  margin: 0.5vh auto;
+  border-radius: 10%
 }
