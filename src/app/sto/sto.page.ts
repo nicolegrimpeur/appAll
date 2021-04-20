@@ -16,12 +16,12 @@ export class StoPage implements OnInit {
 
   // ajoute les événements aux différents labels
   Add_event(): void {
-    const planning = new ClassText('laverie', 'texte_laverie', 'div_liens');
+    const planning = new ClassText('laverie', 'texte_laverie', ['div_liensSTO', 'div_infosSTO']);
 
-    const responsables = new ClassText('responsables', 'texte_responsables', 'div_infos');
-    const evenements = new ClassText('evenements', 'texte_evenements', 'div_infos');
-    const petitDej = new ClassText('petit_dej', 'texte_petit_dej', 'div_infos');
-    const loisir = new ClassText('5eme', 'texte_5eme', 'div_infos');
+    const responsables = new ClassText('responsables', 'texte_responsables', ['div_infosSTO', 'div_liensSTO']);
+    const evenements = new ClassText('evenements', 'texte_evenements', ['div_infosSTO', 'div_liensSTO']);
+    const petitDej = new ClassText('petit_dej', 'texte_petit_dej', ['div_infosSTO', 'div_liensSTO']);
+    const loisir = new ClassText('5eme', 'texte_5eme', ['div_infosSTO', 'div_liensSTO']);
   }
 
 }
