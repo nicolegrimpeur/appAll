@@ -1,16 +1,23 @@
 import {CleanForm, AjoutTexte} from './formulaire';
+import {TextesService} from '../../core/http/textes/textes.service';
 
-import json from '../../../assets/json/textesSTO.json';
+// import json from '../../../assets/json/textesSTO.json';
 
 export class ClassText {
   private readonly idBarre: string;
   private readonly idTexte: string;
   private readonly idDiv: string[];
+  private json: any;
 
-  constructor(idBarre: string, idTexte: string, idDiv: string[]) {
+  constructor(idBarre: string, idTexte: string, idDiv: string[], idJson: string, json: any) {
     this.idBarre = idBarre;
     this.idTexte = idTexte;
     this.idDiv = idDiv;
+
+    this.json = json;
+
+    console.log(this.json);
+
     this.EventClick();
   }
 
@@ -29,7 +36,8 @@ export class ClassText {
       CleanForm(this.idDiv);
 
       // affiche le texte dans la div_infos
-      for (const value of json[this.idBarre]) {
+      console.log('json idbarre', this.json);
+      for (const value of this.json[this.idBarre]) {
         AjoutTexte(value, this.idTexte, this.idDiv[0]);
       }
     } else {

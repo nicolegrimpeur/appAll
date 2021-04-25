@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ClassText} from '../shared/models/classText';
+import {TextesService} from '../core/http/textes/textes.service';
+import {TextesResultsModel} from '../shared/models/textes-results.model';
 
 @Component({
   selector: 'app-home',
@@ -7,20 +9,32 @@ import {ClassText} from '../shared/models/classText';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+  private readonly idDiv = ['div_infosAll'];
+  private readonly idText = 'All';
+  public json = new TextesResultsModel();
 
-  constructor() {
+  constructor(private readonly textesService: TextesService) {
+    this.textesService.getTextes(this.idText).subscribe((results: TextesResultsModel) => {
+      console.log('results', results);
+      this.json = results;
+      this.addEvents();
+    });
+    setTimeout(() => {
+      console.log('sortie', this.json);
+    }, 1000);
   }
 
   ngOnInit(): void {
-    this.addEvents();
+    // this.addEvents();
   }
 
   // ajoute les événements aux différents labels
   addEvents(): void {
-    const ucopia = new ClassText('ucopia', 'texte_ucopia', ['div_infosAll']);
-    const covid = new ClassText('covid', 'texte_covid', ['div_infosAll']);
-    const colis = new ClassText('colis', 'texte_colis', ['div_infosAll']);
-    const ru = new ClassText('ru', 'texte_ru', ['div_infosAll']);
+    console.log('json', this.json);
+    // const ucopia = new ClassText('ucopia', 'texte_ucopia', this.idDiv, this.idText, this.json);
+    // const covid = new ClassText('covid', 'texte_covid', this.idDiv, this.idText, this.json);
+    // const colis = new ClassText('colis', 'texte_colis', this.idDiv, this.idText, this.json);
+    // const ru = new ClassText('ru', 'texte_ru', this.idDiv, this.idText, this.json);
     this.playLogo();
   }
 
