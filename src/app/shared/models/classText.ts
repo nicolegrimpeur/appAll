@@ -16,7 +16,7 @@ export class ClassText {
 
     this.json = json;
 
-    console.log(this.json);
+    // console.log(this.json);
 
     this.EventClick();
   }

@@ -1,5 +1,6 @@
 import {TextesModel} from './textes.model';
 
 export class TextesResultsModel {
-  textes: Array<TextesModel>;
+  liens: Array<TextesModel>;
+  infos: Array<TextesModel>;
 }
