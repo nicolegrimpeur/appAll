@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {ClassText} from '../shared/models/classText';
 import {TextesService} from '../core/http/textes/textes.service';
 import {TextesResultsModel} from '../shared/models/textes-results.model';
@@ -8,7 +8,7 @@ import {TextesResultsModel} from '../shared/models/textes-results.model';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage {
   private readonly idDiv = ['div_infosAll'];
   private readonly idText = 'All';
   public json = new TextesResultsModel();
@@ -19,13 +19,6 @@ export class HomePage implements OnInit {
       this.json = results;
       this.addEvents();
     });
-    setTimeout(() => {
-      console.log('sortie', this.json);
-    }, 1000);
-  }
-
-  ngOnInit(): void {
-    // this.addEvents();
   }
 
   // ajoute les événements aux différents labels

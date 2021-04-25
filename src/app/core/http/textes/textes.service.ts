@@ -12,8 +12,7 @@ export class TextesService {
   constructor(private readonly http: HttpClient) { }
 
   getTextes(nameText: string): Observable<TextesResultsModel>{
-    // const url = this.textApi + '/' + nameText;
-    const url = this.textApi;
+    const url = this.textApi + '/' + nameText;
     return this.http.get<TextesResultsModel>(url);
   }
 }
