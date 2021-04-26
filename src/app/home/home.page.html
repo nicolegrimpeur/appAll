@@ -24,35 +24,16 @@
   <p> &nbsp; Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇ </p>
   <br>
 
-<!--  <ion-title *ngIf="json.infos.length !== 0"> Infos 📝 </ion-title>-->
-  <ion-title> Infos 📝 </ion-title>
+  <!--  <ion-title *ngIf="json.infos.length !== 0"> Infos 📝 </ion-title>-->
+  <ion-title> Infos 📝</ion-title>
   <div id="infosAll">
     <ion-grid>
       <ion-row>
-        <ion-col size="6">
-          <app-btn-list *ngFor="let info of json.infos" [id]="info.id" [text]="info.content"></app-btn-list>
+        <ion-col size="6" *ngFor="let info of json.infos">
+          <app-btn-list [id]="info.id" [text]="info.content"></app-btn-list>
         </ion-col>
-
       </ion-row>
     </ion-grid>
-    <!--    <ion-grid>-->
-    <!--      <ion-row>-->
-    <!--        <ion-col size="6">-->
-    <!--          <ion-button expand="block" color="medium" id="ucopia">Ucopia</ion-button>-->
-    <!--        </ion-col>-->
-    <!--        <ion-col size="6">-->
-    <!--          <ion-button expand="block" color="medium" id="colis">Colis</ion-button>-->
-    <!--        </ion-col>-->
-    <!--      </ion-row>-->
-    <!--      <ion-row>-->
-    <!--        <ion-col size="6">-->
-    <!--          <ion-button expand="block" color="medium" id="ru">Le Resto U</ion-button>-->
-    <!--        </ion-col>-->
-    <!--        <ion-col size="6">-->
-    <!--          <ion-button expand="block" color="medium" id="covid">COVID</ion-button>-->
-    <!--        </ion-col>-->
-    <!--      </ion-row>-->
-    <!--    </ion-grid>-->
 
     <div id="div_infosAll">
     </div>

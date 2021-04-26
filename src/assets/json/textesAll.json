@@ -70,5 +70,9 @@
         "Pour plus d'informations, vous pouvez vous référer à ce document : <a href='./assets/doc/consignes_fr.pdf' title='Document consignes sanitaires FR' target='_blank'>Consignes sanitaire FR</a>, <a href='./assets/doc/consignes_en.pdf' title='Document consignes sanitaires EN' target='_blank'>Consignes sanitaire EN</a> "
       ]
     }
-  ]
+  ],
+  "idAffichage": {
+    "liens": "",
+    "infos": "div_infosAll"
+  }
 }

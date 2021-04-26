@@ -8,7 +8,7 @@ import {TextesService} from '../core/http/textes/textes.service';
   styleUrls: ['./sto.page.scss'],
 })
 export class StoPage implements OnInit {
-  private idText = 'All';
+  private idText = 'STO';
 
   constructor(private readonly textesService: TextesService) { }
 

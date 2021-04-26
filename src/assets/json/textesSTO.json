@@ -72,5 +72,9 @@
         "Attention, pendant la période COVID, 4 personnes maximum sont autorisés dans la salle"
       ]
     }
-  ]
+  ],
+  "idAffichage": {
+    "liens": "div_liensSTO",
+    "infos": "div_infosSTO"
+  }
 }
