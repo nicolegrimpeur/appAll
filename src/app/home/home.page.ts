@@ -18,7 +18,6 @@ export class HomePage {
     textesService.getTextes(this.idText).subscribe((results: TextesResultsModel) => {
       console.log('results', results);
       this.json = results;
-      console.log('length', this.json.infos.length);
       this.addEvents();
     });
   }

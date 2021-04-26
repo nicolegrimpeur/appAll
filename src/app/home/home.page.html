@@ -30,7 +30,7 @@
     <ion-grid>
       <ion-row>
         <ion-col size="6" *ngFor="let info of json.infos">
-          <app-btn-list [id]="info.id" [text]="info.content"></app-btn-list>
+          <app-btn-list [id]="info.id" [content]="info.content" [idText]="info.idText" [idAffichage]="[json.idAffichage.infos]"></app-btn-list>
         </ion-col>
       </ion-row>
     </ion-grid>
