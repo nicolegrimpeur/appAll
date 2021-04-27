@@ -28,7 +28,8 @@
     <ion-grid>
       <ion-row>
         <ion-col *ngFor="let lien of json.liens">
-          <app-btn-list [id]="lien.id" [content]="lien.content" [idAffichage]="[json.idAffichage.liens, json.idAffichage.infos]"></app-btn-list>
+          <app-btn-list [id]="lien.id" [content]="lien.content"
+                        [idAffichage]="[json.idAffichage.liens, json.idAffichage.infos]"></app-btn-list>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -44,8 +45,9 @@
   <div id="infosSTO">
     <ion-grid>
       <ion-row>
-        <ion-col size="6" *ngFor="let info of json.infos">
-          <app-btn-list [id]="info.id" [content]="info.content" [idAffichage]="[json.idAffichage.infos, json.idAffichage.liens]"></app-btn-list>
+        <ion-col *ngFor="let info of json.infos">
+          <app-btn-list [id]="info.id" [content]="info.content"
+                        [idAffichage]="[json.idAffichage.infos, json.idAffichage.liens]"></app-btn-list>
         </ion-col>
       </ion-row>
     </ion-grid>
