@@ -7,7 +7,7 @@ import {TextesResultsModel} from '../../../shared/models/textes-results.model';
   providedIn: 'root'
 })
 export class TextesService {
-  private textApi = 'http://localhost:4201/textes';
+  private textApi = 'https://nicob.space/apiJson';
 
   constructor(private readonly http: HttpClient) { }
 

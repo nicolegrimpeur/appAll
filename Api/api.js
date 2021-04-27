@@ -10,11 +10,12 @@ const server = require('http').createServer(app);
 app.use(express.static(__dirname));
 
 app.use(function (req, res, next) {
-    // Website you wish to allow to connect
+    // site que je veux autoriser à se connecter
     res.setHeader('Access-Control-Allow-Origin', '*');
 
-    // Request methods you wish to allow
+    // méthodes de connexion autorisées
     res.setHeader('Access-Control-Allow-Methods', 'GET');
+
     next();
 });
 
