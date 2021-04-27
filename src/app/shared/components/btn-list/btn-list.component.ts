@@ -11,8 +11,6 @@ export class BtnListComponent implements OnInit {
   @Input() id: string;
   // texte à afficher au clic
   @Input() content: string;
-  // id du texte qui sera afficher -> permet de savoir si l'on a déjà cliqué dessus ou non
-  @Input() idText: string;
   // ids des zones de la page à supprimer
   @Input() idAffichage: string[];
 
@@ -24,13 +22,13 @@ export class BtnListComponent implements OnInit {
 
   addTexte() {
     // si le texte que l'on cherche à afficher n'a pas déjà été affiché
-    if (document.getElementById(this.idText) === null) {
+    if (document.getElementsByClassName(this.id).length === 0) {
       // réinitialise les div contenus dans idDiv à des barres vides, prêtes à accueillir le texte
       CleanForm(this.idAffichage);
 
       // affiche le texte dans la div_infos
       for (const value of this.content) {
-        AjoutTexte(value, this.idText, this.idAffichage[0]);
+        AjoutTexte(value, this.id, this.idAffichage[0]);
       }
     } else {
       // sinon c'est qu'il existe déjà, alors on le supprime

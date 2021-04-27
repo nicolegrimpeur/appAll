@@ -23,15 +23,15 @@
   <br>
 
   <!--ajout de la barre lien-->
-  <ion-title> Liens 📝 </ion-title>
+  <ion-title> Liens 📝</ion-title>
   <div id="liensSTO">
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-button expand="block" color="medium" id="laverie">Plannings</ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let lien of json.liens">
+          <app-btn-list [id]="lien.id" [content]="lien.content" [idAffichage]="[json.idAffichage.liens, json.idAffichage.infos]"></app-btn-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
     <div id="div_liensSTO">
     </div>
@@ -39,30 +39,18 @@
 
   <section></section>
 
-  <!--ajout de la barre infos en 2 lignes-->
-  <ion-title> Infos 📣 </ion-title>
+  <!--ajout de la barre infos -->
+  <ion-title> Infos 📣</ion-title>
   <div id="infosSTO">
     <ion-grid>
       <ion-row>
-        <ion-col size="6">
-          <ion-button expand="block" color="medium" id="responsables">Les responsables</ion-button>
-        </ion-col>
-        <ion-col size="6">
-          <ion-button expand="block" color="medium" id="evenements">Événements</ion-button>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="6">
-          <ion-button expand="block" color="medium" id="petit_dej">Le petit déjeuner</ion-button>
-        </ion-col>
-        <ion-col size="6">
-          <ion-button expand="block" color="medium" id="5eme">La salle loisir</ion-button>
+        <ion-col size="6" *ngFor="let info of json.infos">
+          <app-btn-list [id]="info.id" [content]="info.content" [idAffichage]="[json.idAffichage.infos, json.idAffichage.liens]"></app-btn-list>
         </ion-col>
       </ion-row>
     </ion-grid>
 
     <div id="div_infosSTO">
-
     </div>
   </div>
 

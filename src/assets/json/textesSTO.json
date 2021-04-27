@@ -1,7 +1,7 @@
 {
   "liens": [
     {
-      "id": "laverie",
+      "id": "Plannings",
       "content": [
         "Vous avez accès dans la laverie au premier étage à 2 machines à laver (numérotées machine 1 et 2), 2 sèches linges (numérotés sèche linge 1 et 2), ainsi qu'à un aspirateur",
         "<br>",
@@ -16,7 +16,7 @@
   ],
   "infos": [
     {
-      "id": "responsables",
+      "id": "Les responsables",
       "content": [
         "&emsp; Les responsables principaux sont cette année :",
         "Mathilde Leblond, T211, <a href='tel:06.44.14.19.97' title='Appeler Mathilde' target='_blank'>06.44.14.19.97</a>, <a href='https://m.me/mathilde.leblond.31' title='Lien vers le compte messenger de Mathilde' target='_blank'>Messenger</a>",
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "id": "evenements",
+      "id": "Événements",
       "content": [
         "Tout d'abord, vous pouvez envoyer un message à Nicolas (<a href='tel:07.81.70.66.63' title='Appeler Nicolas' target='_blank'>07.81.70.66.63</a>) afin qu'il puisse vous rajouter sur la conversation du running de la résidence !",
         "Vous trouverez dessus toutes les personnes avec qui vous pourriez aller courir (toujours mieux d'aller courir à plusieurs !) ainsi que les infos pour la course avec la résidence ! (qui aura lieu les jeudis à 20H15 une fois le couvre feu terminé)",
@@ -51,7 +51,7 @@
       ]
     },
     {
-      "id": "petit_dej",
+      "id": "Le petit déjeuner",
       "content": [
         "La salle du petit déjeuner est situé au deuxième étage entre les bâtiments O et T et est ouverte entre 7H et 9H",
         "<br>",
@@ -62,7 +62,7 @@
       ]
     },
     {
-      "id": "5eme",
+      "id": "La salle loisir",
       "content": [
         "La salle du 5ème contient une télé, un babyfoot, des fléchettes, des fauteuils et un panier de basket",
         "Elle est situé au 5ème étage entre le bâtiment T et le O",

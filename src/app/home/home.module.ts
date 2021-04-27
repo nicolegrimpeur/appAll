@@ -9,12 +9,15 @@ import {BtnListComponent} from '../shared/components/btn-list/btn-list.component
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        HomePageRoutingModule
+    ],
+    exports: [
+        BtnListComponent
+    ],
     declarations: [HomePage, BtnListComponent]
 })
 export class HomePageModule {}

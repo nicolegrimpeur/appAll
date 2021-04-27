@@ -2,8 +2,7 @@
   "liens": [],
   "infos": [
     {
-      "id": "ucopia",
-      "idText": "texteUcopia",
+      "id": "Ucopia",
       "content": [
         "Pour vous connecter à internet, il vous faut passer par le portail Ucopia",
         "Il faut pour cela vous rendre sur le site : <a href='https://ucopia.all-lacatho.fr/105/portal/#' title='Accéder au portail Ucopia' target='_blank'>ucopia.all-lacatho.fr</a>",
@@ -19,8 +18,7 @@
       ]
     },
     {
-      "id": "colis",
-      "idText": "texteColis",
+      "id": "Colis",
       "content": [
         "Lorsque l'on vous demande l'adresse où envoyer vos colis, il faut mettre le 47 Boulevard Vauban et non l'adresse de la résidence",
         "<br>",
@@ -29,8 +27,7 @@
       ]
     },
     {
-      "id": "ru",
-      "idText": "texteRu",
+      "id": "Le Restaurant Universitaire",
       "content": [
         "Le ALL vous propose plusieurs restaurants universitaires (quand les restaurants sont ouverts, cf après cette partie) :",
         "&emsp; - Au sous-sol du 125 rue Meurein :",
@@ -61,8 +58,7 @@
       ]
     },
     {
-      "id": "covid",
-      "idText": "texteCovid",
+      "id": "Covid",
       "content": [
         "<span style='color: red; white-space: nowrap'> !!! </span> Nous vous rappelons que le masque est obligatoire dans la résidence sous peine de sanction ! (pouvant aller de l'avertissement à l'exclusion)",
         "<br>",
