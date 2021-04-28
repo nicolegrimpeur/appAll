@@ -1,14 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-erreur-connexion',
   templateUrl: './erreur-connexion.component.html',
   styleUrls: ['./erreur-connexion.component.scss'],
 })
-export class ErreurConnexionComponent implements OnInit {
+export class ErreurConnexionComponent {
 
   constructor() { }
-
-  ngOnInit() {}
 
 }

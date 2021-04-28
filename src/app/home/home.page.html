@@ -23,11 +23,13 @@
   <!--  <ion-title *ngIf="json.infos.length !== 0"> Infos 📝 </ion-title>-->
   <ion-title> Infos 📝</ion-title>
 
+  <!-- barre d'erreur si on a pas de connexion -->
   <app-erreur-connexion *ngIf="!this.json.constructor.length"></app-erreur-connexion>
 
   <div id="infosAll">
     <ion-grid>
       <ion-row>
+        <!-- ajout des barres en fonction du json -->
         <ion-col *ngFor="let info of json.infos">
           <app-btn-list [id]="info.id" [content]="info.content"
                         [idAffichage]="[json.idAffichage.infos, json.idAffichage.liens]"></app-btn-list>
@@ -42,6 +44,7 @@
   <ion-item-divider></ion-item-divider>
   <br>
 
+  <!-- infos du all -->
   <ion-grid>
     <ion-row style="text-align: center">
       <ion-col>

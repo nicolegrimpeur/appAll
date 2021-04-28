@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {AjoutTexte, CleanForm} from '../../models/formulaire';
 
 @Component({
@@ -6,7 +6,7 @@ import {AjoutTexte, CleanForm} from '../../models/formulaire';
   templateUrl: './btn-list.component.html',
   styleUrls: ['./btn-list.component.scss'],
 })
-export class BtnListComponent implements OnInit {
+export class BtnListComponent {
   // nom du bouton
   @Input() id: string;
   // texte à afficher au clic
@@ -15,9 +15,6 @@ export class BtnListComponent implements OnInit {
   @Input() idAffichage: string[];
 
   constructor() {
-  }
-
-  ngOnInit() {
   }
 
   addTexte() {

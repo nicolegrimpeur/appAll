@@ -8,10 +8,11 @@ import { TextesResultsModel } from '../shared/models/textes-results.model';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  private readonly idText = 'All';
+  private readonly idText = 'All';  // id utilisé pour le json
   public json = new TextesResultsModel();
 
   constructor(private readonly textesService: TextesService) {
+    // récupération du json en ligne
     textesService.getTextes(this.idText).subscribe((results: TextesResultsModel) => {
       this.json = results;
     });
