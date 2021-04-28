@@ -22,6 +22,9 @@
 
   <!--  <ion-title *ngIf="json.infos.length !== 0"> Infos 📝 </ion-title>-->
   <ion-title> Infos 📝</ion-title>
+
+  <app-erreur-connexion *ngIf="!this.json.constructor.length"></app-erreur-connexion>
+
   <div id="infosAll">
     <ion-grid>
       <ion-row>

@@ -24,6 +24,9 @@
 
   <!--ajout de la barre lien-->
   <ion-title> Liens 📝</ion-title>
+
+  <app-erreur-connexion *ngIf="!this.json.constructor.length"></app-erreur-connexion>
+
   <div id="liensSTO">
     <ion-grid>
       <ion-row>
@@ -42,6 +45,9 @@
 
   <!--ajout de la barre infos -->
   <ion-title> Infos 📣</ion-title>
+
+  <app-erreur-connexion *ngIf="!this.json.constructor.length"></app-erreur-connexion>
+
   <div id="infosSTO">
     <ion-grid>
       <ion-row>

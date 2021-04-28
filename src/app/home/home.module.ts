@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import {BtnListComponent} from '../shared/components/btn-list/btn-list.component';
+import {ErreurConnexionComponent} from '../shared/components/erreur-connexion/erreur-connexion.component';
 
 
 @NgModule({
@@ -15,9 +16,10 @@ import {BtnListComponent} from '../shared/components/btn-list/btn-list.component
         IonicModule,
         HomePageRoutingModule
     ],
-    exports: [
-        BtnListComponent
-    ],
-    declarations: [HomePage, BtnListComponent]
+  exports: [
+    BtnListComponent,
+    ErreurConnexionComponent
+  ],
+    declarations: [HomePage, BtnListComponent, ErreurConnexionComponent]
 })
 export class HomePageModule {}

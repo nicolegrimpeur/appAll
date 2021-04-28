@@ -13,7 +13,7 @@ export class StoPage {
 
   constructor(private readonly textesService: TextesService) {
     textesService.getTextes(this.idText).subscribe((results: TextesResultsModel) => {
-      this.json = results;
+      // this.json = results;
     });
   }
 }
