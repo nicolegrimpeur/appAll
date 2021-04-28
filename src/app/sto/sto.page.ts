@@ -1,27 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import {ClassText} from '../shared/models/classText';
+import { Component } from '@angular/core';
+import { TextesService } from '../core/http/textes/textes.service';
+import { TextesResultsModel } from '../shared/models/textes-results.model';
+import {LinksResultsModel} from '../shared/models/links-results.model';
+import {LinksModel} from '../shared/models/links.model';
 
 @Component({
   selector: 'app-sto',
   templateUrl: './sto.page.html',
   styleUrls: ['./sto.page.scss'],
 })
-export class StoPage implements OnInit {
+export class StoPage {
+  private readonly idText = 'STO';
+  private lienFacebook = new LinksModel();
+  public json = new TextesResultsModel();
 
-  constructor() { }
+  constructor(private readonly jsonService: TextesService) {
+    // récupération du json en ligne
+    jsonService.getTextes(this.idText).subscribe((results: TextesResultsModel) => {
+      this.json = results;
+    });
 
-  ngOnInit(): void {
-    this.Add_event();
+    // récupération du lien vers le groupe facebook en ligne
+    jsonService.getLinks().subscribe((results: LinksResultsModel) => {
+      this.lienFacebook = results.links.find(element => element.id === 'facebook' + this.idText);
+    });
   }
 
-  // ajoute les événements aux différents labels
-  Add_event(): void {
-    const planning = new ClassText('laverie', 'texte_laverie', ['div_liensSTO', 'div_infosSTO']);
-
-    const responsables = new ClassText('responsables', 'texte_responsables', ['div_infosSTO', 'div_liensSTO']);
-    const evenements = new ClassText('evenements', 'texte_evenements', ['div_infosSTO', 'div_liensSTO']);
-    const petitDej = new ClassText('petit_dej', 'texte_petit_dej', ['div_infosSTO', 'div_liensSTO']);
-    const loisir = new ClassText('5eme', 'texte_5eme', ['div_infosSTO', 'div_liensSTO']);
+  clickFacebook(): void {
+    window.open(this.lienFacebook.link, '_blank');
   }
-
 }

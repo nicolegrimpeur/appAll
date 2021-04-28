@@ -1,5 +1,6 @@
 <ion-header>
   <ion-toolbar>
+    <!-- bouton  de retour en arrière -->
     <ion-buttons slot="start">
       <ion-back-button defaultHref="tabs/residences"></ion-back-button>
     </ion-buttons>
@@ -11,10 +12,8 @@
 </ion-header>
 
 <ion-content>
-  <div>
-    <header class="masthead">
-    </header>
-  </div>
+  <!-- image de fond -->
+  <header class="masthead"></header>
 
   <!--Liste des émojis : https://www.w3schools.com/charsets/ref_emoji.asp -->
   <!-- https://icones8.fr/icons -->
@@ -23,15 +22,22 @@
   <br>
 
   <!--ajout de la barre lien-->
-  <ion-title> Liens 📝 </ion-title>
+  <ion-title> Liens 📝</ion-title>
+
+  <!-- barre d'erreur si on a pas de connexion -->
+  <app-erreur-connexion *ngIf="!this.json.constructor.length"></app-erreur-connexion>
+
+  <!-- div contenant les barres et le texte -->
   <div id="liensSTO">
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-button expand="block" color="medium" id="laverie">Plannings</ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <!-- ajout des barres en fonction du json -->
+        <ion-col *ngFor="let lien of json.liens">
+          <app-btn-list [id]="lien.id" [content]="lien.content"
+                        [idAffichage]="[json.idAffichage.liens, json.idAffichage.infos]"></app-btn-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
     <div id="div_liensSTO">
     </div>
@@ -39,31 +45,50 @@
 
   <section></section>
 
-  <!--ajout de la barre infos en 2 lignes-->
-  <ion-title> Infos 📣 </ion-title>
+  <!--ajout de la barre infos -->
+  <ion-title> Infos 📣</ion-title>
+
+  <!-- barre d'erreur si on a pas de connexion -->
+  <app-erreur-connexion *ngIf="!this.json.constructor.length"></app-erreur-connexion>
+
+  <!-- div contenant les barres et le texte -->
   <div id="infosSTO">
     <ion-grid>
       <ion-row>
-        <ion-col size="6">
-          <ion-button expand="block" color="medium" id="responsables">Les responsables</ion-button>
-        </ion-col>
-        <ion-col size="6">
-          <ion-button expand="block" color="medium" id="evenements">Événements</ion-button>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="6">
-          <ion-button expand="block" color="medium" id="petit_dej">Le petit déjeuner</ion-button>
-        </ion-col>
-        <ion-col size="6">
-          <ion-button expand="block" color="medium" id="5eme">La salle loisir</ion-button>
+        <!-- ajout des barres en fonction du json -->
+        <ion-col *ngFor="let info of json.infos">
+          <app-btn-list [id]="info.id" [content]="info.content"
+                        [idAffichage]="[json.idAffichage.infos, json.idAffichage.liens]"></app-btn-list>
         </ion-col>
       </ion-row>
     </ion-grid>
 
     <div id="div_infosSTO">
-
     </div>
   </div>
 
+  <ion-item-divider></ion-item-divider>
+  <br>
+
+  <!-- infos résidence sto -->
+  <ion-grid>
+    <ion-row style="text-align: center">
+      <ion-col>
+        <ion-title>ADRESSE</ion-title>
+        <h5>
+          Résidence Saint-Omer
+          <br>
+          <a href="https://goo.gl/maps/6LCwHevgpoTLBs6cA" target="_blank"> 13 Rue de Saint-Omer, 59800 Lille </a>
+        </h5>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- bouton vers le groupe facebook -->
+  <div style="text-align: center">
+    <ion-button title="Lien vers le groupe facebook de la résidence" (click)="clickFacebook()"
+                color="medium" shape="round" fill="clear" size="large">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </ion-button>
+  </div>
 </ion-content>

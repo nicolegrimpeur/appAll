@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {ClassText} from '../shared/models/classText';
+import { Component, OnInit } from '@angular/core';
+import { TextesService } from '../core/http/textes/textes.service';
+import { TextesResultsModel } from '../shared/models/textes-results.model';
 
 @Component({
   selector: 'app-home',
@@ -7,20 +8,17 @@ import {ClassText} from '../shared/models/classText';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+  private readonly idText = 'All';  // id utilisé pour le json
+  public json = new TextesResultsModel();
 
-  constructor() {
+  constructor(private readonly textesService: TextesService) {
+    // récupération du json en ligne
+    textesService.getTextes(this.idText).subscribe((results: TextesResultsModel) => {
+      this.json = results;
+    });
   }
 
-  ngOnInit(): void {
-    this.addEvents();
-  }
-
-  // ajoute les événements aux différents labels
-  addEvents(): void {
-    const ucopia = new ClassText('ucopia', 'texte_ucopia', ['div_infosAll']);
-    const covid = new ClassText('covid', 'texte_covid', ['div_infosAll']);
-    const colis = new ClassText('colis', 'texte_colis', ['div_infosAll']);
-    const ru = new ClassText('ru', 'texte_ru', ['div_infosAll']);
+  ngOnInit() {
     this.playLogo();
   }
 
@@ -29,19 +27,22 @@ export class HomePage implements OnInit {
     const currentDiv = document.getElementById('logo');
     let time;
     currentDiv.addEventListener('click', () => {
-      const img = currentDiv.firstElementChild;
-      img.setAttribute('src', '../../assets/gif/logoAll.gif');
-      img.setAttribute('style', 'border-radius: 10%');
+      if (time === undefined) {
+        const img = currentDiv.firstElementChild;
+        img.setAttribute('src', '../../assets/gif/logoAll.gif');
+        img.setAttribute('style', 'border-radius: 10%');
 
-      currentDiv.setAttribute('id', 'gif');
+        currentDiv.setAttribute('id', 'gif');
+        // une fois le gif finit, on le remplace par le logo
+        time = setTimeout(() => {
+          currentDiv.setAttribute('id', 'logo');
+          img.setAttribute('src', '../../assets/image/logoAll.png');
+          img.removeAttribute('style');
 
-      // une fois le gif finit, on le remplace par le logo
-      time = setTimeout(() => {
-        currentDiv.setAttribute('id', 'logo');
-        img.setAttribute('src', '../../assets/image/logoAll.png');
-        img.removeAttribute('style');
-        clearTimeout(time);
-      }, 4300);
+          // évite les problèmes si l'on clique plusieurs fois d'affilés sur le bouton
+          time = undefined;
+        }, 4300);
+      }
     });
   }
 }

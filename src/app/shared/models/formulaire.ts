@@ -3,8 +3,10 @@ export function CleanForm(tabIdDiv: string[]): void {
 
   // supprime toutes les zones de textes possibles
   for (const idDiv of tabIdDiv) {
-    currentDiv = document.getElementById(idDiv);
-    currentDiv.remove();
+    if (idDiv !== '') {
+      currentDiv = document.getElementById(idDiv);
+      currentDiv.remove();
+    }
   }
 
   DebutForm(tabIdDiv);
@@ -30,6 +32,6 @@ export function AjoutTexte(valueString, idString, idDiv): void {
 
   const p = document.createElement('p');
   div.appendChild(p);
-  p.setAttribute('id', idString);
+  p.setAttribute('class', idString);
   p.innerHTML = '&nbsp; ' + valueString;
 }

@@ -1,0 +1,78 @@
+{
+  "liens": [],
+  "infos": [
+    {
+      "id": "Ucopia",
+      "content": [
+        "Pour vous connecter à internet, il vous faut passer par le portail Ucopia",
+        "Il faut pour cela vous rendre sur le site : <a href='https://ucopia.all-lacatho.fr/105/portal/#' title='Accéder au portail Ucopia' target='_blank'>ucopia.all-lacatho.fr</a>",
+        "<br>",
+        "Si c'est votre première connexion, vous devez faire mot de passe oublié afin de récupérer vos identifiants",
+        "Il vous sera alors demandé de rentrer votre mail. Le mail à rentrer est celui utilisé lors de votre inscription dans la résidence",
+        "<br>",
+        "Si vous avez reçu vos identifiants, il ne vous reste plus qu'à les rentrer pour accéder à internet !",
+        "<br>",
+        "Si la page de connexion vous dit qu'il y a trop d'appareil connecté, il faut reset son routeur (rester appuyé 10 secondes sur le bouton reset derrière votre routeur)",
+        "<br>",
+        "N'hésitez pas à envoyer un message à <a href='https://m.me/nicolegrimpeur' title='Lien vers le compte messenger de Nicolas' target='_blank'>Nicolas</a> si vous avez le moindre problème ! "
+      ]
+    },
+    {
+      "id": "Colis",
+      "content": [
+        "Lorsque l'on vous demande l'adresse où envoyer vos colis, il faut mettre le 47 Boulevard Vauban et non l'adresse de la résidence",
+        "<br>",
+        "Une fois votre colis reçu, le ALL vous enverra un mail sous 24H vous disant que votre colis est arrivé",
+        "Vous pourrez alors vous rendre aux bureaux du ALL au 1er étage du 47 Boulevard Vauban afin d'aller récupérer votre colis ! "
+      ]
+    },
+    {
+      "id": "Le Restaurant Universitaire",
+      "content": [
+        "Le ALL vous propose plusieurs restaurants universitaires (quand les restaurants sont ouverts, cf après cette partie) :",
+        "&emsp; - Au sous-sol du 125 rue Meurein :",
+        "&emsp; &emsp; • Le Globe-trotter : cuisine du monde",
+        "&emsp; &emsp; • Le Tradi : pour manger comme à la maison",
+        "&emsp; &emsp; • Le Green : pour manger sain ou végétarien",
+        "&emsp; &emsp; • La Sandwicherie : sandwich et salades sur place et à emporter",
+        "&emsp; - Au 1<sup>er</sup> étage du 47 boulevard Vauban :",
+        "&emsp; &emsp; • Le Food Corner : fast food",
+        "&emsp; - A l'Hôtel Académique au 60 boulevard Vauban :",
+        "&emsp; &emsp; • La Sandwicherie du 60 : sandwich et salades sur place et à emporter",
+        "<br>",
+        "Tous les restaurants universitaires sont à 1€ pour les étudiants boursiers, et 3€30 sinon",
+        "Pendant la période COVID, les RUs sont à 1€ pour tous les étudiants via <a href='https://forms.gle/ZqrV3Sn9BJ3VxHTS9' title='Lien vers le formulaire pour les repas à 1€' target='_blank'>ce formulaire</a>",
+        "<br>",
+        "Tous les paiements se font via la carte du ALL (la même qui vous sert de badge pour rentrer dans la résidence)",
+        "Pour vérifier que votre paiement est bien passé à 1€, ou pour simplement rajouter de l'argent sur votre case, tout se fait sur ce site : <a href='https://resto-aeu.moneweb.fr' title='Lien vers le site' target='_blank'>https://resto-aeu.moneweb.fr</a>",
+        "L'identifiant correspond à votre numéro de carte, tandis que le mot de passe vous a été donné lorsque l'on vous a donné votre carte",
+        "N'hésitez pas à faire mot de passe oublié ou <a href='mailto:contact@all-lacatho.fr' title='Envoyer un mail au service logement'             target='_blank'>à envoyer un mail au ALL</a> si vous l'avez perdu",
+        "<br>",
+        "Pendant la période durant laquelle les restaurants sont fermés, seuls les restaurants du Globe-trotter et du Tradi sont ouverts",
+        "Vous trouverez au Tradi des pâtes, pizzas, sandwichs, ciabattas et wraps, que vous avez la possibilité de manger sur place",
+        "Au Globe-trotter, vous trouverez les mêmes produits mais uniquement à emporter",
+        "Vous avez de plus la possibilité de faire du click and collect, à aller chercher au Globe-trotter en commandat sur <a href='https://www.all-lacatho.fr/click-and-collect/fr/64-click-collect' title='Lien vers le click and collect du RU' target='_blank'>ce site</a>",
+        "A la fin, vous pouvez payer directement avec votre carte du ALL, et si vous avez remplis le formulaire pour avoir les repas à 1€, vos repas passeront bien à 1€ (même si ça reste marqué 3€30 sur le site du click and collect, vous pouvez vérifier que le repas est bien passé à 1€ <a href='https://resto-aeu.moneweb.fr' title='Lien vers le site' target='_blank'><b>ici</b></a>)",
+        "<br>",
+        "N'hésitez pas à envoyer un message à <a href='https://m.me/mathilde.leblond.31' title='Lien vers le compte messenger de Mathilde' target='_blank'>Mathilde</a> ou à <a href='https://m.me/nicolegrimpeur' title='Lien vers le compte messenger de Nicolas' target='_blank'>Nicolas</a> pour toute question supplémentaire !"
+      ]
+    },
+    {
+      "id": "Covid",
+      "content": [
+        "<span style='color: red; white-space: nowrap'> !!! </span> Nous vous rappelons que le masque est obligatoire dans la résidence sous peine de sanction ! (pouvant aller de l'avertissement à l'exclusion)",
+        "<br>",
+        "Vous avez normalement tous reçu un porte clé en laiton (si non vous pouvez aller en demander un au service logement), n'hésitez pas à l'utiliser au maximum sur les boutons d'ascenseur, poignées et autres",
+        "N'oubliez pas de vous laver les mains régulièrement ! Si vous ne pouvez pas utilisez du gel hydroalcoolique",
+        "<br>",
+        "Si vous possédez un ou plusieurs symptômes, merci de prévenir au plus vite le service logement par <a href='tel:03.20.15.97.78' title='Appeler le service logement' target='_blank'>téléphone</a> ou par <a href='mailto:contact@all-lacatho.fr' title='Envoyer un mail au service logement' target='_blank'>mail</a> !",
+        "<br>",
+        "Pour plus d'informations, vous pouvez vous référer à ce document : <a href='./assets/doc/consignes_fr.pdf' title='Document consignes sanitaires FR' target='_blank'>Consignes sanitaire FR</a>, <a href='./assets/doc/consignes_en.pdf' title='Document consignes sanitaires EN' target='_blank'>Consignes sanitaire EN</a> "
+      ]
+    }
+  ],
+  "idAffichage": {
+    "liens": "",
+    "infos": "div_infosAll"
+  }
+}
