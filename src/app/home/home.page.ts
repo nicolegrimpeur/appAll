@@ -56,4 +56,11 @@ export class HomePage implements OnInit {
       }
     });
   }
+
+  // événement pour rafraichir la page
+  doRefresh(event) {
+    setTimeout(() => {
+      event.target.complete();
+    }, 1000);
+  }
 }

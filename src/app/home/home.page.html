@@ -7,11 +7,14 @@
 </ion-header>
 
 <ion-content>
+  <!-- slide refresh -->
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
   <!-- Fond d'écran de l'accueil -->
-  <div>
-    <header class="masthead">
-    </header>
-  </div>
+  <header class="masthead">
+  </header>
 
 
   <!--Liste des émojis : https://www.w3schools.com/charsets/ref_emoji.asp -->

@@ -37,7 +37,15 @@ export class StoPage {
     });
   }
 
+  // click sur le bouton facebook
   clickFacebook(): void {
     window.open(this.lienFacebook.link, '_blank');
+  }
+
+  // événement pour rafraichir la page
+  doRefresh(event) {
+    setTimeout(() => {
+      event.target.complete();
+    }, 1000);
   }
 }
