@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {Platform} from '@ionic/angular';
 
 @Component({
   selector: 'app-residences',
@@ -7,7 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./residences.page.scss'],
 })
 export class ResidencesPage implements OnInit {
-  constructor(private route: Router) { }
+  constructor(
+    private route: Router,
+    private platform: Platform
+  ) {
+
+    // retourne sur la page principale lorsque l'on appuie sur la touche "back"
+    this.platform.backButton.subscribeWithPriority(-1, () => {
+      this.route.navigate(['/']);
+    });
+  }
 
   ngOnInit() {
   }

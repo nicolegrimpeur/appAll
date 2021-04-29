@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { TextesService } from '../core/http/textes/textes.service';
-import { TextesResultsModel } from '../shared/models/textes-results.model';
+import {Component, OnInit} from '@angular/core';
+import {TextesService} from '../core/http/textes/textes.service';
+import {TextesResultsModel} from '../shared/models/textes-results.model';
+import {Platform} from '@ionic/angular';
+import {App} from '@capacitor/core';
 
 @Component({
   selector: 'app-home',
@@ -11,10 +13,19 @@ export class HomePage implements OnInit {
   private readonly idText = 'All';  // id utilisé pour le json
   public json = new TextesResultsModel();
 
-  constructor(private readonly textesService: TextesService) {
+
+  constructor(
+    private readonly textesService: TextesService,
+    private platform: Platform
+  ) {
     // récupération du json en ligne
     textesService.getTextes(this.idText).subscribe((results: TextesResultsModel) => {
       this.json = results;
+    });
+
+    // ferme l'application lorsque l'on appuie sur la touche "back"
+    this.platform.backButton.subscribeWithPriority(-1, () => {
+      App.exitApp();
     });
   }
 
