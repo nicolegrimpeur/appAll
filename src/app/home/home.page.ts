@@ -18,10 +18,6 @@ export class HomePage implements OnInit {
     private readonly textesService: TextesService,
     private platform: Platform
   ) {
-    // récupération du json en ligne
-    textesService.getTextes(this.idText).subscribe((results: TextesResultsModel) => {
-      this.json = results;
-    });
 
     // ferme l'application lorsque l'on appuie sur la touche "back"
     this.platform.backButton.subscribeWithPriority(-1, () => {
@@ -30,6 +26,11 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit() {
+    // récupération du json en ligne
+    this.textesService.getTextes(this.idText).subscribe((results: TextesResultsModel) => {
+      this.json = results;
+    });
+
     this.playLogo();
   }
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {Platform} from '@ionic/angular';
 
@@ -7,7 +7,7 @@ import {Platform} from '@ionic/angular';
   templateUrl: './residences.page.html',
   styleUrls: ['./residences.page.scss'],
 })
-export class ResidencesPage {
+export class ResidencesPage implements OnInit {
   constructor(
     private route: Router,
     private platform: Platform
@@ -15,8 +15,11 @@ export class ResidencesPage {
 
     // retourne sur la page principale lorsque l'on appuie sur la touche "back"
     this.platform.backButton.subscribeWithPriority(-1, () => {
-      this.route.navigate(['/']);
+      this.route.navigate(['/tabs/home']);
     });
+  }
+
+  ngOnInit() {
   }
 
   nextPage(residence: string) {
