@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 import {Platform} from '@ionic/angular';
 
 @Component({
@@ -7,7 +7,7 @@ import {Platform} from '@ionic/angular';
   templateUrl: './residences.page.html',
   styleUrls: ['./residences.page.scss'],
 })
-export class ResidencesPage implements OnInit {
+export class ResidencesPage {
   constructor(
     private route: Router,
     private platform: Platform
@@ -17,19 +17,5 @@ export class ResidencesPage implements OnInit {
     this.platform.backButton.subscribeWithPriority(-1, () => {
       this.route.navigate(['/tabs/home']);
     });
-  }
-
-  ngOnInit() {
-  }
-
-  nextPage(residence: string) {
-      this.route.navigate(['/tabs/' + residence]);
-  }
-
-  // événement pour rafraichir la page
-  doRefresh(event) {
-    setTimeout(() => {
-      event.target.complete();
-    }, 1000);
   }
 }
