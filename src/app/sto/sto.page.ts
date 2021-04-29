@@ -24,7 +24,7 @@ export class StoPage implements OnInit {
 
     // retourne sur la page de résidences lorsque l'on appuie sur la touche "back"
     this.platform.backButton.subscribeWithPriority(-1, () => {
-      this.route.navigate(['/tabs/residences']);
+      route.navigate(['/tabs/residences']).then();
     });
   }
 

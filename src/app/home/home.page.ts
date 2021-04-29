@@ -2,7 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {TextesService} from '../core/http/textes/textes.service';
 import {TextesResultsModel} from '../shared/models/textes-results.model';
 import {Platform} from '@ionic/angular';
-import {App} from '@capacitor/core';
+import {Plugins} from '@capacitor/core';
+
+const {App} = Plugins;
 
 @Component({
   selector: 'app-home',
@@ -51,7 +53,7 @@ export class HomePage implements OnInit {
           img.setAttribute('src', '../../assets/image/logoAll.png');
           img.removeAttribute('style');
 
-          // évite les problèmes si l'on clique plusieurs fois d'affilés sur le bouton
+          // supprime le timeout de fin
           time = undefined;
         }, 4300);
       }
@@ -62,6 +64,7 @@ export class HomePage implements OnInit {
   doRefresh(event) {
     setTimeout(() => {
       event.target.complete();
+      this.ngOnInit();
     }, 1000);
   }
 }
