@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import {Platform} from '@ionic/angular';
 
@@ -7,7 +7,7 @@ import {Platform} from '@ionic/angular';
   templateUrl: './residences.page.html',
   styleUrls: ['./residences.page.scss'],
 })
-export class ResidencesPage implements OnInit {
+export class ResidencesPage {
   constructor(
     private route: Router,
     private platform: Platform
@@ -19,10 +19,14 @@ export class ResidencesPage implements OnInit {
     });
   }
 
-  ngOnInit() {
-  }
-
   nextPage(residence: string) {
       this.route.navigate(['/tabs/' + residence]);
+  }
+
+  // événement pour rafraichir la page
+  doRefresh(event) {
+    setTimeout(() => {
+      event.target.complete();
+    }, 1000);
   }
 }
