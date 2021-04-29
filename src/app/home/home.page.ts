@@ -20,7 +20,7 @@ export class HomePage implements OnInit {
   ) {
 
     // ferme l'application lorsque l'on appuie sur la touche "back"
-    this.platform.backButton.subscribeWithPriority(-1, () => {
+    this.platform.backButton.subscribeWithPriority(999999, () => {
       App.exitApp();
     });
   }
