@@ -3,8 +3,6 @@ import {TextesService} from '../core/http/textes/textes.service';
 import {TextesResultsModel} from '../shared/models/textes-results.model';
 import {LinksResultsModel} from '../shared/models/links-results.model';
 import {LinksModel} from '../shared/models/links.model';
-import {Router} from '@angular/router';
-import {Platform} from '@ionic/angular';
 
 @Component({
   selector: 'app-sto',
@@ -16,16 +14,7 @@ export class StoPage implements OnInit {
   private lienFacebook = new LinksModel();
   public json = new TextesResultsModel();
 
-  constructor(
-    private readonly jsonService: TextesService,
-    private route: Router,
-    private platform: Platform
-  ) {
-
-    // retourne sur la page de résidences lorsque l'on appuie sur la touche "back"
-    this.platform.backButton.subscribeWithPriority(-1, () => {
-      route.navigate(['/tabs/residences']).then();
-    });
+  constructor(private readonly jsonService: TextesService) {
   }
 
   ngOnInit() {

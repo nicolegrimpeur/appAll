@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {TextesService} from '../core/http/textes/textes.service';
 import {TextesResultsModel} from '../shared/models/textes-results.model';
-import {Platform} from '@ionic/angular';
+import {IonRouterOutlet, Platform} from '@ionic/angular';
 import {Plugins} from '@capacitor/core';
+import {Router} from '@angular/router';
 
 const {App} = Plugins;
 
@@ -18,12 +19,21 @@ export class HomePage implements OnInit {
 
   constructor(
     private readonly textesService: TextesService,
-    private platform: Platform
+    private platform: Platform,
+    private routerOutlet: IonRouterOutlet,
+    private route: Router
   ) {
+    console.log(this.route.url);
 
     // ferme l'application lorsque l'on appuie sur la touche "back"
-    this.platform.backButton.subscribeWithPriority(999999, () => {
-      App.exitApp();
+    this.platform.backButton.subscribeWithPriority(-1, () => {
+      if (this.route.url === '/tabs/home') {
+        App.exitApp();
+      } else if (this.route.url === '/tabs/residences') {
+        this.route.navigate(['/tabs/home']).then();
+      } else {
+        this.route.navigate(['/tabs/residences']).then();
+      }
     });
   }
 
@@ -41,6 +51,8 @@ export class HomePage implements OnInit {
     const currentDiv = document.getElementById('logo');
     let time;
     currentDiv.addEventListener('click', () => {
+      ///////////////////////////////////////////////////////// à corriger
+      console.log('play');
       if (time === undefined) {
         const img = currentDiv.firstElementChild;
         img.setAttribute('src', '../../assets/gif/logoAll.gif');
