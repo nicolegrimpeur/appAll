@@ -23,15 +23,15 @@ export class HomePage implements OnInit {
     private routerOutlet: IonRouterOutlet,
     private route: Router
   ) {
-    console.log(this.route.url);
 
-    // ferme l'application lorsque l'on appuie sur la touche "back"
+    // gestion de la touche mobile back
     this.platform.backButton.subscribeWithPriority(-1, () => {
+      // si l'on est sur la page principale on quitte l'application
       if (this.route.url === '/tabs/home') {
         App.exitApp();
-      } else if (this.route.url === '/tabs/residences') {
+      } else if (this.route.url === '/tabs/residences') {  // si on est sur la page de résidence on va sur la page principale
         this.route.navigate(['/tabs/home']).then();
-      } else {
+      } else {  // sinon c'est que l'on est sur la page d'une résidence -> on va sur la liste des résidences
         this.route.navigate(['/tabs/residences']).then();
       }
     });
@@ -49,27 +49,28 @@ export class HomePage implements OnInit {
   // lance l'event du click sur le logo
   playLogo(): void {
     const currentDiv = document.getElementById('logo');
-    let time;
-    currentDiv.addEventListener('click', () => {
-      ///////////////////////////////////////////////////////// à corriger
-      console.log('play');
-      if (time === undefined) {
-        const img = currentDiv.firstElementChild;
-        img.setAttribute('src', '../../assets/gif/logoAll.gif');
-        img.setAttribute('style', 'border-radius: 10%');
 
-        currentDiv.setAttribute('id', 'gif');
-        // une fois le gif finit, on le remplace par le logo
-        time = setTimeout(() => {
-          currentDiv.setAttribute('id', 'logo');
-          img.setAttribute('src', '../../assets/image/logoAll.png');
-          img.removeAttribute('style');
+    if (currentDiv !== null) {
+      currentDiv.addEventListener('click', this.eventLogo);
+    }
+  }
 
-          // supprime le timeout de fin
-          time = undefined;
-        }, 4300);
-      }
-    });
+  eventLogo() {
+    const currentDiv = document.getElementById('logo');
+
+    if (currentDiv !== null) {
+      const img = currentDiv.firstElementChild;
+      img.setAttribute('src', '../../assets/gif/logoAll.gif');
+      img.setAttribute('style', 'border-radius: 10%');
+
+      currentDiv.setAttribute('id', 'gif');
+      // une fois le gif finit, on le remplace par le logo
+      setTimeout(() => {
+        currentDiv.setAttribute('id', 'logo');
+        img.setAttribute('src', '../../assets/image/logoAll.png');
+        img.removeAttribute('style');
+      }, 4300);
+    }
   }
 
   // événement pour rafraichir la page
