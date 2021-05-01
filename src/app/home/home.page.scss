@@ -9,8 +9,10 @@
   width: 16vh;
   height: 7.5vh;
   margin: 0.5vh auto;
-  background: #1F1F1F;
-  border-radius: 2vh;
+}
+
+#logo ion-img {
+  filter: drop-shadow(0px 0px 4vh grey);
 }
 
 #gif {
