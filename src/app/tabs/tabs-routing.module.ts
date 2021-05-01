@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 
-import { TabsPage } from './tabs.page';
+import {TabsPage} from './tabs.page';
 
 const routes: Routes = [
   {
@@ -15,10 +15,6 @@ const routes: Routes = [
       {
         path: 'residences',
         loadChildren: () => import('../residences/residences.module').then(m => m.ResidencesPageModule)
-      },
-      {
-        path: 'sto',
-        loadChildren: () => import('../sto/sto.module').then(m => m.StoPageModule)
       },
       {
         path: '',
@@ -38,4 +34,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule {
+}
