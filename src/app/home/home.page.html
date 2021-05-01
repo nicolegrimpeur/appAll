@@ -7,12 +7,13 @@
 </ion-header>
 
 <ion-content>
-  <!-- Fond d'écran de l'accueil -->
-  <div>
-    <header class="masthead">
-    </header>
-  </div>
+  <!-- slide refresh -->
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
+  <!-- Fond d'écran de l'accueil -->
+  <ion-header class="masthead"></ion-header>
 
   <!--Liste des émojis : https://www.w3schools.com/charsets/ref_emoji.asp -->
   <!-- https://icones8.fr/icons -->
@@ -21,7 +22,7 @@
   <br>
 
   <!--  <ion-title *ngIf="json.infos.length !== 0"> Infos 📝 </ion-title>-->
-  <ion-title> Infos 📝</ion-title>
+  <ion-title>Infos 📝</ion-title>
 
   <!-- barre d'erreur si on a pas de connexion -->
   <app-erreur-connexion *ngIf="!this.json.constructor.length"></app-erreur-connexion>
@@ -110,4 +111,6 @@
       <ion-icon name="logo-linkedin"></ion-icon>
     </ion-button>
   </div>
+
+  <section></section>
 </ion-content>
