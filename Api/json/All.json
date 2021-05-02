@@ -74,5 +74,27 @@
   "idAffichage": {
     "liens": "",
     "infos": "div_infosAll"
-  }
+  },
+  "bullesLiens": [
+    {
+      "title": "Lien vers le site du ALL",
+      "href": "https://www.all-lacatho.fr/fr",
+      "logo": "link"
+    },
+    {
+      "title": "Lien vers le compte facebook du ALL",
+      "href": "https://www.facebook.com/Alldelacatho",
+      "logo": "logo-facebook"
+    },
+    {
+      "title": "Lien vers le compte instagram du ALL",
+      "href": "https://www.instagram.com/alldelacatho",
+      "logo": "logo-instagram"
+    },
+    {
+      "title": "Lien vers le compte linkedin du ALL",
+      "href": "https://www.linkedin.com/company/all-lacatho",
+      "logo": "logo-linkedin"
+    }
+  ]
 }

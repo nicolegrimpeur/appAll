@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import {BtnListComponent} from '../shared/components/btn-list/btn-list.component';
 import {ErreurConnexionComponent} from '../shared/components/erreur-connexion/erreur-connexion.component';
+import {BullesLienComponent} from '../shared/components/bulles-lien/bulles-lien.component';
 
 
 @NgModule({
@@ -20,6 +21,6 @@ import {ErreurConnexionComponent} from '../shared/components/erreur-connexion/er
     BtnListComponent,
     ErreurConnexionComponent
   ],
-    declarations: [HomePage, BtnListComponent, ErreurConnexionComponent]
+    declarations: [HomePage, BtnListComponent, ErreurConnexionComponent, BullesLienComponent]
 })
 export class HomePageModule {}

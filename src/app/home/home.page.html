@@ -87,29 +87,32 @@
   </ion-grid>
 
   <div style="text-align: center">
-    <ion-button title="Lien vers le site du ALL" target="_blank"
-                href="https://www.all-lacatho.fr/fr"
-                color="medium" shape="round" fill="clear" size="large">
-      <ion-icon name="link"></ion-icon>
-    </ion-button>
+    <app-bulles-lien *ngFor="let bullesLien of json.bullesLien"
+                     [title]="bullesLien.title" [href]="bullesLien.href" [logo]="bullesLien.logo">
+    </app-bulles-lien>
+    <!--    <ion-button title="Lien vers le site du ALL" target="_blank"-->
+    <!--                href="https://www.all-lacatho.fr/fr"-->
+    <!--                color="medium" shape="round" fill="clear" size="large">-->
+    <!--      <ion-icon name="link"></ion-icon>-->
+    <!--    </ion-button>-->
 
-    <ion-button title="Lien vers le compte facebook du ALL" target="_blank"
-                href="https://www.facebook.com/Alldelacatho"
-                color="medium" shape="round" fill="clear" size="large">
-      <ion-icon name="logo-facebook"></ion-icon>
-    </ion-button>
+    <!--    <ion-button title="Lien vers le compte facebook du ALL" target="_blank"-->
+    <!--                href="https://www.facebook.com/Alldelacatho"-->
+    <!--                color="medium" shape="round" fill="clear" size="large">-->
+    <!--      <ion-icon name="logo-facebook"></ion-icon>-->
+    <!--    </ion-button>-->
 
-    <ion-button title="Lien vers le compte instagram du ALL" target="_blank"
-                href="https://www.instagram.com/alldelacatho"
-                color="medium" shape="round" fill="clear" size="large">
-      <ion-icon name="logo-instagram"></ion-icon>
-    </ion-button>
+    <!--    <ion-button title="Lien vers le compte instagram du ALL" target="_blank"-->
+    <!--                href="https://www.instagram.com/alldelacatho"-->
+    <!--                color="medium" shape="round" fill="clear" size="large">-->
+    <!--      <ion-icon name="logo-instagram"></ion-icon>-->
+    <!--    </ion-button>-->
 
-    <ion-button title="Lien vers le compte linkedin du ALL" target="_blank"
-                href="https://www.linkedin.com/company/all-lacatho"
-                color="medium" shape="round" fill="clear" size="large">
-      <ion-icon name="logo-linkedin"></ion-icon>
-    </ion-button>
+    <!--    <ion-button title="Lien vers le compte linkedin du ALL" target="_blank"-->
+    <!--                href="https://www.linkedin.com/company/all-lacatho"-->
+    <!--                color="medium" shape="round" fill="clear" size="large">-->
+    <!--      <ion-icon name="logo-linkedin"></ion-icon>-->
+    <!--    </ion-button>-->
   </div>
 
   <section></section>

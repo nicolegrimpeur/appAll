@@ -76,5 +76,12 @@
   "idAffichage": {
     "liens": "div_liensSTO",
     "infos": "div_infosSTO"
-  }
+  },
+  "bullesLien": [
+    {
+      "title": "Lien vers le groupe facebook de la résidence",
+      "href": "https://www.facebook.com/groups/sto.2020.2021",
+      "logo": "logo-facebook"
+    }
+  ]
 }
