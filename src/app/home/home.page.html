@@ -21,19 +21,19 @@
   <p> &nbsp; Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇ </p>
   <br>
 
-  <!--  <ion-title *ngIf="json.infos.length !== 0"> Infos 📝 </ion-title>-->
+  <!--  <ion-title *ngIf="subscribeService.texte.infos.length !== 0"> Infos 📝 </ion-title>-->
   <ion-title>Infos 📝</ion-title>
 
   <!-- barre d'erreur si on a pas de connexion -->
-  <app-erreur-connexion *ngIf="!this.json.constructor.length"></app-erreur-connexion>
+  <app-erreur-connexion *ngIf="!subscribeService.textes.constructor.length"></app-erreur-connexion>
 
   <div id="infosAll">
     <ion-grid>
       <ion-row>
-        <!-- ajout des barres en fonction du json -->
-        <ion-col *ngFor="let info of json.infos">
+        <!-- ajout des barres en fonction du subscribeService.texte -->
+        <ion-col *ngFor="let info of subscribeService.textes.infos">
           <app-btn-list [id]="info.id" [content]="info.content"
-                        [idAffichage]="[json.idAffichage.infos, json.idAffichage.liens]"></app-btn-list>
+                        [idAffichage]="[subscribeService.textes.idAffichage.infos, subscribeService.textes.idAffichage.liens]"></app-btn-list>
         </ion-col>
       </ion-row>
     </ion-grid>

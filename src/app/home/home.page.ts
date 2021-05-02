@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {TextesService} from '../core/http/textes/textes.service';
-import {TextesResultsModel} from '../shared/models/textes-results.model';
-import {IonRouterOutlet, Platform} from '@ionic/angular';
+import {Platform} from '@ionic/angular';
 import {Plugins} from '@capacitor/core';
 import {Router} from '@angular/router';
+import {SubscribeService} from '../core/subscribe/subscribe.service';
 
 const {App} = Plugins;
 
@@ -14,13 +13,10 @@ const {App} = Plugins;
 })
 export class HomePage implements OnInit {
   private readonly idText = 'All';  // id utilisé pour le json
-  public json = new TextesResultsModel();
-
 
   constructor(
-    private readonly textesService: TextesService,
+    public readonly subscribeService: SubscribeService,
     private platform: Platform,
-    private routerOutlet: IonRouterOutlet,
     private route: Router
   ) {
 
@@ -39,9 +35,7 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     // récupération du json en ligne
-    this.textesService.getTextes(this.idText).subscribe((results: TextesResultsModel) => {
-      this.json = results;
-    });
+    this.subscribeService.initTextes(this.idText);
 
     this.playLogo();
   }
