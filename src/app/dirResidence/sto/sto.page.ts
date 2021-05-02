@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {SubscribeService} from '../core/subscribe/subscribe.service';
-import {TextesResultsModel} from '../shared/models/textes-results.model';
-import {LinksModel} from '../shared/models/links.model';
+import {SubscribeService} from '../../core/subscribe/subscribe.service';
+import {TextesResultsModel} from '../../shared/models/textes-results.model';
+import {LinksModel} from '../../shared/models/links.model';
 
 @Component({
   selector: 'app-sto',

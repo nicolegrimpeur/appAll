@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: 'sto',
-    loadChildren: () => import('./sto/sto.module').then( m => m.StoPageModule)
+    loadChildren: () => import('./dirResidence/sto/sto.module').then(m => m.StoPageModule)
   }
 ];
 

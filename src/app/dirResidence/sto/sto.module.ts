@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 import { StoPageRoutingModule } from './sto-routing.module';
 
 import { StoPage } from './sto.page';
-import {HomePageModule} from '../home/home.module';
+import {HomePageModule} from '../../home/home.module';
 
 @NgModule({
   imports: [
