@@ -3,7 +3,7 @@ import {Platform} from '@ionic/angular';
 import {Plugins} from '@capacitor/core';
 import {Router} from '@angular/router';
 import {SubscribeService} from '../core/subscribe/subscribe.service';
-import {TextesResultsModel} from '../shared/models/textes-results.model';
+import {JsonResultsModel} from '../shared/models/json-results.model';
 
 const {App} = Plugins;
 
@@ -14,7 +14,7 @@ const {App} = Plugins;
 })
 export class HomePage implements OnInit {
   private readonly idText = 'All';  // id utilisé pour le json
-  public json = new TextesResultsModel();
+  public json = new JsonResultsModel();  // stockage du json
 
   constructor(
     public readonly subscribeService: SubscribeService,

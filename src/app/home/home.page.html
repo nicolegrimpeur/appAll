@@ -21,10 +21,9 @@
   <p> &nbsp; Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇ </p>
   <br>
 
-  <!--  <ion-title *ngIf="subscribeService.texte.infos.length !== 0"> Infos 📝 </ion-title>-->
   <ion-title>Infos 📝</ion-title>
 
-  <!-- barre d'erreur si on a pas de connexion -->
+  <!-- barre d'erreur si on a pas réussi à récupérer le json -->
   <app-erreur-connexion *ngIf="!json.constructor.length"></app-erreur-connexion>
 
   <div id="infosAll">
@@ -55,33 +54,11 @@
     </ion-row>
   </ion-grid>
 
+  <!-- bulles boutons -->
   <div style="text-align: center">
     <app-bulles-lien *ngFor="let bullesLien of json.bullesLien"
                      [title]="bullesLien.title" [href]="bullesLien.href" [logo]="bullesLien.logo">
     </app-bulles-lien>
-    <!--    <ion-button title="Lien vers le site du ALL" target="_blank"-->
-    <!--                href="https://www.all-lacatho.fr/fr"-->
-    <!--                color="medium" shape="round" fill="clear" size="large">-->
-    <!--      <ion-icon name="link"></ion-icon>-->
-    <!--    </ion-button>-->
-
-    <!--    <ion-button title="Lien vers le compte facebook du ALL" target="_blank"-->
-    <!--                href="https://www.facebook.com/Alldelacatho"-->
-    <!--                color="medium" shape="round" fill="clear" size="large">-->
-    <!--      <ion-icon name="logo-facebook"></ion-icon>-->
-    <!--    </ion-button>-->
-
-    <!--    <ion-button title="Lien vers le compte instagram du ALL" target="_blank"-->
-    <!--                href="https://www.instagram.com/alldelacatho"-->
-    <!--                color="medium" shape="round" fill="clear" size="large">-->
-    <!--      <ion-icon name="logo-instagram"></ion-icon>-->
-    <!--    </ion-button>-->
-
-    <!--    <ion-button title="Lien vers le compte linkedin du ALL" target="_blank"-->
-    <!--                href="https://www.linkedin.com/company/all-lacatho"-->
-    <!--                color="medium" shape="round" fill="clear" size="large">-->
-    <!--      <ion-icon name="logo-linkedin"></ion-icon>-->
-    <!--    </ion-button>-->
   </div>
 
   <section></section>
