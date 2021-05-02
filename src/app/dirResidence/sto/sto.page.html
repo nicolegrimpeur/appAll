@@ -90,10 +90,9 @@
 
   <!-- bouton vers le groupe facebook -->
   <div style="text-align: center">
-    <ion-button title="Lien vers le groupe facebook de la résidence" (click)="clickFacebook()"
-                color="medium" shape="round" fill="clear" size="large">
-      <ion-icon name="logo-facebook"></ion-icon>
-    </ion-button>
+    <app-bulles-lien *ngFor="let bullesLien of json.bullesLien"
+                     [title]="bullesLien.title" [href]="bullesLien.href" [logo]="bullesLien.logo">
+    </app-bulles-lien>
   </div>
 
   <br>

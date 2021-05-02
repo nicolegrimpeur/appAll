@@ -39,6 +39,7 @@ export class HomePage implements OnInit {
     // récupération du json en ligne
     this.subscribeService.initTextes(this.idText).then((results) => {
       this.json = results;
+      console.log(results);
     });
 
     this.playLogo();
