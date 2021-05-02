@@ -18,37 +18,42 @@ export class SubscribeService {
   ) {
   }
 
-  getTextes(id: string): any {
-    return this.initTextes(id);
-  }
-
-  // retourne un TextesResultsModel
+  // retourne une promise contenant le json
   async initTextes(id: string): Promise<TextesResultsModel> {
+    let textes = new TextesResultsModel();
+
+    // attend que la fonction soit terminé avant de passer à la suite
     await this.jsonService.getTextes(id).toPromise().then((results: TextesResultsModel) => {
-      this.textes = results;
+      textes = results;
 
       // stockage du json ou récupération pour utilisation hors ligne
-      if (!this.textes.constructor.length) {
-        this.textes = this.storageService.get(id);
+      if (!textes.constructor.length) {
+        textes = this.storageService.get(id);
       } else {
-        this.storageService.set(id, this.textes);
+        this.storageService.set(id, textes);
       }
     });
 
-    return this.textes;
+    return textes;
   }
 
-  initLink(id: string): void {
-    this.jsonService.getLinks().subscribe((results: LinksResultsModel) => {
-      this.link = results.links.find(element => element.id === 'facebook' + id);
+  // retourne une promise contenant le lien
+  async initLink(id: string): Promise<LinksModel> {
+    let link = new LinksModel();
+
+    // attend que la fonction soit terminé avant de passer à la suite
+    await this.jsonService.getLinks().toPromise().then((results: LinksResultsModel) => {
+      link = results.links.find(element => element.id === 'facebook' + id);
 
       // stockage du json ou récupération pour utilisation hors ligne
-      if (this.link === undefined) {
-        this.link = this.storageService.get('lienFcb' + id);
+      if (link === undefined) {
+        link = this.storageService.get('lienFcb' + id);
       } else {
-        this.storageService.set('lienFcb' + id, this.link);
+        this.storageService.set('lienFcb' + id, link);
       }
-      return this.link;
     });
+
+    return link;
   }
+
 }

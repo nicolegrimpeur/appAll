@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {SubscribeService} from '../core/subscribe/subscribe.service';
+import {TextesResultsModel} from '../shared/models/textes-results.model';
+import {LinksModel} from '../shared/models/links.model';
 
 @Component({
   selector: 'app-sto',
@@ -8,6 +10,8 @@ import {SubscribeService} from '../core/subscribe/subscribe.service';
 })
 export class StoPage implements OnInit {
   private readonly idText = 'STO';
+  public json = new TextesResultsModel();
+  public link = new LinksModel();
 
   constructor(
     public readonly subscribeService: SubscribeService
@@ -16,15 +20,18 @@ export class StoPage implements OnInit {
 
   ngOnInit() {
     // récupération du json en ligne
-    this.subscribeService.initTextes(this.idText);
-
+    this.subscribeService.initTextes(this.idText).then((results: TextesResultsModel) => {
+      this.json = results;
+    });
     // récupération du lien vers le groupe facebook en ligne
-    this.subscribeService.initLink(this.idText);
+    this.subscribeService.initLink(this.idText).then((results: LinksModel) => {
+      this.link = results;
+    });
   }
 
   // click sur le bouton facebook
   clickFacebook(): void {
-    window.open(this.subscribeService.link.link, '_blank');
+    window.open(this.link.link, '_blank');
   }
 
   // événement pour rafraichir la page
