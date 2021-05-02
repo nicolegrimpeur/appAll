@@ -11,7 +11,6 @@ export class BullesLienComponent {
   @Input() logo: string;
 
   constructor() {
-    console.log(this.title);
   }
 
 }

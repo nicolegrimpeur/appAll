@@ -83,5 +83,12 @@
       "href": "https://www.facebook.com/groups/sto.2020.2021",
       "logo": "logo-facebook"
     }
+  ],
+  "colInfo": [
+    {
+      "title": "ADRESSE",
+      "info1": "Résidence Saint-Omer",
+      "info2": "<a title=\"Lien vers Google Maps\" href=\"https://goo.gl/maps/6LCwHevgpoTLBs6cA\" target=\"_blank\"> 13 Rue de Saint-Omer, 59800 Lille </a>"
+    }
   ]
 }

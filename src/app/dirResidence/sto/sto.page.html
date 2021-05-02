@@ -77,13 +77,9 @@
   <!-- infos résidence sto -->
   <ion-grid>
     <ion-row style="text-align: center">
-      <ion-col>
-        <ion-title>ADRESSE</ion-title>
-        <h5>
-          Résidence Saint-Omer
-          <br>
-          <a href="https://goo.gl/maps/6LCwHevgpoTLBs6cA" target="_blank"> 13 Rue de Saint-Omer, 59800 Lille </a>
-        </h5>
+      <ion-col *ngFor="let colInfo of json.colInfo">
+        <app-col-info [title]="colInfo.title" [info1]="colInfo.info1" [info2]="colInfo.info2">
+        </app-col-info>
       </ion-col>
     </ion-row>
   </ion-grid>

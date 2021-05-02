@@ -96,5 +96,27 @@
       "href": "https://www.linkedin.com/company/all-lacatho",
       "logo": "logo-linkedin"
     }
+  ],
+  "colInfo": [
+    {
+      "title": "ADRESSE",
+      "info1": "All",
+      "info2": "<a title=\"Lien vers Google Maps\" href=\"https://goo.gl/maps/1Mhk8jH7hM3v3bnN6\" target=\"_blank\"> 47 Boulevard Vauban, 59800 Lille </a>"
+    },
+    {
+      "title": "SERVICE LOGEMENT",
+      "info1": "<a title=\"Appeler le service logement\" href=\"tel:03.20.15.97.78\" target=\"_blank\">03.20.15.97.78</a>",
+      "info2": "<a title=\"Envoyer un mail au service logement\" href=\"mailto:contact@all-lacatho.fr\" target=\"_blank\">contact@all-lacatho.fr</a>"
+    },
+    {
+      "title": "SERVICE TECHNIQUE",
+      "info1": "<a title=\"Appeler le service technique\" href=\"tel:03.20.15.97.77\" target=\"_blank\">03.20.15.97.77</a>",
+      "info2": "<a title=\"Envoyer un mail au service technique\" href=\"mailto:servicetechnique@all-lacatho.fr\" target=\"_blank\">servicetechnique@all-lacatho.fr</a>"
+    },
+    {
+      "title": "HORAIRES",
+      "info1": "Lundi - Vendredi : 8H30 - 18H",
+      "info2": "Samedi - Dimanche : Fermé"
+    }
   ]
 }

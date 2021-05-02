@@ -8,7 +8,7 @@ import {HomePageRoutingModule} from './home-routing.module';
 import {BtnListComponent} from '../shared/components/btn-list/btn-list.component';
 import {ErreurConnexionComponent} from '../shared/components/erreur-connexion/erreur-connexion.component';
 import {BullesLienComponent} from '../shared/components/bulles-lien/bulles-lien.component';
-
+import {ColInfoComponent} from '../shared/components/col-info/col-info.component';
 
 @NgModule({
   imports: [
@@ -20,9 +20,10 @@ import {BullesLienComponent} from '../shared/components/bulles-lien/bulles-lien.
   exports: [
     BtnListComponent,
     ErreurConnexionComponent,
-    BullesLienComponent
+    BullesLienComponent,
+    ColInfoComponent
   ],
-  declarations: [HomePage, BtnListComponent, ErreurConnexionComponent, BullesLienComponent]
+  declarations: [HomePage, BtnListComponent, ErreurConnexionComponent, BullesLienComponent, ColInfoComponent]
 })
 export class HomePageModule {
 }
