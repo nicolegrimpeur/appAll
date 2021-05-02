@@ -8,6 +8,7 @@ export class StorageService {
   private storageTemp: Storage | null = null;
 
   constructor(private storage: Storage) {
+    this.init().then();
   }
 
   async init() {

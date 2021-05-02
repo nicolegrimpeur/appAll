@@ -18,20 +18,24 @@ export class SubscribeService {
   ) {
   }
 
+  getTextes(id: string): any {
+    return this.initTextes(id);
+  }
+
   // retourne un TextesResultsModel
-  initTextes(id: string): void {
-    this.jsonService.getTextes(id).subscribe((results: TextesResultsModel) => {
-      // this.textes = results;
+  async initTextes(id: string): Promise<TextesResultsModel> {
+    await this.jsonService.getTextes(id).toPromise().then((results: TextesResultsModel) => {
+      this.textes = results;
 
       // stockage du json ou récupération pour utilisation hors ligne
       if (!this.textes.constructor.length) {
         this.textes = this.storageService.get(id);
-      }
-      else {
+      } else {
         this.storageService.set(id, this.textes);
       }
-      return this.textes;
     });
+
+    return this.textes;
   }
 
   initLink(id: string): void {
@@ -41,8 +45,7 @@ export class SubscribeService {
       // stockage du json ou récupération pour utilisation hors ligne
       if (this.link === undefined) {
         this.link = this.storageService.get('lienFcb' + id);
-      }
-      else {
+      } else {
         this.storageService.set('lienFcb' + id, this.link);
       }
       return this.link;
