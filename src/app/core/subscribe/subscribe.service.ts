@@ -19,11 +19,13 @@ export class SubscribeService {
 
     // attend que la fonction soit terminé avant de passer à la suite
     await this.jsonService.getJson(id).toPromise().then((results: JsonResultsModel) => {
-      json = results;
+      // json = results;
 
       // stockage du json ou récupération pour utilisation hors ligne
       if (!json.constructor.length) {
-        json = this.storageService.get(id);
+        this.storageService.get(id).then((result) => {
+          json = JSON.parse(result.value);
+        });
       } else {
         this.storageService.set(id, json);
       }
