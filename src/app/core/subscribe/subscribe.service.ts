@@ -2,6 +2,9 @@ import {Injectable} from '@angular/core';
 import {TextesService} from '../http/textes/textes.service';
 import {StorageService} from '../storage/storage.service';
 import {JsonResultsModel} from '../../shared/models/json-results.model';
+import {Plugins} from '@capacitor/core';
+
+const {Network} = Plugins;
 
 @Injectable({
   providedIn: 'root'
@@ -17,19 +20,21 @@ export class SubscribeService {
   async initTextes(id: string): Promise<JsonResultsModel> {
     let json = new JsonResultsModel();
 
-    // attend que la fonction soit terminé avant de passer à la suite
-    await this.jsonService.getJson(id).toPromise().then((results: JsonResultsModel) => {
-      // json = results;
+    const status = await Network.getStatus();
 
-      // stockage du json ou récupération pour utilisation hors ligne
-      if (!json.constructor.length) {
-        this.storageService.get(id).then((result) => {
-          json = JSON.parse(result.value);
-        });
-      } else {
+    if (status.connected) {
+      await this.jsonService.getJson(id).toPromise().then((results: JsonResultsModel) => {
+        json = results;
+
+        // stockage du json
         this.storageService.set(id, json);
-      }
-    });
+      });
+    } else {
+      // récupération du json en local pour utilisation hors ligne
+      await this.storageService.get(id).then((result) => {
+        json = JSON.parse(result.value);
+      });
+    }
 
     return json;
   }
