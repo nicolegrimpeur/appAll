@@ -22,8 +22,7 @@
 
   <!--Liste des émojis : https://www.w3schools.com/charsets/ref_emoji.asp -->
   <!-- https://icones8.fr/icons -->
-  <p> &nbsp; 💖 Nouveautés : Ajout d'informations concernant les restos U 🤤 </p>
-  <p> &nbsp; Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇ </p>
+  <p> &nbsp; {{json.news}} </p>
   <br>
 
   <!--ajout de la barre lien-->
@@ -72,7 +71,6 @@
   </div>
 
   <ion-item-divider></ion-item-divider>
-  <br>
 
   <!-- infos résidence sto -->
   <ion-grid>
@@ -90,6 +88,4 @@
                      [title]="bullesLien.title" [href]="bullesLien.href" [logo]="bullesLien.logo">
     </app-bulles-lien>
   </div>
-
-  <br>
 </ion-content>

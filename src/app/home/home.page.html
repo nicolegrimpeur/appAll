@@ -17,7 +17,7 @@
 
   <!--Liste des émojis : https://www.w3schools.com/charsets/ref_emoji.asp -->
   <!-- https://icones8.fr/icons -->
-  <p> &nbsp; 💖 Nouveautés : Application mobile disponible + ajout des autres résidences </p>
+  <p> &nbsp; {{json.news}} </p>
   <p> &nbsp; Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇ </p>
   <br>
 
@@ -29,10 +29,11 @@
   <div id="infosAll">
     <ion-grid>
       <ion-row>
-        <!-- ajout des barres en fonction du subscribeService.texte -->
+        <!-- ajout des barres en fonction du json -->
         <ion-col *ngFor="let info of json.infos">
           <app-btn-list [id]="info.id" [content]="info.content"
-                        [idAffichage]="[json.idAffichage.infos, json.idAffichage.liens]"></app-btn-list>
+                        [idAffichage]="[json.idAffichage.infos, json.idAffichage.liens]">
+          </app-btn-list>
         </ion-col>
       </ion-row>
     </ion-grid>

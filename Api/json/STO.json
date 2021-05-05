@@ -1,4 +1,7 @@
 {
+  "news": [
+    "💖 Nouveautés : Ajouts d'infos sur les événements 🏆"
+  ],
   "liens": [
     {
       "id": "Plannings",
@@ -45,7 +48,7 @@
         "Tout d'abord, vous pouvez envoyer un message à Nicolas (<a href='tel:07.81.70.66.63' title='Appeler Nicolas' target='_blank'>07.81.70.66.63</a>) afin qu'il puisse vous rajouter sur la conversation du running de la résidence !",
         "Vous trouverez dessus toutes les personnes avec qui vous pourriez aller courir (toujours mieux d'aller courir à plusieurs !) ainsi que les infos pour la course avec la résidence ! (qui aura lieu les jeudis à 20H15 une fois le couvre feu terminé)",
         "<br>",
-        "Pour l'instant, les événements se font à distance sur le discord du All !",
+        "En plus des événements classiques, on fait toutes les semaines des événements à distance sur le discord du All !",
         "Vous trouverez de plus dessus le serveur minecraft survie mis en place pour l'occasion !",
         "Pour le rejoindre, cliquez <a href='https://discord.gg/Jmz77hKdxj' title='Lien vers le discord du All' target='_blank'><b>ici</b></a>"
       ]
