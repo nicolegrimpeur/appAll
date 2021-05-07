@@ -3,6 +3,7 @@ import {TextesService} from '../http/textes/textes.service';
 import {StorageService} from '../storage/storage.service';
 import {JsonResultsModel} from '../../shared/models/json-results.model';
 import {Plugins} from '@capacitor/core';
+import {Language} from '../../shared/langue';
 
 const {Network} = Plugins;
 
@@ -33,6 +34,7 @@ export class SubscribeService {
       // récupération du json en local pour utilisation hors ligne
       await this.storageService.get(id).then((result) => {
         json = JSON.parse(result.value);
+        Language.value = json.langue;
       });
     }
 

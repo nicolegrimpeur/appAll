@@ -4,6 +4,7 @@ import {BullesLienModel} from './bullesLien.model';
 import {ColInfoModel} from './colInfo.model';
 
 export class JsonResultsModel {
+  langue: string;
   news: Array<string>;
   nameLiens: string;
   liens: Array<TextesModel>;

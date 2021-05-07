@@ -1,1 +1,3 @@
-export let Language = 'fr';
+export let Language = {
+  value: 'fr'
+};
