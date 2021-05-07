@@ -22,11 +22,11 @@
 
   <!--Liste des émojis : https://www.w3schools.com/charsets/ref_emoji.asp -->
   <!-- https://icones8.fr/icons -->
-  <p> &nbsp; {{json.news}} </p>
+  <p *ngFor="let news of json.news"> &nbsp; {{ news }} </p>
   <br>
 
   <!--ajout de la barre lien-->
-  <ion-title>Liens 📝</ion-title>
+  <ion-title> {{json.nameLiens}} 📝 </ion-title>
 
   <!-- barre d'erreur si on a pas de connexion -->
   <app-erreur-connexion *ngIf="!json.constructor.length"></app-erreur-connexion>
@@ -49,7 +49,7 @@
   <br>
 
   <!--ajout de la barre infos -->
-  <ion-title>Infos 📣</ion-title>
+  <ion-title> {{json.nameInfos}} 📣 </ion-title>
 
   <!-- barre d'erreur si on a pas de connexion -->
   <app-erreur-connexion *ngIf="!json.constructor.length"></app-erreur-connexion>

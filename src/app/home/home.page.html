@@ -17,11 +17,10 @@
 
   <!--Liste des émojis : https://www.w3schools.com/charsets/ref_emoji.asp -->
   <!-- https://icones8.fr/icons -->
-  <p> &nbsp; {{json.news}} </p>
-  <p> &nbsp; Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇ </p>
+  <p *ngFor="let news of json.news"> &nbsp; {{ news }} </p>
   <br>
 
-  <ion-title>Infos 📝</ion-title>
+  <ion-title>{{json.nameInfos}} 📣</ion-title>
 
   <!-- barre d'erreur si on a pas réussi à récupérer le json -->
   <app-erreur-connexion *ngIf="!json.constructor.length"></app-erreur-connexion>
