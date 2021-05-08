@@ -1,0 +1,25 @@
+<ion-menu side="start" contentId="menu">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item [routerLink]="'/home'">
+        <ion-icon name="home" slot="start"></ion-icon>
+        <ion-label>Accueil</ion-label>
+      </ion-item>
+      <br>
+      <ion-title>Résidences</ion-title>
+      <br>
+      <ion-item [routerLink]="'/sto'">
+        <ion-icon name="business" slot="start"></ion-icon>
+        <ion-label>Saint-Omer</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="menu"></ion-router-outlet>
+
+

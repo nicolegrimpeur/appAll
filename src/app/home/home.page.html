@@ -1,5 +1,11 @@
+<app-menu></app-menu>
+
+
 <ion-header>
   <ion-toolbar id="header">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-thumbnail id="logo">
       <ion-img src="./assets/image/logoAll.png"></ion-img>
     </ion-thumbnail>
@@ -59,6 +65,4 @@
                      [title]="bullesLien.title" [href]="bullesLien.href" [logo]="bullesLien.logo">
     </app-bulles-lien>
   </div>
-
-  <section></section>
 </ion-content>

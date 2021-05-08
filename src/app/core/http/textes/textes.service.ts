@@ -15,7 +15,6 @@ export class TextesService {
 
   // récupère le json en ligne
   getJson(nameText: string): Observable<JsonResultsModel> {
-    console.log(Language.value);
     const url = this.textApi + '/' + nameText + '_' + Language.value;
     return this.http.get<JsonResultsModel>(url);
   }
