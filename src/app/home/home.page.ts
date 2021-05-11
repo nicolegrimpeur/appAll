@@ -39,10 +39,9 @@ export class HomePage implements OnInit {
   }
 
   ionViewWillEnter() {
-    // récupération du json en ligne
+    // récupération du json en ligne à chaque fois que l'on affiche la page
     this.subscribeService.initTextes(this.idText).then((results) => {
       this.json = results;
-      console.log(this.json.langue);
     });
   }
 

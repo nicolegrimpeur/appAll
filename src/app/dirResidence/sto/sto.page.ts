@@ -24,7 +24,9 @@ export class StoPage implements OnInit {
   // événement pour rafraichir la page
   doRefresh(event) {
     setTimeout(() => {
+      // permet de terminer l'animation
       event.target.complete();
+      // rafraichi le json
       this.ngOnInit();
     }, 1000);
   }

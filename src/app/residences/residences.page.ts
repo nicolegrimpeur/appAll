@@ -11,21 +11,24 @@ import {Router} from '@angular/router';
 })
 export class ResidencesPage {
   public langue: string;
-  constructor(public alertController: AlertController,
-              public readonly subscribeService: SubscribeService,
-              private route: Router
 
+  constructor(
+    public alertController: AlertController,
+    public readonly subscribeService: SubscribeService,
+    private route: Router
   ) {
     this.subscribeService.initTextes('All').then((results) => {
       this.langue = Language.value;
     });
   }
 
+  // fonction lancé par le switch de langue
   changeLangue(event: any) {
     Language.value = event.detail.value;
     this.addAlert().then();
   }
 
+  // affiche l'alerte
   async addAlert() {
     let alert;
     if (Language.value === 'fr') {
@@ -34,8 +37,7 @@ export class ResidencesPage {
         message: 'Vous allez être redirigé sur la page d\'accueil',
         buttons: ['OK']
       });
-    }
-    else if (Language.value === 'en') {
+    } else if (Language.value === 'en') {
       alert = await this.alertController.create({
         subHeader: 'Language switch to English',
         message: 'You will be redirect on the main page',
@@ -52,7 +54,10 @@ export class ResidencesPage {
     // on attend que l'utilisateur supprime l'alerte
     await alert.onDidDismiss();
 
+    // on redirige sur la page d'accueil
     this.route.navigate(['/home']).then();
+
+    // on change la langue de la page
     this.langue = Language.value;
   }
 }
