@@ -1,25 +1,29 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {IonicModule} from '@ionic/angular';
+import {FormsModule} from '@angular/forms';
+import {HomePage} from './home.page';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import {HomePageRoutingModule} from './home-routing.module';
 import {BtnListComponent} from '../shared/components/btn-list/btn-list.component';
 import {ErreurConnexionComponent} from '../shared/components/erreur-connexion/erreur-connexion.component';
-
+import {BullesLienComponent} from '../shared/components/bulles-lien/bulles-lien.component';
+import {ColInfoComponent} from '../shared/components/col-info/col-info.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        HomePageRoutingModule
-    ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    HomePageRoutingModule
+  ],
   exports: [
     BtnListComponent,
-    ErreurConnexionComponent
+    ErreurConnexionComponent,
+    BullesLienComponent,
+    ColInfoComponent
   ],
-    declarations: [HomePage, BtnListComponent, ErreurConnexionComponent]
+  declarations: [HomePage, BtnListComponent, ErreurConnexionComponent, BullesLienComponent, ColInfoComponent]
 })
-export class HomePageModule {}
+export class HomePageModule {
+}

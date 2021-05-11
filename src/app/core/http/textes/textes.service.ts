@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import {TextesResultsModel} from '../../../shared/models/textes-results.model';
-import {LinksResultsModel} from '../../../shared/models/links-results.model';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {JsonResultsModel} from '../../../shared/models/json-results.model';
+import {Language} from '../../../shared/langue';
 
 @Injectable({
   providedIn: 'root'
@@ -10,15 +10,12 @@ import {LinksResultsModel} from '../../../shared/models/links-results.model';
 export class TextesService {
   private textApi = 'https://nicob.space/apiJson';
 
-  constructor(private readonly http: HttpClient) { }
-
-  getTextes(nameText: string): Observable<TextesResultsModel>{
-    const url = this.textApi + '/' + nameText;
-    return this.http.get<TextesResultsModel>(url);
+  constructor(private readonly http: HttpClient) {
   }
 
-  getLinks(): Observable<LinksResultsModel>{
-    const url = this.textApi + '/links';
-    return this.http.get<LinksResultsModel>(url);
+  // récupère le json en ligne
+  getJson(nameText: string): Observable<JsonResultsModel> {
+    const url = this.textApi + '/' + nameText + '_' + Language.value;
+    return this.http.get<JsonResultsModel>(url);
   }
 }

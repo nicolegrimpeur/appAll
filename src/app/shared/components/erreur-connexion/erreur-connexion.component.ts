@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Language} from '../../langue';
 
 @Component({
   selector: 'app-erreur-connexion',
@@ -6,7 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./erreur-connexion.component.scss'],
 })
 export class ErreurConnexionComponent {
-
-  constructor() { }
+  public readonly langue: string;
+  constructor() {
+    this.langue = Language.value;
+  }
 
 }

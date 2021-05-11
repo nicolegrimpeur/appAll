@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar id="header">
     <ion-thumbnail id="logo">
-      <ion-img src="../../assets/image/logoAll.png"></ion-img>
+      <ion-img src="./assets/image/logoAll.png"></ion-img>
     </ion-thumbnail>
   </ion-toolbar>
 </ion-header>
@@ -17,15 +17,13 @@
 
   <!--Liste des émojis : https://www.w3schools.com/charsets/ref_emoji.asp -->
   <!-- https://icones8.fr/icons -->
-  <p> &nbsp; 💖 Nouveautés : Application mobile disponible + ajout des autres résidences </p>
-  <p> &nbsp; Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇ </p>
+  <p *ngFor="let news of json.news"> &nbsp; {{ news }} </p>
   <br>
 
-  <!--  <ion-title *ngIf="json.infos.length !== 0"> Infos 📝 </ion-title>-->
-  <ion-title>Infos 📝</ion-title>
+  <ion-title>{{json.nameInfos}} 📣</ion-title>
 
-  <!-- barre d'erreur si on a pas de connexion -->
-  <app-erreur-connexion *ngIf="!this.json.constructor.length"></app-erreur-connexion>
+  <!-- barre d'erreur si on a pas réussi à récupérer le json -->
+  <app-erreur-connexion *ngIf="!json.constructor.length"></app-erreur-connexion>
 
   <div id="infosAll">
     <ion-grid>
@@ -33,7 +31,8 @@
         <!-- ajout des barres en fonction du json -->
         <ion-col *ngFor="let info of json.infos">
           <app-btn-list [id]="info.id" [content]="info.content"
-                        [idAffichage]="[json.idAffichage.infos, json.idAffichage.liens]"></app-btn-list>
+                        [idAffichage]="[json.idAffichage.infos, json.idAffichage.liens]">
+          </app-btn-list>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -43,73 +42,22 @@
   </div>
 
   <ion-item-divider></ion-item-divider>
-  <br>
 
   <!-- infos du all -->
   <ion-grid>
     <ion-row style="text-align: center">
-      <ion-col>
-        <ion-title>ADRESSE</ion-title>
-        <h5>
-          All
-          <br>
-          <a href="https://goo.gl/maps/1Mhk8jH7hM3v3bnN6" target="_blank"> 47 Boulevard Vauban, 59800 Lille </a>
-        </h5>
-      </ion-col>
-
-      <ion-col>
-        <ion-title>SERVICE LOGEMENT</ion-title>
-        <h5>
-          <a href="tel:03.20.15.97.78" target="_blank">03.20.15.97.78</a>
-          <br>
-          <a href="mailto:contact@all-lacatho.fr" target="_blank">contact@all-lacatho.fr</a>
-        </h5>
-      </ion-col>
-
-      <ion-col>
-        <ion-title>SERVICE TECHNIQUE</ion-title>
-        <h5>
-          <a href="tel:03.20.15.97.77" target="_blank">03.20.15.97.77</a>
-          <br>
-          <a href="mailto:servicetechnique@all-lacatho.fr" target="_blank">servicetechnique@all-lacatho.fr</a>
-        </h5>
-      </ion-col>
-
-      <ion-col>
-        <ion-title>HORAIRES</ion-title>
-        <h5>
-          Lundi - Vendredi : 8H30 - 18H
-          <br>
-          Samedi - Dimanche : Fermé
-        </h5>
+      <ion-col *ngFor="let colInfo of json.colInfo">
+        <app-col-info [title]="colInfo.title" [info1]="colInfo.info1" [info2]="colInfo.info2">
+        </app-col-info>
       </ion-col>
     </ion-row>
   </ion-grid>
 
+  <!-- bulles boutons -->
   <div style="text-align: center">
-    <ion-button title="Lien vers le site du ALL" target="_blank"
-                href="https://www.all-lacatho.fr/fr"
-                color="medium" shape="round" fill="clear" size="large">
-      <ion-icon name="link"></ion-icon>
-    </ion-button>
-
-    <ion-button title="Lien vers le compte facebook du ALL" target="_blank"
-                href="https://www.facebook.com/Alldelacatho"
-                color="medium" shape="round" fill="clear" size="large">
-      <ion-icon name="logo-facebook"></ion-icon>
-    </ion-button>
-
-    <ion-button title="Lien vers le compte instagram du ALL" target="_blank"
-                href="https://www.instagram.com/alldelacatho"
-                color="medium" shape="round" fill="clear" size="large">
-      <ion-icon name="logo-instagram"></ion-icon>
-    </ion-button>
-
-    <ion-button title="Lien vers le compte linkedin du ALL" target="_blank"
-                href="https://www.linkedin.com/company/all-lacatho"
-                color="medium" shape="round" fill="clear" size="large">
-      <ion-icon name="logo-linkedin"></ion-icon>
-    </ion-button>
+    <app-bulles-lien *ngFor="let bullesLien of json.bullesLien"
+                     [title]="bullesLien.title" [href]="bullesLien.href" [logo]="bullesLien.logo">
+    </app-bulles-lien>
   </div>
 
   <section></section>

@@ -1,5 +1,12 @@
 {
+  "langue": "en",
+  "news": [
+    "💖 News : Application mobile disponible + ajout des autres résidences",
+    "Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇"
+  ],
+  "nameLiens": "",
   "liens": [],
+  "nameInfos": "Information",
   "infos": [
     {
       "id": "Ucopia",
@@ -74,5 +81,49 @@
   "idAffichage": {
     "liens": "",
     "infos": "div_infosAll"
-  }
+  },
+  "bullesLien": [
+    {
+      "title": "Lien vers le site du ALL",
+      "href": "https://www.all-lacatho.fr/fr",
+      "logo": "link"
+    },
+    {
+      "title": "Lien vers le compte facebook du ALL",
+      "href": "https://www.facebook.com/Alldelacatho",
+      "logo": "logo-facebook"
+    },
+    {
+      "title": "Lien vers le compte instagram du ALL",
+      "href": "https://www.instagram.com/alldelacatho",
+      "logo": "logo-instagram"
+    },
+    {
+      "title": "Lien vers le compte linkedin du ALL",
+      "href": "https://www.linkedin.com/company/all-lacatho",
+      "logo": "logo-linkedin"
+    }
+  ],
+  "colInfo": [
+    {
+      "title": "ADRESSE",
+      "info1": "All",
+      "info2": "<a title=\"Lien vers Google Maps\" href=\"https://goo.gl/maps/1Mhk8jH7hM3v3bnN6\" target=\"_blank\"> 47 Boulevard Vauban, 59800 Lille </a>"
+    },
+    {
+      "title": "SERVICE LOGEMENT",
+      "info1": "<a title=\"Appeler le service logement\" href=\"tel:03.20.15.97.78\" target=\"_blank\">03.20.15.97.78</a>",
+      "info2": "<a title=\"Envoyer un mail au service logement\" href=\"mailto:contact@all-lacatho.fr\" target=\"_blank\">contact@all-lacatho.fr</a>"
+    },
+    {
+      "title": "SERVICE TECHNIQUE",
+      "info1": "<a title=\"Appeler le service technique\" href=\"tel:03.20.15.97.77\" target=\"_blank\">03.20.15.97.77</a>",
+      "info2": "<a title=\"Envoyer un mail au service technique\" href=\"mailto:servicetechnique@all-lacatho.fr\" target=\"_blank\">servicetechnique@all-lacatho.fr</a>"
+    },
+    {
+      "title": "HORAIRES",
+      "info1": "Lundi - Vendredi : 8H30 - 18H",
+      "info2": "Samedi - Dimanche : Fermé"
+    }
+  ]
 }

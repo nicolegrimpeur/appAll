@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <!-- bouton  de retour en arrière -->
+    <!-- bouton de retour en arrière -->
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="tabs/residences"></ion-back-button>
+      <ion-back-button defaultHref="residences"></ion-back-button>
     </ion-buttons>
     <ion-title>
       Résidence Saint-Omer
@@ -22,15 +22,14 @@
 
   <!--Liste des émojis : https://www.w3schools.com/charsets/ref_emoji.asp -->
   <!-- https://icones8.fr/icons -->
-  <p> &nbsp; 💖 Nouveautés : Ajout d'informations concernant les restos U 🤤 </p>
-  <p> &nbsp; Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇ </p>
+  <p *ngFor="let news of json.news"> &nbsp; {{ news }} </p>
   <br>
 
   <!--ajout de la barre lien-->
-  <ion-title>Liens 📝</ion-title>
+  <ion-title> {{json.nameLiens}} 📝 </ion-title>
 
   <!-- barre d'erreur si on a pas de connexion -->
-  <app-erreur-connexion *ngIf="!this.json.constructor.length"></app-erreur-connexion>
+  <app-erreur-connexion *ngIf="!json.constructor.length"></app-erreur-connexion>
 
   <!-- div contenant les barres et le texte -->
   <div id="liensSTO">
@@ -47,14 +46,13 @@
     <div id="div_liensSTO">
     </div>
   </div>
-
-  <section></section>
+  <br>
 
   <!--ajout de la barre infos -->
-  <ion-title>Infos 📣</ion-title>
+  <ion-title> {{json.nameInfos}} 📣 </ion-title>
 
   <!-- barre d'erreur si on a pas de connexion -->
-  <app-erreur-connexion *ngIf="!this.json.constructor.length"></app-erreur-connexion>
+  <app-erreur-connexion *ngIf="!json.constructor.length"></app-erreur-connexion>
 
   <!-- div contenant les barres et le texte -->
   <div id="infosSTO">
@@ -73,29 +71,21 @@
   </div>
 
   <ion-item-divider></ion-item-divider>
-  <br>
 
   <!-- infos résidence sto -->
   <ion-grid>
     <ion-row style="text-align: center">
-      <ion-col>
-        <ion-title>ADRESSE</ion-title>
-        <h5>
-          Résidence Saint-Omer
-          <br>
-          <a href="https://goo.gl/maps/6LCwHevgpoTLBs6cA" target="_blank"> 13 Rue de Saint-Omer, 59800 Lille </a>
-        </h5>
+      <ion-col *ngFor="let colInfo of json.colInfo">
+        <app-col-info [title]="colInfo.title" [info1]="colInfo.info1" [info2]="colInfo.info2">
+        </app-col-info>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <!-- bouton vers le groupe facebook -->
+  <!-- bulles boutons -->
   <div style="text-align: center">
-    <ion-button title="Lien vers le groupe facebook de la résidence" (click)="clickFacebook()"
-                color="medium" shape="round" fill="clear" size="large">
-      <ion-icon name="logo-facebook"></ion-icon>
-    </ion-button>
+    <app-bulles-lien *ngFor="let bullesLien of json.bullesLien"
+                     [title]="bullesLien.title" [href]="bullesLien.href" [logo]="bullesLien.logo">
+    </app-bulles-lien>
   </div>
-
-  <br>
 </ion-content>
