@@ -21,7 +21,6 @@ export class HomePage implements OnInit {
     private platform: Platform,
     private route: Router
   ) {
-
     // gestion de la touche mobile back
     this.platform.backButton.subscribeWithPriority(-1, () => {
       // si l'on est sur la page principale on quitte l'application
@@ -36,12 +35,15 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit() {
+    this.playLogo();
+  }
+
+  ionViewWillEnter() {
     // récupération du json en ligne
     this.subscribeService.initTextes(this.idText).then((results) => {
       this.json = results;
+      console.log(this.json.langue);
     });
-
-    this.playLogo();
   }
 
   // lance l'event du click sur le logo

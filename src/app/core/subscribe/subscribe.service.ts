@@ -4,6 +4,7 @@ import {StorageService} from '../storage/storage.service';
 import {JsonResultsModel} from '../../shared/models/json-results.model';
 import {Plugins} from '@capacitor/core';
 import {Language} from '../../shared/langue';
+import {Router} from '@angular/router';
 
 const {Network} = Plugins;
 
@@ -13,7 +14,8 @@ const {Network} = Plugins;
 export class SubscribeService {
   constructor(
     private readonly jsonService: TextesService,
-    private readonly storageService: StorageService
+    private readonly storageService: StorageService,
+    private route: Router
   ) {
   }
 
@@ -24,6 +26,16 @@ export class SubscribeService {
     const status = await Network.getStatus();
 
     if (status.connected) {
+      if (!Language.init) {
+        await this.storageService.get(id).then((result) => {
+          Language.value = JSON.parse(result.value).langue;
+          Language.init = true;
+        });
+      }
+      // else {
+      //   Language.init = true;
+      // }
+
       await this.jsonService.getJson(id).toPromise().then((results: JsonResultsModel) => {
         json = results;
 

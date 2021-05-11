@@ -1,3 +1,4 @@
 export let Language = {
-  value: 'fr'
+  value: 'fr',
+  init: false
 };

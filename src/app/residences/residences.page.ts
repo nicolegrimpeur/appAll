@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import {Language} from '../shared/langue';
 import {AlertController} from '@ionic/angular';
+import {SubscribeService} from '../core/subscribe/subscribe.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-residences',
@@ -8,9 +10,15 @@ import {AlertController} from '@ionic/angular';
   styleUrls: ['./residences.page.scss'],
 })
 export class ResidencesPage {
-  public readonly langue: string;
-  constructor(public alertController: AlertController) {
-    this.langue = Language.value;
+  public langue: string;
+  constructor(public alertController: AlertController,
+              public readonly subscribeService: SubscribeService,
+              private route: Router
+
+  ) {
+    this.subscribeService.initTextes('All').then((results) => {
+      this.langue = Language.value;
+    });
   }
 
   changeLangue(event: any) {
@@ -19,11 +27,32 @@ export class ResidencesPage {
   }
 
   async addAlert() {
-    const alert = await this.alertController.create({
-      subHeader: 'Passage de la langue en ' + ((Language.value === 'fr') ? 'Français' : 'Anglais'),
-      buttons: ['OK']
-    });
+    let alert;
+    if (Language.value === 'fr') {
+      alert = await this.alertController.create({
+        subHeader: 'Changement de la langue en Français',
+        message: 'Vous allez être redirigé sur la page d\'accueil',
+        buttons: ['OK']
+      });
+    }
+    else if (Language.value === 'en') {
+      alert = await this.alertController.create({
+        subHeader: 'Language switch to English',
+        message: 'You will be redirect on the main page',
+        buttons: ['OK']
+      });
+    }
 
+    // on affiche l'alerte
     await alert.present();
+
+    // on enregistre la langue sur le json
+    this.subscribeService.initTextes('All').then();
+
+    // on attend que l'utilisateur supprime l'alerte
+    await alert.onDidDismiss();
+
+    this.route.navigate(['/home']).then();
+    this.langue = Language.value;
   }
 }

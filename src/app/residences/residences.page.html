@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Choisis ta résidence</ion-title>
+    <ion-title *ngIf="langue === 'fr'">Choisis ta résidence</ion-title>
+    <ion-title *ngIf="langue === 'en'">Choose your residence</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,7 +12,7 @@
 </ion-content>
 
 <ion-footer>
-  <p style="text-align: center">
+  <p *ngIf="langue === 'fr'" style="text-align: center">
     Si votre résidence n'apparait pas,
     envoyez un message à votre/vos responsable(s) de résidence en lui disant de contacter Nicolas Barrat via
     <a href='https://m.me/nicolegrimpeur' title='Lien vers le compte messenger de Nicolas' target='_blank'>Messenger</a>
@@ -19,17 +20,28 @@
     <a href='sms:07.81.70.66.63' title='Envoyer un message à Nicolas' target='_blank'>07.81.70.66.63</a>
   </p>
 
-  <!-- code pour changer de langue
+  <p *ngIf="langue === 'en'" style="text-align: center">
+    If your residence does not appear,
+    send a message to your residence referrer(s) telling them to contact Nicolas Barrat via
+    <a href='https://m.me/nicolegrimpeur' title='Lien vers le compte messenger de Nicolas' target='_blank'>Messenger</a>
+    or at
+    <a href='sms:07.81.70.66.63' title='Envoyer un message à Nicolas' target='_blank'>07.81.70.66.63</a>
+  </p>
+
+
+<!--  &lt;!&ndash; code pour changer de langue-->
   <br>
   <ion-segment value={{this.langue}} (ionChange)="changeLangue($event)">
     <ion-segment-button value="fr">
-      <label>Français</label>
+      <label *ngIf="langue === 'fr'">Français</label>
+      <label *ngIf="langue === 'en'">French</label>
     </ion-segment-button>
     <ion-segment-button value="en">
-      <label>Anglais</label>
+      <label *ngIf="langue === 'fr'">Anglais</label>
+      <label *ngIf="langue === 'en'">English</label>
     </ion-segment-button>
   </ion-segment>
-  -->
+<!--  &ndash;&gt;-->
   <section></section>
 </ion-footer>
 

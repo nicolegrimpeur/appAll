@@ -1,10 +1,10 @@
 {
   "langue": "en",
   "news": [
-    "💖 Nouveautés : Ajouts d'infos sur les événements 🏆",
+    "💖 News : Ajouts d'infos sur les événements 🏆",
     "Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇"
   ],
-  "nameLiens": "Liens",
+  "nameLiens": "Links",
   "liens": [
     {
       "id": "Plannings",
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "nameInfos": "Infos",
+  "nameInfos": "Information",
   "infos": [
     {
       "id": "Les responsables",
