@@ -23,16 +23,24 @@ export class SubscribeService {
 
     const status = await Network.getStatus();
 
-    // si l'on est connecté à internet
-    if (status.connected) {
-      // on récupère la langue initiale enregistré au dernier chargement de la page
-      if (!Language.init) {
+    // on récupère la langue initiale enregistré au dernier chargement de la page
+    if (!Language.init) {
+      let nbKey;
+
+      // récupère toutes les clés stockés
+      await this.storageService.getKeys().then(result => nbKey = result);
+
+      // on vérifie qu'il existe déjà un fichier json de stocker en vérifiant qu'il existe au moins un objet stocké
+      if (nbKey.keys.length !== 0) {
         await this.storageService.get(id).then((result) => {
           Language.value = JSON.parse(result.value).langue;
-          Language.init = true;
         });
       }
+      Language.init = true;
+    }
 
+    // si l'on est connecté à internet
+    if (status.connected) {
       // on récupère le json
       await this.jsonService.getJson(id).toPromise().then((results: JsonResultsModel) => {
         json = results;
@@ -44,7 +52,6 @@ export class SubscribeService {
       // récupération du json en local pour utilisation hors ligne
       await this.storageService.get(id).then((result) => {
         json = JSON.parse(result.value);
-        Language.value = json.langue;
       });
     }
 

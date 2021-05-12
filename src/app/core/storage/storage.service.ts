@@ -22,4 +22,8 @@ export class StorageService {
   async get(id: string) {
     return Storage.get({key: id});
   }
+
+  async getKeys() {
+    return Storage.keys();
+  }
 }
