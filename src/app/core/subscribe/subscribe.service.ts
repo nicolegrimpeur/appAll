@@ -3,7 +3,6 @@ import {TextesService} from '../http/textes/textes.service';
 import {StorageService} from '../storage/storage.service';
 import {JsonResultsModel} from '../../shared/models/json-results.model';
 import {Plugins} from '@capacitor/core';
-import {Language} from '../../shared/langue';
 
 const {Network} = Plugins;
 
@@ -25,14 +24,6 @@ export class SubscribeService {
 
     // si l'on est connecté à internet
     if (status.connected) {
-      // on récupère la langue initiale enregistré au dernier chargement de la page
-      if (!Language.init) {
-        await this.storageService.get(id).then((result) => {
-          Language.value = JSON.parse(result.value).langue;
-          Language.init = true;
-        });
-      }
-
       // on récupère le json
       await this.jsonService.getJson(id).toPromise().then((results: JsonResultsModel) => {
         json = results;
@@ -44,7 +35,6 @@ export class SubscribeService {
       // récupération du json en local pour utilisation hors ligne
       await this.storageService.get(id).then((result) => {
         json = JSON.parse(result.value);
-        Language.value = json.langue;
       });
     }
 

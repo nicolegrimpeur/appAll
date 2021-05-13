@@ -3,6 +3,10 @@ import {Language} from '../shared/langue';
 import {AlertController} from '@ionic/angular';
 import {SubscribeService} from '../core/subscribe/subscribe.service';
 import {Router} from '@angular/router';
+import {StorageService} from '../core/storage/storage.service';
+import {NetworkStatus, Plugins} from '@capacitor/core';
+
+const {Network} = Plugins;
 
 @Component({
   selector: 'app-residences',
@@ -11,14 +15,36 @@ import {Router} from '@angular/router';
 })
 export class ResidencesPage {
   public langue: string;
+  public status: any;
 
   constructor(
     public alertController: AlertController,
     public readonly subscribeService: SubscribeService,
+    public storageService: StorageService,
     private route: Router
   ) {
-    this.subscribeService.initTextes('All').then((results) => {
+    this.langue = Language.value;
+
+    // on récupère la langue si elle existe déjà sinon on l'initialise dans le stockage local
+    this.storageService.getLangue().then(result => {
+      if (result.value !== null) {
+        Language.value = result.value;
+      }
+      else {
+        this.storageService.setLangue().then();
+      }
       this.langue = Language.value;
+    });
+
+    this.status = {
+      connected: false
+    };
+  }
+
+  ionViewWillEnter() {
+    // on met à jour le status pour afficher ou non le système de langue
+    Network.getStatus().then(result => {
+      this.status = result;
     });
   }
 
@@ -49,7 +75,7 @@ export class ResidencesPage {
     await alert.present();
 
     // on enregistre la langue sur le json
-    this.subscribeService.initTextes('All').then();
+    this.storageService.setLangue().then();
 
     // on attend que l'utilisateur supprime l'alerte
     await alert.onDidDismiss();

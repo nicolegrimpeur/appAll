@@ -4,6 +4,8 @@ import {Plugins} from '@capacitor/core';
 import {Router} from '@angular/router';
 import {SubscribeService} from '../core/subscribe/subscribe.service';
 import {JsonResultsModel} from '../shared/models/json-results.model';
+import {Language} from '../shared/langue';
+import {StorageService} from '../core/storage/storage.service';
 
 const {App} = Plugins;
 
@@ -18,6 +20,7 @@ export class HomePage implements OnInit {
 
   constructor(
     public readonly subscribeService: SubscribeService,
+    public storageService: StorageService,
     private platform: Platform,
     private route: Router
   ) {
@@ -39,6 +42,16 @@ export class HomePage implements OnInit {
   }
 
   ionViewWillEnter() {
+    // on récupère la langue si elle existe déjà sinon on l'initialise dans le stockage local
+    this.storageService.getLangue().then(result => {
+      if (result.value !== null) {
+        Language.value = result.value;
+      }
+      else {
+        this.storageService.setLangue().then();
+      }
+    });
+
     // récupération du json en ligne à chaque fois que l'on affiche la page
     this.subscribeService.initTextes(this.idText).then((results) => {
       this.json = results;
