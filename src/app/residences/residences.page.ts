@@ -25,6 +25,7 @@ export class ResidencesPage {
   ) {
     this.langue = Language.value;
 
+    // on récupère la langue si elle existe déjà sinon on l'initialise dans le stockage local
     this.storageService.getLangue().then(result => {
       if (result.value !== null) {
         Language.value = result.value;
@@ -41,6 +42,7 @@ export class ResidencesPage {
   }
 
   ionViewWillEnter() {
+    // on met à jour le status pour afficher ou non le système de langue
     Network.getStatus().then(result => {
       this.status = result;
     });

@@ -42,6 +42,7 @@ export class HomePage implements OnInit {
   }
 
   ionViewWillEnter() {
+    // on récupère la langue si elle existe déjà sinon on l'initialise dans le stockage local
     this.storageService.getLangue().then(result => {
       if (result.value !== null) {
         Language.value = result.value;
