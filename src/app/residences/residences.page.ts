@@ -37,7 +37,7 @@ export class ResidencesPage {
     });
 
     this.status = {
-      connected: false
+      connected: true
     };
   }
 
