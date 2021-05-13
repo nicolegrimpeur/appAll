@@ -3,6 +3,7 @@ import {Language} from '../shared/langue';
 import {AlertController} from '@ionic/angular';
 import {SubscribeService} from '../core/subscribe/subscribe.service';
 import {Router} from '@angular/router';
+import {StorageService} from '../core/storage/storage.service';
 
 @Component({
   selector: 'app-residences',
@@ -15,11 +16,21 @@ export class ResidencesPage {
   constructor(
     public alertController: AlertController,
     public readonly subscribeService: SubscribeService,
+    public storageService: StorageService,
     private route: Router
   ) {
-    this.subscribeService.initTextes('All').then((results) => {
-      this.langue = Language.value;
-    });
+    // this.storageService.getLangue().then(result => {
+    //   if (result.value !== null) {
+    //     Language.value = result.value;
+    //   }
+    //   else {
+    //     this.storageService.setLangue().then();
+    //   }
+    //   this.langue = Language.value;
+    //
+    // });
+    this.langue = Language.value;
+
   }
 
   // fonction lancé par le switch de langue
@@ -49,7 +60,7 @@ export class ResidencesPage {
     await alert.present();
 
     // on enregistre la langue sur le json
-    this.subscribeService.initTextes('All').then();
+    this.storageService.setLangue().then();
 
     // on attend que l'utilisateur supprime l'alerte
     await alert.onDidDismiss();

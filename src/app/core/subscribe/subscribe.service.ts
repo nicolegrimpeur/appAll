@@ -3,7 +3,6 @@ import {TextesService} from '../http/textes/textes.service';
 import {StorageService} from '../storage/storage.service';
 import {JsonResultsModel} from '../../shared/models/json-results.model';
 import {Plugins} from '@capacitor/core';
-import {Language} from '../../shared/langue';
 
 const {Network} = Plugins;
 
@@ -22,22 +21,6 @@ export class SubscribeService {
     let json = new JsonResultsModel();
 
     const status = await Network.getStatus();
-
-    // on récupère la langue initiale enregistré au dernier chargement de la page
-    if (!Language.init) {
-      let nbKey;
-
-      // récupère toutes les clés stockés
-      await this.storageService.getKeys().then(result => nbKey = result);
-
-      // on vérifie qu'il existe déjà un fichier json de stocker en vérifiant qu'il existe au moins un objet stocké
-      if (nbKey.keys.length !== 0) {
-        await this.storageService.get(id).then((result) => {
-          Language.value = JSON.parse(result.value).langue;
-        });
-      }
-      Language.init = true;
-    }
 
     // si l'on est connecté à internet
     if (status.connected) {

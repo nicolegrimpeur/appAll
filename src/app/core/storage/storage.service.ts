@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Plugins} from '@capacitor/core';
 import {JsonResultsModel} from '../../shared/models/json-results.model';
+import {Language} from '../../shared/langue';
 
 const {Storage} = Plugins;
 
@@ -21,6 +22,17 @@ export class StorageService {
 
   async get(id: string) {
     return Storage.get({key: id});
+  }
+
+  async setLangue() {
+    await Storage.set({
+      key: 'langue',
+      value: Language.value
+    });
+  }
+
+  async getLangue() {
+    return Storage.get({key: 'langue'});
   }
 
   async getKeys() {
