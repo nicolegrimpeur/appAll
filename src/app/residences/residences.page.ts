@@ -4,6 +4,9 @@ import {AlertController} from '@ionic/angular';
 import {SubscribeService} from '../core/subscribe/subscribe.service';
 import {Router} from '@angular/router';
 import {StorageService} from '../core/storage/storage.service';
+import {NetworkStatus, Plugins} from '@capacitor/core';
+
+const {Network} = Plugins;
 
 @Component({
   selector: 'app-residences',
@@ -12,6 +15,7 @@ import {StorageService} from '../core/storage/storage.service';
 })
 export class ResidencesPage {
   public langue: string;
+  public status: any;
 
   constructor(
     public alertController: AlertController,
@@ -19,18 +23,27 @@ export class ResidencesPage {
     public storageService: StorageService,
     private route: Router
   ) {
-    // this.storageService.getLangue().then(result => {
-    //   if (result.value !== null) {
-    //     Language.value = result.value;
-    //   }
-    //   else {
-    //     this.storageService.setLangue().then();
-    //   }
-    //   this.langue = Language.value;
-    //
-    // });
     this.langue = Language.value;
 
+    this.storageService.getLangue().then(result => {
+      if (result.value !== null) {
+        Language.value = result.value;
+      }
+      else {
+        this.storageService.setLangue().then();
+      }
+      this.langue = Language.value;
+    });
+
+    this.status = {
+      connected: false
+    };
+  }
+
+  ionViewWillEnter() {
+    Network.getStatus().then(result => {
+      this.status = result;
+    });
   }
 
   // fonction lancé par le switch de langue
