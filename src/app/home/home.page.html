@@ -20,6 +20,7 @@
   <p *ngFor="let news of json.news"> &nbsp; {{ news }} </p>
   <br>
   <p>{{test}}</p>
+  <p>{{phabletAndroid}}</p>
 
   <ion-title>{{json.nameInfos}} 📣</ion-title>
 
@@ -62,5 +63,6 @@
   </div>
 
   <section></section>
-  <section *ngIf="phabletAndroid"></section>
+
+  <app-divider-android></app-divider-android>
 </ion-content>

@@ -9,21 +9,24 @@ import {BtnListComponent} from '../shared/components/btn-list/btn-list.component
 import {ErreurConnexionComponent} from '../shared/components/erreur-connexion/erreur-connexion.component';
 import {BullesLienComponent} from '../shared/components/bulles-lien/bulles-lien.component';
 import {ColInfoComponent} from '../shared/components/col-info/col-info.component';
+import {TabsPageModule} from '../tabs/tabs.module';
+import {DividerAndroidComponent} from '../shared/components/divider-android/divider-android.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        HomePageRoutingModule
+    ],
   exports: [
     BtnListComponent,
     ErreurConnexionComponent,
     BullesLienComponent,
-    ColInfoComponent
+    ColInfoComponent,
+    DividerAndroidComponent
   ],
-  declarations: [HomePage, BtnListComponent, ErreurConnexionComponent, BullesLienComponent, ColInfoComponent]
+  declarations: [HomePage, BtnListComponent, ErreurConnexionComponent, BullesLienComponent, ColInfoComponent, DividerAndroidComponent]
 })
 export class HomePageModule {
 }

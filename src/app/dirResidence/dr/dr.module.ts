@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
-import { IonicModule } from '@ionic/angular';
+import {IonicModule} from '@ionic/angular';
 
-import { DrPageRoutingModule } from './dr-routing.module';
+import {DrPageRoutingModule} from './dr-routing.module';
 
-import { DrPage } from './dr.page';
+import {DrPage} from './dr.page';
 import {HomePageModule} from '../../home/home.module';
 
 @NgModule({
@@ -19,4 +19,5 @@ import {HomePageModule} from '../../home/home.module';
   ],
   declarations: [DrPage]
 })
-export class DrPageModule {}
+export class DrPageModule {
+}
