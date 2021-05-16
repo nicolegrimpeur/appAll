@@ -40,3 +40,7 @@ p {
   margin: 1vh 0.5vw;
   text-align: left;
 }
+
+ion-router-outlet {
+  height: calc(var(--vh, 1vh) * 100);
+}
