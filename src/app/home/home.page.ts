@@ -18,12 +18,17 @@ export class HomePage implements OnInit {
   private readonly idText = 'All';  // id utilisé pour le json
   public json = new JsonResultsModel();  // stockage du json
 
+  public test: any;
+
   constructor(
     public readonly subscribeService: SubscribeService,
     public storageService: StorageService,
     private platform: Platform,
     private route: Router
   ) {
+    this.test = platform.platforms();
+    console.log(this.test);
+
     // gestion de la touche mobile back
     this.platform.backButton.subscribeWithPriority(-1, () => {
       // si l'on est sur la page principale on quitte l'application
