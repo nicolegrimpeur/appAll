@@ -46,8 +46,7 @@ export class HomePage implements OnInit {
     this.storageService.getLangue().then(result => {
       if (result.value !== null) {
         Language.value = result.value;
-      }
-      else {
+      } else {
         this.storageService.setLangue().then();
       }
     });

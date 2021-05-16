@@ -9,12 +9,12 @@ import {StoPage} from './sto.page';
 import {HomePageModule} from '../../home/home.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    IonicModule,
-    StoPageRoutingModule,
-    HomePageModule
-  ],
+    imports: [
+        CommonModule,
+        IonicModule,
+        StoPageRoutingModule,
+        HomePageModule
+    ],
   declarations: [StoPage]
 })
 export class StoPageModule {

@@ -11,12 +11,12 @@ import {BullesLienComponent} from '../shared/components/bulles-lien/bulles-lien.
 import {ColInfoComponent} from '../shared/components/col-info/col-info.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        HomePageRoutingModule
+    ],
   exports: [
     BtnListComponent,
     ErreurConnexionComponent,

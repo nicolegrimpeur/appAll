@@ -37,11 +37,6 @@ section{
 
 p {
   font-size: 17px;
-  margin-bottom: 0;
+  margin: 1vh 0.5vw;
   text-align: left;
-}
-
-// passe la page en taille pleine pour passer en dessous du tabs
-ion-router-outlet {
-  height: 100vh;
 }

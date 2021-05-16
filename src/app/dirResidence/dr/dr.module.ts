@@ -4,20 +4,20 @@ import {FormsModule} from '@angular/forms';
 
 import {IonicModule} from '@ionic/angular';
 
-import {TabsPageRoutingModule} from './tabs-routing.module';
+import {DrPageRoutingModule} from './dr-routing.module';
 
-import {TabsPage} from './tabs.page';
-import {HomePageModule} from '../home/home.module';
+import {DrPage} from './dr.page';
+import {HomePageModule} from '../../home/home.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TabsPageRoutingModule,
+    DrPageRoutingModule,
     HomePageModule
   ],
-  declarations: [TabsPage]
+  declarations: [DrPage]
 })
-export class TabsPageModule {
+export class DrPageModule {
 }

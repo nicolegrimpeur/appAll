@@ -7,8 +7,8 @@
 
 <ion-content>
   <!-- liste des résidences -->
-  <br>
   <ion-button expand="block" color="medium" routerLink="/sto">Saint-Omer</ion-button>
+  <ion-button expand="block" color="medium" routerLink="/dr">Denis Reille</ion-button>
 </ion-content>
 
 <ion-footer>
@@ -28,7 +28,7 @@
     <a href='sms:07.81.70.66.63' title='Envoyer un message à Nicolas' target='_blank'>07.81.70.66.63</a>
   </p>
 
-<!-- switch de la langue -->
+  <!-- switch de la langue -->
   <br>
   <ion-segment *ngIf="status.connected" value={{this.langue}} (ionChange)="changeLangue($event)">
     <ion-segment-button value="fr">
@@ -40,6 +40,8 @@
       <label *ngIf="langue === 'en'">English</label>
     </ion-segment-button>
   </ion-segment>
+
+  <br>
   <section></section>
 </ion-footer>
 
