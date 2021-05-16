@@ -18,20 +18,12 @@ export class HomePage implements OnInit {
   private readonly idText = 'All';  // id utilisé pour le json
   public json = new JsonResultsModel();  // stockage du json
 
-  public test: Array<string>;
-  public phabletAndroid: boolean;
-
   constructor(
     public readonly subscribeService: SubscribeService,
     public storageService: StorageService,
     private platform: Platform,
     private route: Router
   ) {
-    this.test = platform.platforms();
-    console.log(this.test);
-    console.log(this.test.find(element => element === 'android') !== undefined);
-    this.phabletAndroid = this.test.find(element => element === 'android') !== undefined && this.test.find(element => element === 'phablet') !== undefined;
-
     // gestion de la touche mobile back
     this.platform.backButton.subscribeWithPriority(-1, () => {
       // si l'on est sur la page principale on quitte l'application
@@ -54,8 +46,7 @@ export class HomePage implements OnInit {
     this.storageService.getLangue().then(result => {
       if (result.value !== null) {
         Language.value = result.value;
-      }
-      else {
+      } else {
         this.storageService.setLangue().then();
       }
     });
