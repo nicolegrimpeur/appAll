@@ -5,7 +5,7 @@
       <ion-back-button defaultHref="residences"></ion-back-button>
     </ion-buttons>
     <ion-title>
-      Résidence Denis Reille
+      Résidence Saint-Omer
     </ion-title>
 
   </ion-toolbar>
@@ -25,29 +25,6 @@
   <p *ngFor="let news of json.news"> &nbsp; {{ news }} </p>
   <br>
 
-  <!--ajout de la barre lien-->
-  <ion-title> {{json.nameLiens}} 📝 </ion-title>
-
-  <!-- barre d'erreur si on a pas de connexion -->
-  <app-erreur-connexion *ngIf="!json.constructor.length"></app-erreur-connexion>
-
-  <!-- div contenant les barres et le texte -->
-  <div id="liensSTO">
-    <ion-grid>
-      <ion-row>
-        <!-- ajout des barres en fonction du json -->
-        <ion-col *ngFor="let lien of json.liens">
-          <app-btn-list [id]="lien.id" [content]="lien.content"
-                        [idAffichage]="[json.idAffichage.liens, json.idAffichage.infos]"></app-btn-list>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <div id="div_liensSTO">
-    </div>
-  </div>
-  <br>
-
   <!--ajout de la barre infos -->
   <ion-title> {{json.nameInfos}} 📣 </ion-title>
 
@@ -55,7 +32,7 @@
   <app-erreur-connexion *ngIf="!json.constructor.length"></app-erreur-connexion>
 
   <!-- div contenant les barres et le texte -->
-  <div id="infosSTO">
+  <div id="infosDR">
     <ion-grid>
       <ion-row>
         <!-- ajout des barres en fonction du json -->
@@ -66,7 +43,7 @@
       </ion-row>
     </ion-grid>
 
-    <div id="div_infosSTO">
+    <div id="div_infosDR">
     </div>
   </div>
 

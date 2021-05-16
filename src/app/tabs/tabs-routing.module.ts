@@ -9,6 +9,10 @@ const routes: Routes = [
     loadChildren: () => import('../dirResidence/sto/sto.module').then(m => m.StoPageModule)
   },
   {
+    path: 'dr',
+    loadChildren: () => import('../dirResidence/dr/dr.module').then(m => m.DrPageModule)
+  },
+  {
     path: '',
     component: TabsPage,
     children: [

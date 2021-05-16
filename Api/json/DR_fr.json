@@ -45,7 +45,7 @@
     }
   ],
   "idAffichage": {
-    "liens": "div_liensDR",
+    "liens": "",
     "infos": "div_infosDR"
   },
   "bullesLien": [],
