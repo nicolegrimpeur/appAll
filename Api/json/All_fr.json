@@ -65,6 +65,26 @@
       ]
     },
     {
+      "id": "Compte logement",
+      "content": [
+        "Voici le lien vers le site sur lequel vous pourrez trouver votre compte logement : <a href='https://logement.all-lacatho.fr/login' title='Lien vers votre compte logement' target='_blank'> https://logement.all-lacatho.fr/login</a>",
+        "",
+        "Vos identifiants vous ont normalement été envoyé par mail, sinon faites 'Identifiants oubliés' ou envoyer un mail au service logement"
+      ]
+    },
+    {
+      "id": "Lit d'appoint",
+      "content": [
+        "Vous pouvez demander au All un lit d'appoint si vous devez loger quelqu'un chez vous",
+        "",
+        "Le lit est un lit pliant d'appoint fourni avec le linge de lit.",
+        "Le tarif est de 5€ par nuit, mais si vous prenez pour la/les soirées du vendredi et/ou samedi et/ou dimanche, le 'forfait weekend' sera appliqué à 15€",
+        "",
+        "Vous pouvez en faire la demande directement sur <a href='https://logement.all-lacatho.fr/login' title='Lien vers votre compte logement' target='_blank'>votre compte logement</a> ou en envoyant un mail au service logement",
+        "Une fois la confirmation reçu, le service technique vous le déposera dans votre chambre pour le jour demandé"
+      ]
+    },
+    {
       "id": "Covid",
       "content": [
         "<span style='color: red'> !!! </span> Nous vous rappelons que le masque est obligatoire dans la résidence sous peine de sanction ! (pouvant aller de l'avertissement à l'exclusion)",

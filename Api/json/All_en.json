@@ -65,6 +65,26 @@
       ]
     },
     {
+      "id": "Housing account",
+      "content": [
+        "Here is the link to the site where you can find your housing account : <a href='https://logement.all-lacatho.fr/login' title='Link to your housing account' target='_blank'> https://logement.all-lacatho.fr/login</a>",
+        "",
+        "Your login details should have been sent to you by email, if not do 'Identifiants oubliés' or send an email to the housing department"
+      ]
+    },
+    {
+      "id": "Spare bed",
+      "content": [
+        "You can ask the All for a spare bed if you need to accommodate someone in your home",
+        "",
+        "The bed is a spare folding bed provided with bed linen",
+        "The price is 5€ per night, but if you take for the evening(s) of Friday and/or Saturday and/or Sunday, the 'weekend price' will be applied at 15€",
+        "",
+        "You can request it directly on <a href='https://logement.all-lacatho.fr/login' title='Link to your housing account' target='_blank'>your housing account</a> or by sending an email to the housing department",
+        "Once the confirmation is received, the technical service will deliver it to your room for the requested day"
+      ]
+    },
+    {
       "id": "Covid",
       "content": [
         "<span style='color: red'> !!! </span> We remind you that the mask is compulsory in the residence at the risk of sanctions ! (from a warning to exclusion)",
