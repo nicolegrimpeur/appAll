@@ -8,7 +8,7 @@ import {Language} from '../../../shared/langue';
   providedIn: 'root'
 })
 export class TextesService {
-  private textApi = 'https://nicob.space/apiJson';
+  private textApi = 'https://nicob.ovh/apiJson';
 
   constructor(private readonly http: HttpClient) {
   }
