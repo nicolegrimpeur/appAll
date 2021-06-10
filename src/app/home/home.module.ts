@@ -9,6 +9,7 @@ import {BtnListComponent} from '../shared/components/btn-list/btn-list.component
 import {ErreurConnexionComponent} from '../shared/components/erreur-connexion/erreur-connexion.component';
 import {BullesLienComponent} from '../shared/components/bulles-lien/bulles-lien.component';
 import {ColInfoComponent} from '../shared/components/col-info/col-info.component';
+import {TemplatePageComponent} from '../shared/components/template-page/template-page.component';
 
 @NgModule({
     imports: [
@@ -21,9 +22,10 @@ import {ColInfoComponent} from '../shared/components/col-info/col-info.component
     BtnListComponent,
     ErreurConnexionComponent,
     BullesLienComponent,
-    ColInfoComponent
+    ColInfoComponent,
+    TemplatePageComponent
   ],
-  declarations: [HomePage, BtnListComponent, ErreurConnexionComponent, BullesLienComponent, ColInfoComponent]
+    declarations: [HomePage, BtnListComponent, ErreurConnexionComponent, BullesLienComponent, ColInfoComponent, TemplatePageComponent]
 })
 export class HomePageModule {
 }
