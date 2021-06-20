@@ -5,9 +5,7 @@
     "To display the required informations, click on the corresponding button ⬇"
   ],
   "nameLiens": "",
-  "liens": [],
-  "nameInfos": "Information",
-  "infos": [
+  "liens": [
     {
       "id": "Ucopia",
       "content": [
@@ -24,6 +22,17 @@
         "Do not hesitate to send a message to <a href='https://m.me/nicolegrimpeur' title='Link to Nicolas' messenger account' target='_blank'>Nicolas</a> if you have any problems! "
       ]
     },
+    {
+      "id": "Housing account",
+      "content": [
+        "Here is the link to the site where you can find your housing account : <a href='https://logement.all-lacatho.fr/login' title='Link to your housing account' target='_blank'> https://logement.all-lacatho.fr/login</a>",
+        "",
+        "Your login details should have been sent to you by email, if not do 'Identifiants oubliés' or send an email to the housing department"
+      ]
+    }
+  ],
+  "nameInfos": "Information",
+  "infos": [
     {
       "id": "Packages",
       "content": [
@@ -62,14 +71,6 @@
         "At the end, you can pay directly with your ALL card, and if you have filled in the form to have the meals at 1€, your meals will be at 1€ (even if it is marked 3€30 on the click and collect website, you can check that the meal is at 1€) <a href='https://resto-aeu.moneweb.fr' title='Link to the website' target='_blank'><b>ici</b></a>)",
         "",
         "Do not hesitate to send a message to <a href='https://m.me/mathilde.leblond.31' title='Link to Mathilde's messenger account' target='_blank'>Mathilde</a> or to <a href='https://m.me/nicolegrimpeur' title='Link to Nicolas' messenger account' target='_blank'>Nicolas</a> for any further questions!"
-      ]
-    },
-    {
-      "id": "Housing account",
-      "content": [
-        "Here is the link to the site where you can find your housing account : <a href='https://logement.all-lacatho.fr/login' title='Link to your housing account' target='_blank'> https://logement.all-lacatho.fr/login</a>",
-        "",
-        "Your login details should have been sent to you by email, if not do 'Identifiants oubliés' or send an email to the housing department"
       ]
     },
     {

@@ -1,0 +1,18 @@
+<ion-item-divider></ion-item-divider>
+
+<!-- infos résidence sto -->
+<ion-grid>
+  <ion-row style="text-align: center">
+    <ion-col *ngFor="let colInfo of json.colInfo">
+      <app-col-info [title]="colInfo.title" [info1]="colInfo.info1" [info2]="colInfo.info2">
+      </app-col-info>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<!-- bulles boutons -->
+<div style="text-align: center">
+  <app-bulles-lien *ngFor="let bullesLien of json.bullesLien"
+                   [title]="bullesLien.title" [href]="bullesLien.href" [logo]="bullesLien.logo">
+  </app-bulles-lien>
+</div>
