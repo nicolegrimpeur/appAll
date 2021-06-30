@@ -4,7 +4,7 @@
     "💖 News : mobile application available + addition of the other residences",
     "To display the required informations, click on the corresponding button ⬇"
   ],
-  "nameLiens": "",
+  "nameLiens": "Link",
   "liens": [
     {
       "id": "Ucopia",
@@ -100,7 +100,7 @@
     }
   ],
   "idAffichage": {
-    "liens": "",
+    "liens": "div_liensAll",
     "infos": "div_infosAll"
   },
   "bullesLien": [

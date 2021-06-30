@@ -100,7 +100,7 @@
     }
   ],
   "idAffichage": {
-    "liens": "",
+    "liens": "div_liensAll",
     "infos": "div_infosAll"
   },
   "bullesLien": [
