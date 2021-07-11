@@ -1,7 +1,7 @@
 {
   "langue": "fr",
   "news": [
-    "💖 Nouveautés : Application mobile disponible + ajout des autres résidences",
+    "💖 Nouveautés : Ajout des règles en résidences 🏢 + déchets 🗑",
     "Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇"
   ],
   "nameLiens": "Liens",
@@ -34,6 +34,21 @@
   "nameInfos": "Infos",
   "infos": [
     {
+      "id": "Règles en résidences",
+      "content": [
+        "Merci de respecter le calme dans les couloirs et les chambres !",
+        "L'alcool et les substances illicites sont interdites. Tout manquement peut entrainer une expulsion immédiate",
+        "Il est de plus interdit de fumer dans les couloirs ainsi que dans les chambres. Vous trouverez en fonction des résidences des cendriers à votre disposition. S'il n'y en a pas encore, vous pouvez en faire la demande à vos responsables"
+      ]
+    },
+    {
+      "id": "Déchets",
+      "content": [
+        "Merci de trier vos déchets et d'utiliser la poubelle jaune pour les déchets recyclables !",
+        "Les autres déchets vont dans les poubelles noirs, pas à côté ni dans les couloirs !"
+      ]
+    },
+    {
       "id": "Colis",
       "content": [
         "Lorsque l'on vous demande l'adresse où envoyer vos colis, il faut mettre le 47 Boulevard Vauban et non l'adresse de la résidence",
@@ -57,10 +72,9 @@
         "&emsp; &emsp; • La Sandwicherie du 60 : sandwich et salades sur place et à emporter",
         "",
         "Tous les restaurants universitaires sont à 1€ pour les étudiants boursiers, et 3€30 sinon",
-        "Pendant la période COVID, les RUs sont à 1€ pour tous les étudiants via <a href='https://forms.gle/ZqrV3Sn9BJ3VxHTS9' title='Lien vers le formulaire pour les repas à 1€' target='_blank'>ce formulaire</a>",
         "",
         "Tous les paiements se font via la carte du ALL (la même qui vous sert de badge pour rentrer dans la résidence)",
-        "Pour vérifier que votre paiement est bien passé à 1€, ou pour simplement rajouter de l'argent sur votre case, tout se fait sur ce site : <a href='https://resto-aeu.moneweb.fr' title='Lien vers le site' target='_blank'>https://resto-aeu.moneweb.fr</a>",
+        "Pour vérifier que votre paiement est bien passé à 1€, ou pour simplement rajouter de l'argent sur votre carte, tout se fait sur ce site : <a href='https://resto-aeu.moneweb.fr' title='Lien vers le site' target='_blank'>https://resto-aeu.moneweb.fr</a>",
         "L'identifiant correspond à votre numéro de carte, tandis que le mot de passe vous a été donné lorsque l'on vous a donné votre carte",
         "N'hésitez pas à faire mot de passe oublié ou <a href='mailto:contact@all-lacatho.fr' title='Envoyer un mail au service logement'             target='_blank'>à envoyer un mail au ALL</a> si vous l'avez perdu",
         "",

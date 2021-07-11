@@ -1,7 +1,7 @@
 {
   "langue": "en",
   "news": [
-    "💖 News : mobile application available + addition of the other residences",
+    "💖 What's new: Addition of rules in residences 🏢 + garbage 🗑",
     "To display the required informations, click on the corresponding button ⬇"
   ],
   "nameLiens": "Link",
@@ -34,6 +34,21 @@
   "nameInfos": "Information",
   "infos": [
     {
+      "id": "Règles en résidences",
+      "content": [
+        "Please respect the quiet in the hallways and rooms!",
+        "Alcohol and illegal substances are prohibited. Failure to do so may result in immediate expulsion",
+        "It is also forbidden to smoke in the corridors and in the rooms. You will find ashtrays at your disposal in each residence. If you do not have one, you can request one from your referrers"
+      ]
+    },
+    {
+      "id": "Déchets",
+      "content": [
+        "Please sort your trash and use the yellow garbage can for recyclables!",
+        "Other trash goes in the black garbage cans, not next to it or in the hallways!"
+      ]
+    },
+    {
       "id": "Packages",
       "content": [
         "When you are asked for the address where to send your packages, you should put 47 Boulevard Vauban and not the address of the residence",
@@ -57,7 +72,6 @@
         "&emsp; &emsp; • La Sandwicherie du 60 : sandwiches and salads on the spot and to take away",
         "",
         "All university restaurants are €1 for students with grants, and €3.30 otherwise",
-        "During the COVID period, university restaurants are €1 for all students via <a href='https://forms.gle/ZqrV3Sn9BJ3VxHTS9' title='Link to the form for 1€ meals' target='_blank'>this form</a>",
         "",
         "All payments are made via the ALL card (the same card you use to enter the residence)",
         "To check that your payment has gone to €1, or to simply add money to your card, everything is done on this site : <a href='https://resto-aeu.moneweb.fr' title='Link to the website' target='_blank'>https://resto-aeu.moneweb.fr</a>",

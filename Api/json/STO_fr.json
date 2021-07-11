@@ -1,7 +1,8 @@
 {
   "langue": "fr",
   "news": [
-    "💖 Nouveautés : Ajouts d'infos sur les événements 🏆",
+    "💖 Nouveautés : Ajout du groupe facebook 2021-2022",
+    "‼ Les informations sur les responsables seront mis à jour en septembre 2021",
     "Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇"
   ],
   "nameLiens": "Liens",
@@ -85,7 +86,7 @@
   "bullesLien": [
     {
       "title": "Lien vers le groupe facebook de la résidence",
-      "href": "https://www.facebook.com/groups/sto.2020.2021",
+      "href": "https://www.facebook.com/groups/sto.21.22",
       "logo": "logo-facebook"
     }
   ],
