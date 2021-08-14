@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {AjoutTexte, CleanForm} from '../../models/formulaire';
+import {ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-btn-list',
@@ -13,6 +14,8 @@ export class BtnListComponent {
   @Input() content: string;
   // ids des zones de la page à supprimer
   @Input() idAffichage: string[];
+
+  @ViewChild('button') button;
 
   constructor() {
   }
@@ -30,6 +33,29 @@ export class BtnListComponent {
     } else {
       // sinon c'est qu'il existe déjà, alors on le supprime
       CleanForm(this.idAffichage);
+    }
+
+    if (this.button.fill === 'solid') {
+      this.clearFill();
+    }
+    this.changeFill();
+  }
+
+  clearFill() {
+    const buttons = document.getElementsByTagName('ion-button');
+
+    for (let id = 0; id < buttons.length; id++) {
+      if (buttons.item(id).fill !== 'clear') {
+        buttons.item(id).fill = 'solid';
+      }
+    }
+  }
+
+  changeFill() {
+    if (this.button.fill === 'solid') {
+      this.button.fill = 'outline';
+    } else if (this.button.fill === 'outline') {
+      this.button.fill = 'solid';
     }
   }
 }
