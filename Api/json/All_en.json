@@ -34,7 +34,7 @@
   "nameInfos": "Information",
   "infos": [
     {
-      "id": "Règles en résidences",
+      "id": "Rules in residences",
       "content": [
         "Please respect the quiet in the hallways and rooms!",
         "Alcohol and illegal substances are prohibited. Failure to do so may result in immediate expulsion",
@@ -42,7 +42,7 @@
       ]
     },
     {
-      "id": "Déchets",
+      "id": "Garbage",
       "content": [
         "Please sort your trash and use the yellow garbage can for recyclables!",
         "Other trash goes in the black garbage cans, not next to it or in the hallways!"
