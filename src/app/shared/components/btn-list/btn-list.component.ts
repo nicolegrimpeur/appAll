@@ -42,11 +42,11 @@ export class BtnListComponent {
   }
 
   clearFill() {
-    const buttons = document.getElementsByTagName('ion-button');
+    const listButtons = document.getElementsByTagName('ion-button');
 
-    for (let id = 0; id < buttons.length; id++) {
-      if (buttons.item(id).fill !== 'clear') {
-        buttons.item(id).fill = 'solid';
+    for (let id = 0; id < listButtons.length; id++) {
+      if (listButtons.item(id).fill !== 'clear') {
+        listButtons.item(id).fill = 'solid';
       }
     }
   }
