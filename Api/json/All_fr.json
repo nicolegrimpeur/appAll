@@ -1,7 +1,7 @@
 {
   "langue": "fr",
   "news": [
-    "💖 Nouveautés : Ajout des règles en résidences 🏢 + déchets 🗑",
+    "💖 Nouveautés : L'inter-résidence arrive !!! 📣📣",
     "Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇"
   ],
   "nameLiens": "Liens",
@@ -39,6 +39,20 @@
         "Merci de respecter le calme dans les couloirs et les chambres !",
         "L'alcool et les substances illicites sont interdites. Tout manquement peut entrainer une expulsion immédiate",
         "Il est de plus interdit de fumer dans les couloirs ainsi que dans les chambres. Vous trouverez en fonction des résidences des cendriers à votre disposition. S'il n'y en a pas encore, vous pouvez en faire la demande à vos responsables"
+      ]
+    },
+    {
+      "id": "Evenements 📣",
+      "content": [
+        "😍 Le premier événement inter-résidence arrive !!!",
+        "🕑 Rendez vous le 11 septembre entre 14 heures et 17 heures 30 devant la Catho pour tout le monde",
+        "Certaines résidences font des départs avant depuis leur résidence pour y aller ensemble, n'hésitez pas de demander à vos RPs directement pour plus d'informations sur ces départs",
+        "",
+        "Au programme, activités avec sa résidence et les autres (j'ai peut être entendu parler de lots à gagner aussi 🤫), pot d'accueil, et bien plus !",
+        "",
+        "‼️ Attention pass sanitaire obligatoire ! (des contrôles seront effectués à l'entrée)",
+        "",
+        "Inscription auprès de vos RPs, n'hésitez pas à les contacter !"
       ]
     },
     {
