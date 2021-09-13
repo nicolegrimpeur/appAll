@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-  padding-top: 8vh;
+  padding-top: 5vh;
 }
 
 a {
@@ -24,6 +24,10 @@ a:hover {
   color: #c9c9c9;
 }
 
-#badge {
-  width: 30vmin;
+.badge {
+  width: 25vh;
+}
+
+section {
+  margin: 100px 0;
 }

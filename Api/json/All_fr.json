@@ -1,7 +1,7 @@
 {
   "langue": "fr",
   "news": [
-    "💖 Nouveautés : L'inter-résidence arrive !!! 📣📣",
+    "💖 Nouveautés : Ajout d'informations sur la salle de sport du All 🏃‍♀️🏃‍♂️",
     "Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇"
   ],
   "nameLiens": "Liens",
@@ -42,17 +42,9 @@
       ]
     },
     {
-      "id": "Evenements 📣",
+      "id": "Evenements",
       "content": [
-        "😍 Le premier événement inter-résidence arrive !!!",
-        "🕑 Rendez vous le 11 septembre entre 14 heures et 17 heures 30 devant la Catho pour tout le monde",
-        "Certaines résidences font des départs avant depuis leur résidence pour y aller ensemble, n'hésitez pas de demander à vos RPs directement pour plus d'informations sur ces départs",
-        "",
-        "Au programme, activités avec sa résidence et les autres (j'ai peut être entendu parler de lots à gagner aussi 🤫), pot d'accueil, et bien plus !",
-        "",
-        "‼️ Attention pass sanitaire obligatoire ! (des contrôles seront effectués à l'entrée)",
-        "",
-        "Inscription auprès de vos RPs, n'hésitez pas à les contacter !"
+        "Le premier événement inter-résidence est maintenant terminé mais d'autres arriveront bientôt !"
       ]
     },
     {
@@ -88,17 +80,14 @@
         "Tous les restaurants universitaires sont à 1€ pour les étudiants boursiers, et 3€30 sinon",
         "",
         "Tous les paiements se font via la carte du ALL (la même qui vous sert de badge pour rentrer dans la résidence)",
-        "Pour vérifier que votre paiement est bien passé à 1€, ou pour simplement rajouter de l'argent sur votre carte, tout se fait sur ce site : <a href='https://resto-aeu.moneweb.fr' title='Lien vers le site' target='_blank'>https://resto-aeu.moneweb.fr</a>",
+        "Pour vérifier que votre paiement est bien passé, ou pour recharger vos carte en ligne, tout se fait sur ce site : <a href='https://resto-aeu.moneweb.fr' title='Lien vers le site' target='_blank'>https://resto-aeu.moneweb.fr</a>",
         "L'identifiant correspond à votre numéro de carte, tandis que le mot de passe vous a été donné lorsque l'on vous a donné votre carte",
-        "N'hésitez pas à faire mot de passe oublié ou <a href='mailto:contact@all-lacatho.fr' title='Envoyer un mail au service logement'             target='_blank'>à envoyer un mail au ALL</a> si vous l'avez perdu",
+        "N'hésitez pas à faire mot de passe oublié ou <a href='mailto:contact@all-lacatho.fr' title='Envoyer un mail au service logement' target='_blank'>à envoyer un mail au ALL</a> si vous l'avez perdu",
         "",
-        "Pendant la période durant laquelle les restaurants sont fermés, seuls les restaurants du Globe-trotter et du Tradi sont ouverts",
-        "Vous trouverez au Tradi des pâtes, pizzas, sandwichs, ciabattas et wraps, que vous avez la possibilité de manger sur place",
-        "Au Globe-trotter, vous trouverez les mêmes produits mais uniquement à emporter",
-        "Vous avez de plus la possibilité de faire du click and collect, à aller chercher au Globe-trotter en commandant sur <a href='https://www.all-lacatho.fr/click-and-collect/fr/64-click-collect' title='Lien vers le click and collect du RU' target='_blank'>ce site</a>",
-        "A la fin, vous pouvez payer directement avec votre carte du ALL, et si vous avez remplis le formulaire pour avoir les repas à 1€, vos repas passeront bien à 1€ (même si ça reste marqué 3€30 sur le site du click and collect, vous pouvez vérifier que le repas est bien passé à 1€ <a href='https://resto-aeu.moneweb.fr' title='Lien vers le site' target='_blank'><b>ici</b></a>)",
+        "Vous avez la possibilité de faire du click and collect, à aller chercher à la You have the possibility of making click and collect, to go to the sandwitcherie of 125 rue Meurein by ordering on en commandant sur <a href='https://www.all-lacatho.fr/click-and-collect/fr/64-click-collect' title='Lien vers le click and collect du RU' target='_blank'>ce site</a>",
+        "Les paiements se font directement la bas si vous souhaitez payer avec votre carte All, mais si vous préférez payer par CB vous pouvez le faire directement sur le site",
         "",
-        "N'hésitez pas à envoyer un message à <a href='https://m.me/mathilde.leblond.31' title='Lien vers le compte messenger de Mathilde' target='_blank'>Mathilde</a> ou à <a href='https://m.me/nicolegrimpeur' title='Lien vers le compte messenger de Nicolas' target='_blank'>Nicolas</a> pour toute question supplémentaire !"
+        "N'hésitez pas à envoyer un message à vos RPs pour toutes questions supplémentaires !"
       ]
     },
     {
@@ -118,12 +107,31 @@
       "content": [
         "<span style='color: red'> !!! </span> Nous vous rappelons que le masque est obligatoire dans la résidence sous peine de sanction ! (pouvant aller de l'avertissement à l'exclusion)",
         "",
-        "Vous avez normalement tous reçu un porte clé en laiton (si non vous pouvez aller en demander un au service logement), n'hésitez pas à l'utiliser au maximum sur les boutons d'ascenseur, poignées et autres",
         "N'oubliez pas de vous laver les mains régulièrement ! Si vous ne pouvez pas, utilisez du gel hydroalcoolique",
         "",
         "Si vous possédez un ou plusieurs symptômes, merci de prévenir au plus vite le service logement par <a href='tel:03.20.15.97.78' title='Appeler le service logement' target='_blank'>téléphone</a> ou par <a href='mailto:contact@all-lacatho.fr' title='Envoyer un mail au service logement' target='_blank'>mail</a> !",
         "",
         "Pour plus d'informations, vous pouvez vous référer à ce document : <a href='./assets/doc/consignes_fr.pdf' title='Document consignes sanitaires FR' target='_blank'>Consignes sanitaire FR</a>, <a href='./assets/doc/consignes_en.pdf' title='Document consignes sanitaires EN' target='_blank'>Consignes sanitaire EN</a> "
+      ]
+    },
+    {
+      "id": "Sport",
+      "content": [
+        "Le All sport propose différents espaces à tous les étudiants de l'Université Catholique de Lille : une salle de fitness ouverte de septembre à juillet, un gymnase et un complexe sportif accessible toute l'année aux associations sportives et aux écoles",
+        "",
+        "La salle de fitness se situe au 125 rue Meurein et est ouverte :",
+        "&emsp; - du Lundi au Jeudi de 7H30 à 21H30",
+        "&emsp; - le Vendredi de 7H30 à 19H30",
+        "&emsp; - le Samedi de 10H30 à 13H30",
+        "Fermé l'été de mi-juillet à fin août",
+        "Vous pouvez y retrouver tous les équipements d'une salle de sport",
+        "",
+        "Vous avez de plus accès dans la salle Henninot au sous sol à de nombreux cours du lundi au samedi, tel que de la Zumba, Step, Abdos-Fessiers, et de la Boxe par exemple",
+        "Vous pouvez retrouver le planning des cours <a href='https://www.all-lacatho.fr/fr/content/101-sport' title='Lien vers le site du All' target='_blank'><b>ici</b></a> ",
+        "",
+        "Vous pouvez retrouver les tarifs ainsi que les informations pour s'inscrire <a href='all-lacatho.fr/fr/inscription-sport' title='Lien vers le site du All' target='_blank'><b>ici</b></a>",
+        "",
+        "!!! Attention : Pass Sanitaire obligatoire à l'entrée de la salle"
       ]
     }
   ],
