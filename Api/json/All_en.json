@@ -1,7 +1,7 @@
 {
   "langue": "en",
   "news": [
-    "💖 What's new: The first inter-residency event is coming up!!! 📣📣",
+    "💖 What's new: Added information about the All gym 🏃‍♀️🏃‍♂️",
     "To display the required informations, click on the corresponding button ⬇"
   ],
   "nameLiens": "Link",
@@ -42,17 +42,9 @@
       ]
     },
     {
-      "id": "Event 📣",
+      "id": "Event",
       "content": [
-        "😍 The first inter-residency event is coming up!!!",
-        "🕑 Meeting on September 11 between 2:00 and 5:30 pm in front of the Catho for everyone",
-        "Some residences do pre-departures from their residence to go together, feel free to ask your RPs directly for more information on these departures",
-        "",
-        "On the agenda, activities with your residence and others (I may have heard of prizes to be won too 🤫), welcome drink, and more!",
-        "",
-        "‼️ Warning: sanitary pass required! (controls will be made at the entrance)",
-        "",
-        "Register with your PRs, don't hesitate to contact them!"
+        "The first inter-residency event is now over but more will be coming soon!"
       ]
     },
     {
@@ -88,17 +80,14 @@
         "All university restaurants are €1 for students with grants, and €3.30 otherwise",
         "",
         "All payments are made via the ALL card (the same card you use to enter the residence)",
-        "To check that your payment has gone to €1, or to simply add money to your card, everything is done on this site : <a href='https://resto-aeu.moneweb.fr' title='Link to the website' target='_blank'>https://resto-aeu.moneweb.fr</a>",
+        "To check that your payment has gone, or to simply add money to your card, everything is done on this site : <a href='https://resto-aeu.moneweb.fr' title='Link to the website' target='_blank'>https://resto-aeu.moneweb.fr</a>",
         "The login is your card number, while the password was given to you when you were given your card",
         "Don't hesitate to request a forgotten password or <a href='mailto:contact@all-lacatho.fr' title='Send an email to the housing department' target='_blank'>to send an email to the ALL</a> if you lost it",
         "",
-        "During the Covid period, only the Globe-trotter and Tradi restaurants are open",
-        "At the Tradi you will find pasta, pizzas, sandwiches, ciabattas and wraps, which you can eat on site",
-        "At the Globe-trotter, you will find the same products but only to take away",
-        "You also have the possibility of click and collect, to be picked up at the Globe-trotter by ordering on <a href='https://www.all-lacatho.fr/click-and-collect/fr/64-click-collect' title='Link to the university restaurant click and collect' target='_blank'>this website</a>",
-        "At the end, you can pay directly with your ALL card, and if you have filled in the form to have the meals at 1€, your meals will be at 1€ (even if it is marked 3€30 on the click and collect website, you can check that the meal is at 1€) <a href='https://resto-aeu.moneweb.fr' title='Link to the website' target='_blank'><b>ici</b></a>)",
+        "You have the possibility of click and collect, to be picked up at the sandwitcherie of 125 rue Meurein by ordering on <a href='https://www.all-lacatho.fr/click-and-collect/fr/64-click-collect' title='Link to the university restaurant click and collect' target='_blank'>this website</a>",
+        "The payments are made directly there if you wish to pay with your All card, but if you prefer to pay by CB you can do it directly on the site",
         "",
-        "Do not hesitate to send a message to <a href='https://m.me/mathilde.leblond.31' title='Link to Mathilde's messenger account' target='_blank'>Mathilde</a> or to <a href='https://m.me/nicolegrimpeur' title='Link to Nicolas' messenger account' target='_blank'>Nicolas</a> for any further questions!"
+        "Do not hesitate to send a message to your RPs for any further questions!"
       ]
     },
     {
@@ -118,12 +107,31 @@
       "content": [
         "<span style='color: red'> !!! </span> We remind you that the mask is compulsory in the residence at the risk of sanctions ! (from a warning to exclusion)",
         "",
-        "You have normally all received a brass key ring (if not you can ask for one at the housing department), feel free to use it as much as possible on lift buttons, handles and so on",
         "Remember to wash your hands regularly! If you can't, use hydroalcoholic gel",
         "",
         "If you have one or more symptoms, please inform the housing department as soon as possible by <a href='tel:03.20.15.97.78' title='Call the housing department' target='_blank'>phone</a> or by <a href='mailto:contact@all-lacatho.fr' title='Send an email to the housing department' target='_blank'>email</a> !",
         "",
         "For more information, you can refer to this document : <a href='./assets/doc/consignes_fr.pdf' title='Sanitary instructions document FR' target='_blank'>Sanitary instructions FR</a>, <a href='./assets/doc/consignes_en.pdf' title='Sanitary instructions document EN' target='_blank'>Sanitary instructions EN</a> "
+      ]
+    },
+    {
+      "id": "Sport",
+      "content": [
+        "The All sport offers different spaces to all students of the Catholic University of Lille: a fitness room open from September to July, a gymnasium and a sports complex accessible all year round to sports associations and schools",
+        "",
+        "The fitness room is located at 125 rue Meurein and is open :",
+        "&emsp; - Monday to Thursday from 7H30 to 21H30",
+        "&emsp; - Friday from 7H30 to 19H30",
+        "&emsp; - Saturday from 10H30 to 13H30",
+        "Closed in summer from mid-July to the end of August",
+        "You can find there all the equipment of a gym",
+        "",
+        "You also have access in the Henninot room in the basement to many courses from Monday to Saturday, such as Zumba, Step, Abdos-Fessiers, and Boxing for example",
+        "You can find the course schedule <a href='https://www.all-lacatho.fr/fr/content/101-sport' title='Link to the All website' target='_blank'><b>here</b></a> ",
+        "",
+        "You can find the rates and registration information <a href='all-lacatho.fr/fr/inscription-sport' title='Link to the All website' target='_blank'><b>here</b></a>",
+        "",
+        "!!! Warning: Sanitary pass required at the entrance of the hall"
       ]
     }
   ],
