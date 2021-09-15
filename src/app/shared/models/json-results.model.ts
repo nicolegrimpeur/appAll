@@ -5,6 +5,7 @@ import {ColInfoModel} from './colInfo.model';
 
 export class JsonResultsModel {
   langue: string;
+  name: string;
   news: Array<string>;
   nameLiens: string;
   liens: Array<TextesModel>;

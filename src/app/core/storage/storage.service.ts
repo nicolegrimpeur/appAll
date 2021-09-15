@@ -13,7 +13,7 @@ export class StorageService {
   }
 
   // stocke en local les json
-  async set(id: string, valeur: JsonResultsModel) {
+  async set(id: string, valeur: any) {
     await Storage.set({
         key: id,
         value: JSON.stringify(valeur)

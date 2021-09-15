@@ -5,6 +5,7 @@ import {SubscribeService} from '../core/subscribe/subscribe.service';
 import {Router} from '@angular/router';
 import {StorageService} from '../core/storage/storage.service';
 import {NetworkStatus, Plugins} from '@capacitor/core';
+import {ListeModel} from '../shared/models/liste.model';
 
 const {Network} = Plugins;
 
@@ -16,6 +17,7 @@ const {Network} = Plugins;
 export class ResidencesPage {
   public langue: string;
   public status: any;
+  public liste = new ListeModel();
 
   constructor(
     public alertController: AlertController,
@@ -36,6 +38,7 @@ export class ResidencesPage {
       this.langue = Language.value;
     });
 
+
     this.status = {
       connected: true
     };
@@ -46,6 +49,16 @@ export class ResidencesPage {
     Network.getStatus().then(result => {
       this.status = result;
     });
+
+    // récupère la liste de résidences
+    this.subscribeService.initListe().then((results) => {
+      this.liste = results;
+    });
+  }
+
+  // redirige l'utilisateur au click sur un bouton
+  clickEvent(id) {
+    this.route.navigateByUrl('infos-res?' + id).then();
   }
 
   // fonction lancé par le switch de langue
@@ -85,5 +98,13 @@ export class ResidencesPage {
 
     // on change la langue de la page
     this.langue = Language.value;
+  }
+
+  // événement pour rafraichir la page
+  doRefresh(event) {
+    setTimeout(() => {
+      event.target.complete();
+      this.ionViewWillEnter();
+    }, 1000);
   }
 }

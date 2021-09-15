@@ -1,0 +1,12 @@
+{
+  "residence": [
+    {
+      "id": "STO",
+      "name": "Saint-Omer"
+    },
+    {
+      "id": "DR",
+      "name": "Denis Reille"
+    }
+  ]
+}

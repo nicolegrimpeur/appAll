@@ -3,6 +3,7 @@ import {TextesService} from '../http/textes/textes.service';
 import {StorageService} from '../storage/storage.service';
 import {JsonResultsModel} from '../../shared/models/json-results.model';
 import {Plugins} from '@capacitor/core';
+import {ListeModel} from '../../shared/models/liste.model';
 
 const {Network} = Plugins;
 
@@ -39,5 +40,30 @@ export class SubscribeService {
     }
 
     return json;
+  }
+
+  // retourne une promise contenant le json
+  async initListe(): Promise<ListeModel> {
+    let liste = new ListeModel();
+
+    const status = await Network.getStatus();
+
+    // si l'on est connecté à internet
+    if (status.connected) {
+      // on récupère la liste
+      await this.jsonService.getListe().toPromise().then((results: ListeModel) => {
+        liste = results;
+
+        // stockage du json
+        this.storageService.set('liste', liste);
+      });
+    } else {  // si l'on est hors ligne
+      // récupération de la liste en local pour utilisation hors ligne
+      await this.storageService.get('liste').then((result) => {
+        liste = JSON.parse(result.value);
+      });
+    }
+
+    return liste;
   }
 }
