@@ -5,12 +5,8 @@ import {TabsPage} from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'sto',
-    loadChildren: () => import('../dirResidence/sto/sto.module').then(m => m.StoPageModule)
-  },
-  {
-    path: 'dr',
-    loadChildren: () => import('../dirResidence/dr/dr.module').then(m => m.DrPageModule)
+    path: 'infos-res',
+    loadChildren: () => import('../infos-res/infos-res.module').then( m => m.InfosResPageModule)
   },
   {
     path: '',

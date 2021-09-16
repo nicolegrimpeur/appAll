@@ -12,9 +12,6 @@
   </ion-refresher>
 
   <!-- liste des résidences -->
-  <ion-button expand="block" color="medium" routerLink="/sto">Saint-Omer</ion-button>
-  <ion-button expand="block" color="medium" routerLink="/dr">Denis Reille</ion-button>
-
   <ion-button *ngFor="let residence of liste.residence" expand="block" color="medium" (click)="clickEvent(residence.id)">{{residence.name}}</ion-button>
 
 </ion-content>
