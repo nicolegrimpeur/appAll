@@ -1,6 +1,6 @@
 {
   "appId": "appAll.ionic.all",
-  "appName": "appAll",
+  "appName": "All Résidences",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

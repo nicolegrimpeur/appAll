@@ -44,7 +44,7 @@ export class InfosResPage implements OnInit {
   // initialise l'image d'arrière plan
   initMasthead() {
     this.masthead.el.style.height = '100vh';
-    this.masthead.el.style.background = 'linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(../../../assets/image/residence' + this.id + '.jpg)';
+    this.masthead.el.style.background = 'linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(assets/image/residence' + this.id + '.jpg)';
     this.masthead.el.style.backgroundSize = 'cover';
   }
 
