@@ -6,6 +6,7 @@ import {SubscribeService} from '../core/subscribe/subscribe.service';
 import {JsonResultsModel} from '../shared/models/json-results.model';
 import {Language} from '../shared/langue';
 import {StorageService} from '../core/storage/storage.service';
+import {CleanForm} from '../shared/models/formulaire';
 
 const {App} = Plugins;
 
@@ -55,6 +56,9 @@ export class HomePage implements OnInit {
     this.subscribeService.initTextes(this.idText).then((results) => {
       this.json = results;
     });
+
+    // remet à 0 les divs
+    CleanForm([this.json.idAffichage.liens, this.json.idAffichage.infos]);
   }
 
   // lance l'event du click sur le logo
