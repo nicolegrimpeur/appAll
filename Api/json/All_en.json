@@ -1,7 +1,7 @@
 {
   "langue": "en",
   "news": [
-    "💖 What's new: Added information about the All gym 🏃‍♀️🏃‍♂️",
+    "💖 What's new: Added information about the garbage 🚮",
     "To display the required informations, click on the corresponding button ⬇"
   ],
   "nameLiens": "Link",
@@ -51,7 +51,9 @@
       "id": "Garbage",
       "content": [
         "Please sort your trash and use the yellow garbage can for recyclables!",
-        "Other trash goes in the black garbage cans, not next to it or in the hallways!"
+        "Other trash goes in the black garbage cans, not next to it or in the hallways!",
+        "",
+        "<span style='color: red'> !!! </span> Remember that your garbage goes IN the garbage, not over it!"
       ]
     },
     {

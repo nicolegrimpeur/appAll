@@ -1,7 +1,7 @@
 {
   "langue": "fr",
   "news": [
-    "💖 Nouveautés : Ajout d'informations sur la salle de sport du All 🏃‍♀️🏃‍♂️",
+    "💖 Nouveautés : Ajout d'informations sur les poubelles️ 🚮",
     "Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇"
   ],
   "nameLiens": "Liens",
@@ -51,7 +51,9 @@
       "id": "Déchets",
       "content": [
         "Merci de trier vos déchets et d'utiliser la poubelle jaune pour les déchets recyclables !",
-        "Les autres déchets vont dans les poubelles noirs, pas à côté ni dans les couloirs !"
+        "Les autres déchets vont dans les poubelles noirs, pas à côté ni dans les couloirs !",
+        "",
+        "<span style='color: red'> !!! </span> N'oubliez pas que vos poubelles vont DANS les poubelles, pas au dessus !"
       ]
     },
     {
