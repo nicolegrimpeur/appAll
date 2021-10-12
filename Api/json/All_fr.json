@@ -1,7 +1,7 @@
 {
   "langue": "fr",
   "news": [
-    "💖 Nouveautés : Ajout d'informations sur les poubelles️ 🚮",
+    "💖 Nouveautés : Ajout d'informations sur Ucopia",
     "Pour afficher les informations recherchées, il vous suffit de cliquer sur le bouton correspondant ⬇"
   ],
   "nameLiens": "Liens",
@@ -12,14 +12,9 @@
         "Pour vous connecter à internet, il vous faut passer par le portail Ucopia",
         "Il faut pour cela vous rendre sur le site : <a href='https://ucopia.all-lacatho.fr/105/portal/#' title='Accéder au portail Ucopia' target='_blank'>ucopia.all-lacatho.fr</a>",
         "",
-        "Si c'est votre première connexion, vous devez faire mot de passe oublié afin de récupérer vos identifiants",
-        "Il vous sera alors demandé de rentrer votre mail. Le mail à rentrer est celui utilisé lors de votre inscription dans la résidence",
+        "Des documents concernant la première connexion, les règles avec Ucopia et plus d'informations sont disponibles depuis <a href='https://drive.google.com/drive/folders/1qsSKYX1H_Sr0MzJDC-6TDg6YmQnAGx8c?usp=sharing' title='Accéder aux informations Ucopia' target='_blank'>ce drive</a>",
         "",
-        "Si vous avez reçu vos identifiants, il ne vous reste plus qu'à les rentrer pour accéder à internet !",
-        "",
-        "Si la page de connexion vous dit qu'il y a trop d'appareil connecté, il faut reset son routeur (rester appuyé 10 secondes sur le bouton reset derrière votre routeur)",
-        "",
-        "N'hésitez pas à envoyer un message à <a href='https://m.me/nicolegrimpeur' title='Lien vers le compte messenger de Nicolas' target='_blank'>Nicolas</a> si vous avez le moindre problème ! "
+        "N'hésitez pas à envoyer un message à vos RPs si vous avez le moindre problème ! "
       ]
     },
     {

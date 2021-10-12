@@ -1,7 +1,7 @@
 {
   "langue": "en",
   "news": [
-    "💖 What's new: Added information about the garbage 🚮",
+    "💖 What's new: Added information about Ucopia",
     "To display the required informations, click on the corresponding button ⬇"
   ],
   "nameLiens": "Link",
@@ -12,14 +12,9 @@
         "To connect to the internet you must do it via the ucopia portal",
         "You have to go to the website : <a href='https://ucopia.all-lacatho.fr/105/portal/#' title='Access to the web portal Ucopia' target='_blank'>ucopia.all-lacatho.fr</a>",
         "",
-        "If this is your first time logging in, you need to do Forgotten password to receive your login details",
-        "You will then be asked to enter your email address. The email to enter is the one used when you registered in the residence",
+        "Documents concerning the first connection, the rules with Ucopia and more information are available from <a href='https://drive.google.com/drive/folders/1qsSKYX1H_Sr0MzJDC-6TDg6YmQnAGx8c?usp=sharing' title='Access to the information of Ucopia' target='_blank'>this drive</a>",
         "",
-        "If you have received your login details, all you have to do is enter them to access the internet!",
-        "",
-        "If the login page tells you that there are too many devices connected, you need to reset your router (press the reset button behind your router for 10 seconds)",
-        "",
-        "Do not hesitate to send a message to <a href='https://m.me/nicolegrimpeur' title='Link to Nicolas' messenger account' target='_blank'>Nicolas</a> if you have any problems! "
+        "Do not hesitate to send a message to your referrers if you have any problems! "
       ]
     },
     {
