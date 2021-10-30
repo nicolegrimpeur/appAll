@@ -3,7 +3,7 @@ import {Router} from '@angular/router';
 import {SubscribeService} from '../core/subscribe/subscribe.service';
 import {JsonResultsModel} from '../shared/models/json-results.model';
 import {BaseUrl} from '../shared/baseUrl';
-// import {Network} from '@capacitor/network';
+import {Network} from '@capacitor/network';
 
 @Component({
   selector: 'app-infos-res',
@@ -15,7 +15,7 @@ export class InfosResPage implements OnInit {
 
   private id = ''; // stockage de l'id de la résidence
   public json = new JsonResultsModel();  // stockage du json
-  public status = true; // stocke le status courant de la connexion internet
+  private status; // stocke le status courant de la connexion internet
 
   constructor(
     private router: Router,
@@ -49,16 +49,16 @@ export class InfosResPage implements OnInit {
 
   // initialise le status
   async initNetworkStatus() {
-    // this.status = await Network.getStatus();
+    this.status = await Network.getStatus();
   }
 
   // initialise l'image d'arrière plan
   async initMasthead() {
-    // if (this.status.isConnected) {
+    if (this.status.connected) {
       this.masthead.el.style.height = '100vh';
       this.masthead.el.style.background = 'linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(' + BaseUrl + 'get/residence' + this.id + ')';
       this.masthead.el.style.backgroundSize = 'cover';
-    // }
+    }
   }
 
   // événement pour rafraichir la page

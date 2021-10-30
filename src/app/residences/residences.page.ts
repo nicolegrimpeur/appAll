@@ -4,10 +4,8 @@ import {AlertController} from '@ionic/angular';
 import {SubscribeService} from '../core/subscribe/subscribe.service';
 import {Router} from '@angular/router';
 import {StorageService} from '../core/storage/storage.service';
-import {NetworkStatus, Plugins} from '@capacitor/core';
+import {Network} from '@capacitor/network';
 import {ListeModel} from '../shared/models/liste.model';
-
-const {Network} = Plugins;
 
 @Component({
   selector: 'app-residences',
@@ -37,7 +35,6 @@ export class ResidencesPage {
       }
       this.langue = Language.value;
     });
-
 
     this.status = {
       connected: true

@@ -2,10 +2,8 @@ import {Injectable} from '@angular/core';
 import {TextesService} from '../http/textes/textes.service';
 import {StorageService} from '../storage/storage.service';
 import {JsonResultsModel} from '../../shared/models/json-results.model';
-import {Plugins} from '@capacitor/core';
+import {Network} from '@capacitor/network';
 import {ListeModel} from '../../shared/models/liste.model';
-
-const {Network} = Plugins;
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +24,8 @@ export class SubscribeService {
     // si l'on est connecté à internet
     if (status.connected) {
       // on récupère le json
-      await this.jsonService.getJson(id).toPromise().then((results: JsonResultsModel) => {
+      await this.jsonService.getJson(id).toPromise()
+        .then((results: JsonResultsModel) => {
         json = results;
 
         // stockage du json

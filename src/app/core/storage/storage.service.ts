@@ -1,9 +1,6 @@
 import {Injectable} from '@angular/core';
-import {Plugins} from '@capacitor/core';
-import {JsonResultsModel} from '../../shared/models/json-results.model';
+import {Storage} from '@capacitor/storage';
 import {Language} from '../../shared/langue';
-
-const {Storage} = Plugins;
 
 @Injectable({
   providedIn: 'root'
