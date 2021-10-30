@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
 import {SubscribeService} from '../core/subscribe/subscribe.service';
 import {JsonResultsModel} from '../shared/models/json-results.model';
+import {BaseUrl} from '../shared/baseUrl';
 
 @Component({
   selector: 'app-infos-res',
@@ -17,7 +18,8 @@ export class InfosResPage implements OnInit {
   constructor(
     private router: Router,
     private subscribeService: SubscribeService
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
   }
@@ -42,9 +44,9 @@ export class InfosResPage implements OnInit {
   }
 
   // initialise l'image d'arrière plan
-  initMasthead() {
+  async initMasthead() {
     this.masthead.el.style.height = '100vh';
-    this.masthead.el.style.background = 'linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(assets/image/residence' + this.id + '.jpg)';
+    this.masthead.el.style.background = 'linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(' + BaseUrl + 'get/residence' + this.id + ')';
     this.masthead.el.style.backgroundSize = 'cover';
   }
 
@@ -54,7 +56,7 @@ export class InfosResPage implements OnInit {
       // permet de terminer l'animation
       event.target.complete();
       // rafraichi le json
-      this.ngOnInit();
+      this.ionViewWillEnter();
     }, 1000);
   }
 }
