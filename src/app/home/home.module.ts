@@ -10,22 +10,24 @@ import {ErreurConnexionComponent} from '../shared/components/erreur-connexion/er
 import {BullesLienComponent} from '../shared/components/bulles-lien/bulles-lien.component';
 import {ColInfoComponent} from '../shared/components/col-info/col-info.component';
 import {TemplatePageComponent} from '../shared/components/template-page/template-page.component';
+import {PageComponent} from '../shared/components/page/page.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        HomePageRoutingModule
-    ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    HomePageRoutingModule
+  ],
   exports: [
     BtnListComponent,
     ErreurConnexionComponent,
     BullesLienComponent,
     ColInfoComponent,
-    TemplatePageComponent
+    TemplatePageComponent,
+    PageComponent
   ],
-    declarations: [HomePage, BtnListComponent, ErreurConnexionComponent, BullesLienComponent, ColInfoComponent, TemplatePageComponent]
+  declarations: [HomePage, BtnListComponent, ErreurConnexionComponent, BullesLienComponent, ColInfoComponent, TemplatePageComponent, PageComponent]
 })
 export class HomePageModule {
 }

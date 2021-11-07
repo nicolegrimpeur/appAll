@@ -16,49 +16,25 @@ const {App} = Plugins;
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  private readonly idText = 'All';  // id utilisé pour le json
-  public json = new JsonResultsModel();  // stockage du json
-
   constructor(
-    public readonly subscribeService: SubscribeService,
-    public storageService: StorageService,
-    private platform: Platform,
-    private route: Router
-  ) {
-    // gestion de la touche mobile back
-    this.platform.backButton.subscribeWithPriority(-1, () => {
-      // si l'on est sur la page principale on quitte l'application
-      if (this.route.url === '/home') {
-        App.exitApp();
-      } else if (this.route.url === '/residences') {  // si on est sur la page de résidence on va sur la page principale
-        this.route.navigate(['/home']).then();
-      } else {  // sinon c'est que l'on est sur la page d'une résidence -> on va sur la liste des résidences
-        this.route.navigate(['/residences']).then();
-      }
-    });
+      private platform: Platform,
+      private route: Router
+    ) {
+      // gestion de la touche mobile back
+      this.platform.backButton.subscribeWithPriority(-1, () => {
+        // si l'on est sur la page principale on quitte l'application
+        if (this.route.url === '/home') {
+          App.exitApp();
+        } else if (this.route.url === '/residences') {  // si on est sur la page de résidence on va sur la page principale
+          this.route.navigate(['/home']).then();
+        } else {  // sinon c'est que l'on est sur la page d'une résidence -> on va sur la liste des résidences
+          this.route.navigate(['/residences']).then();
+        }
+      });
   }
 
   ngOnInit() {
     this.playLogo();
-  }
-
-  ionViewWillEnter() {
-    // on récupère la langue si elle existe déjà sinon on l'initialise dans le stockage local
-    this.storageService.getLangue().then(result => {
-      if (result.value !== null) {
-        Language.value = result.value;
-      } else {
-        this.storageService.setLangue().then();
-      }
-    });
-
-    // récupération du json en ligne à chaque fois que l'on affiche la page
-    this.subscribeService.initTextes(this.idText).then((results) => {
-      this.json = results;
-    });
-
-    // remet à 0 les divs
-    CleanForm([this.json.idAffichage.liens, this.json.idAffichage.infos]);
   }
 
   // lance l'event du click sur le logo
@@ -88,11 +64,5 @@ export class HomePage implements OnInit {
     }
   }
 
-  // événement pour rafraichir la page
-  doRefresh(event) {
-    setTimeout(() => {
-      event.target.complete();
-      this.ngOnInit();
-    }, 1000);
-  }
+
 }

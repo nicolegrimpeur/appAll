@@ -7,66 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <!-- slide refresh -->
-  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-
-  <!-- Fond d'écran de l'accueil -->
-  <ion-header class="masthead"></ion-header>
-
-  <!-- Liste des émojis : https://www.w3schools.com/charsets/ref_emoji.asp -->
-  <!-- https://icones8.fr/icons -->
-  <p *ngFor="let news of json.news"> &nbsp; {{ news }} </p>
-  <br>
-
-
-  <!--ajout de la barre lien-->
-  <ion-title> {{json.nameLiens}} 📝 </ion-title>
-
-  <!-- barre d'erreur si on a pas de connexion -->
-  <app-erreur-connexion *ngIf="!json.constructor.length"></app-erreur-connexion>
-
-  <!-- div contenant les barres et le texte -->
-  <div id="liensAll">
-    <ion-grid>
-      <ion-row>
-        <!-- ajout des barres en fonction du json -->
-        <ion-col *ngFor="let lien of json.liens">
-          <app-btn-list [id]="lien.id" [content]="lien.content"
-                        [idAffichage]="[json.idAffichage.liens, json.idAffichage.infos]"></app-btn-list>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <div id="div_liensAll">
-    </div>
-  </div>
-  <br>
-
-
-  <ion-title>{{json.nameInfos}} 📣</ion-title>
-
-  <!-- barre d'erreur si on a pas réussi à récupérer le json -->
-  <app-erreur-connexion *ngIf="!json.constructor.length"></app-erreur-connexion>
-
-  <div id="infosAll">
-    <ion-grid>
-      <ion-row>
-        <!-- ajout des barres en fonction du json -->
-        <ion-col *ngFor="let info of json.infos">
-          <app-btn-list [id]="info.id" [content]="info.content"
-                        [idAffichage]="[json.idAffichage.infos, json.idAffichage.liens]">
-          </app-btn-list>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <div id="div_infosAll">
-    </div>
-  </div>
-
-  <app-template-page [json]="json"></app-template-page>
+  <app-page></app-page>
 
   <section></section>
 </ion-content>
