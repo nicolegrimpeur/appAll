@@ -26,11 +26,17 @@ export class SubscribeService {
       // on récupère le json
       await this.jsonService.getJson(id).toPromise()
         .then((results: JsonResultsModel) => {
-        json = results;
+          json = results;
 
-        // stockage du json
-        this.storageService.set(id, json);
-      });
+          // stockage du json
+          this.storageService.set(id, json);
+        })
+        .catch(async () => {
+          // récupération du json en local pour utilisation hors ligne
+          await this.storageService.get(id).then((result) => {
+            json = JSON.parse(result.value);
+          });
+        });
     } else {  // si l'on est hors ligne
       // récupération du json en local pour utilisation hors ligne
       await this.storageService.get(id).then((result) => {
