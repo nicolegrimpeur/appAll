@@ -31,5 +31,6 @@ npm-debug.log*
 /platforms
 /plugins
 /www
+/.angular
 
 Api/json/.idea/
