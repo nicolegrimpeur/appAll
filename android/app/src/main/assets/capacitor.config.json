@@ -1,14 +1,14 @@
 {
-  "appId": "appAll.ionic.all",
-  "appName": "All Résidences",
-  "bundledWebRuntime": false,
-  "npmClient": "npm",
-  "webDir": "www",
-  "plugins": {
-    "SplashScreen": {
-      "launchShowDuration": 0
-    }
-  },
-  "cordova": {},
-  "windowsAndroidStudioPath": "C:\\Users\\nico_\\AppData\\Local\\JetBrains\\Toolbox\\apps\\AndroidStudio\\ch-0\\203.7583922\\bin\\studio64.exe"
+	"appId": "appAll.ionic.all",
+	"appName": "All Résidences",
+	"bundledWebRuntime": false,
+	"npmClient": "npm",
+	"webDir": "www",
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 0
+		}
+	},
+	"cordova": {},
+	"windowsAndroidStudioPath": "C:\\Users\\nico_\\AppData\\Local\\JetBrains\\Toolbox\\apps\\AndroidStudio\\ch-0\\203.7583922\\bin\\studio64.exe"
 }

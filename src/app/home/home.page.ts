@@ -1,14 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Platform} from '@ionic/angular';
-import {Plugins} from '@capacitor/core';
+import {App} from '@capacitor/app';
 import {Router} from '@angular/router';
-import {SubscribeService} from '../core/subscribe/subscribe.service';
-import {JsonResultsModel} from '../shared/models/json-results.model';
-import {Language} from '../shared/langue';
-import {StorageService} from '../core/storage/storage.service';
-import {CleanForm} from '../shared/models/formulaire';
-
-const {App} = Plugins;
 
 @Component({
   selector: 'app-home',
