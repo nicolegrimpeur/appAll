@@ -6,14 +6,16 @@
 <p *ngFor="let news of json.news"> &nbsp; {{ news }} </p>
 <br>
 
+<div *ngFor="let infosOrLiens of ['liens', 'infos']">
+  <ion-card *ngIf="json['name' + infosOrLiens[0].toUpperCase() + infosOrLiens.slice(1, infosOrLiens.length)] !== ''">
+    <ion-card-header>
+      <ion-card-title>
+        {{json['name' + infosOrLiens[0].toUpperCase() + infosOrLiens.slice(1, infosOrLiens.length)]}}
+      </ion-card-title>
+    </ion-card-header>
+    <app-btn-list [infos]="json[infosOrLiens]"></app-btn-list>
+  </ion-card>
+</div>
 
-<ion-card *ngFor="let infosOrLiens of ['liens', 'infos']">
-  <ion-card-header>
-    <ion-card-title>
-      {{json['name' + infosOrLiens[0].toUpperCase() + infosOrLiens.slice(1, infosOrLiens.length)]}}
-    </ion-card-title>
-  </ion-card-header>
-  <app-btn-list [infos]="json[infosOrLiens]"></app-btn-list>
-</ion-card>
 
 <app-template-page [json]="json"></app-template-page>
