@@ -10,8 +10,6 @@ import {BaseUrl} from '../../../shared/baseUrl';
   providedIn: 'root'
 })
 export class TextesService {
-  private baseUrl = 'https://nicob.ovh/apiJson/';
-
   constructor(private readonly http: HttpClient) {
   }
 
