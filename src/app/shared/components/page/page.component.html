@@ -7,57 +7,13 @@
 <br>
 
 
-<!-- on vérifie qu'il y a des liens à afficher -->
-<div *ngIf="json.nameLiens !== ''">
-  <!--ajout de la barre lien-->
-  <ion-title> {{json.nameLiens}} 📝</ion-title>
-
-  <!-- barre d'erreur si on a pas de connexion -->
-  <app-erreur-connexion *ngIf="!json.constructor.length"></app-erreur-connexion>
-
-  <!-- div contenant les barres et le texte -->
-  <div id="liens">
-    <ion-grid>
-      <ion-row>
-        <!-- ajout des barres en fonction du json -->
-        <ion-col *ngFor="let lien of json.liens">
-          <app-btn-list [id]="lien.id" [content]="lien.content"
-                        [idAffichage]="[(json.nameLiens !== '') ? 'div_liens' : '', (json.nameInfos !== '') ? 'div_infos' : '']"></app-btn-list>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <div id="div_liens">
-    </div>
-  </div>
-  <br>
-</div>
-
-
-<!-- on vérifie qu'il y a des infos à afficher -->
-<div *ngIf="json.nameInfos !== ''">
-  <!--ajout de la barre infos -->
-  <ion-title> {{json.nameInfos}} 📣</ion-title>
-
-  <!-- barre d'erreur si on a pas de connexion -->
-  <app-erreur-connexion *ngIf="!json.constructor.length"></app-erreur-connexion>
-
-  <!-- div contenant les barres et le texte -->
-  <div id="infos">
-    <ion-grid>
-      <ion-row>
-        <!-- ajout des barres en fonction du json -->
-        <ion-col *ngFor="let info of json.infos">
-          <app-btn-list [id]="info.id" [content]="info.content"
-                        [idAffichage]="[(json.nameInfos !== '') ? 'div_infos' : '', (json.nameLiens !== '') ? 'div_liens' : '']"></app-btn-list>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <div id="div_infos">
-    </div>
-  </div>
-</div>
+<ion-card *ngFor="let infosOrLiens of ['liens', 'infos']">
+  <ion-card-header>
+    <ion-card-title>
+      {{json['name' + infosOrLiens[0].toUpperCase() + infosOrLiens.slice(1, infosOrLiens.length)]}}
+    </ion-card-title>
+  </ion-card-header>
+  <app-btn-list [infos]="json[infosOrLiens]"></app-btn-list>
+</ion-card>
 
 <app-template-page [json]="json"></app-template-page>
-

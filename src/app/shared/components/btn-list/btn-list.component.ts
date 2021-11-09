@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {AjoutTexte, CleanForm} from '../../models/formulaire';
-import {ViewChild} from '@angular/core';
+import {TextesModel} from '../../models/textes.model';
 
 @Component({
   selector: 'app-btn-list',
@@ -8,54 +7,44 @@ import {ViewChild} from '@angular/core';
   styleUrls: ['./btn-list.component.scss'],
 })
 export class BtnListComponent {
-  // nom du bouton
-  @Input() id: string;
-  // texte à afficher au clic
-  @Input() content: string;
-  // ids des zones de la page à supprimer
-  @Input() idAffichage: string[];
+  // infos à afficher
+  @Input() infos: Array<TextesModel>;
 
-  @ViewChild('button') button;
+  // stocke le contenu à afficher
+  content = [];
+  // stocke l'id du bouton affiché précédemment
+  currentIdAffichage = '';
 
   constructor() {
   }
 
-  addTexte() {
-    // si le texte que l'on cherche à afficher n'a pas déjà été affiché
-    if (document.getElementsByClassName(this.id).length === 0) {
-      // réinitialise les div contenus dans idDiv à des barres vides, prêtes à accueillir le texte
-      CleanForm(this.idAffichage);
+  // au click sur un bouton, id l'id du bouton, content le contenu à afficher
+  addTexte(id, content) {
+    // on change le fill du bouton
+    this.changeFill(id);
 
-      // affiche le texte dans la div_infos
-      for (const value of this.content) {
-        AjoutTexte(value, this.id, this.idAffichage[0]);
-      }
+    // si un autre bouton avait été cliqué précédemment, alors on le remet à 0
+    if (this.currentIdAffichage !== '' && this.currentIdAffichage !== id) {
+      this.changeFill(this.currentIdAffichage);
+    }
+
+    // si le click est sur le même bouton, on supprime le contenu, sinon on l'affiche
+    if (this.content === content) {
+      this.content = [];
+      this.currentIdAffichage = '';
     } else {
-      // sinon c'est qu'il existe déjà, alors on le supprime
-      CleanForm(this.idAffichage);
-    }
-
-    if (this.button.fill === 'solid') {
-      this.clearFill();
-    }
-    this.changeFill();
-  }
-
-  clearFill() {
-    const listButtons = document.getElementsByTagName('ion-button');
-
-    for (let id = 0; id < listButtons.length; id++) {
-      if (listButtons.item(id).fill !== 'clear') {
-        listButtons.item(id).fill = 'solid';
-      }
+      this.content = content;
+      this.currentIdAffichage = id;
     }
   }
 
-  changeFill() {
-    if (this.button.fill === 'solid') {
-      this.button.fill = 'outline';
-    } else if (this.button.fill === 'outline') {
-      this.button.fill = 'solid';
+  // change le fill du bouton
+  changeFill(id) {
+    const button = document.getElementById(id);
+    if (button.getAttribute('fill') === 'solid') {
+      button.setAttribute('fill', 'outline');
+    } else if (button.getAttribute('fill') === 'outline') {
+      button.setAttribute('fill', 'solid');
     }
   }
 }

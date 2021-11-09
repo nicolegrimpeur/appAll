@@ -1,1 +1,12 @@
-<ion-button #button expand="block" color="medium" (click)="addTexte()" fill="solid"> {{ id }} </ion-button>
+<ion-card-content>
+  <ion-grid>
+    <ion-row>
+      <!-- ajout des barres en fonction du json -->
+      <ion-col *ngFor="let info of infos">
+        <ion-button id="{{info.id}}" expand="block" color="medium" (click)="addTexte(info.id, info.content)" fill="solid"> {{ info.id }} </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card-content>
+<ion-card-content *ngFor="let info of content" [innerHTML]="info">
+</ion-card-content>
