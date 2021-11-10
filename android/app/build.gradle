@@ -6,8 +6,8 @@ android {
     applicationId "appAll.ionic.all"
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
-    versionCode 32
-    versionName "2.5.1"
+    versionCode 33
+    versionName "2.5.2"
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
