@@ -4,6 +4,7 @@ import {StorageService} from '../storage/storage.service';
 import {JsonResultsModel} from '../../shared/models/json-results.model';
 import {Network} from '@capacitor/network';
 import {ListeModel} from '../../shared/models/liste.model';
+import {lastValueFrom} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class SubscribeService {
     // si l'on est connecté à internet
     if (status.connected) {
       // on récupère le json
-      await this.jsonService.getJson(id).toPromise()
+      await lastValueFrom(this.jsonService.getJson(id))
         .then((results: JsonResultsModel) => {
           json = results;
 
@@ -56,7 +57,7 @@ export class SubscribeService {
     // si l'on est connecté à internet
     if (status.connected) {
       // on récupère la liste
-      await this.jsonService.getListe().toPromise().then((results: ListeModel) => {
+      await lastValueFrom(this.jsonService.getListe()).then((results: ListeModel) => {
         liste = results;
 
         // stockage du json
