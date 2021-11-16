@@ -38,6 +38,10 @@ export class PageComponent {
       }
     }
 
+    this.getTextes();
+  }
+
+  getTextes() {
     // récupération du json en ligne
     this.subscribeService.initTextes(this.id).then((results: JsonResultsModel) => {
       this.json = results;

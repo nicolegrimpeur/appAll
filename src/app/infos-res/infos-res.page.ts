@@ -19,9 +19,6 @@ export class InfosResPage implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  ionViewWillEnter() {
     let after = false;
     // récupère l'email dans le lien
     for (const i of this.router.url) {
@@ -32,6 +29,10 @@ export class InfosResPage implements OnInit {
       }
     }
 
+    this.getTextes();
+  }
+
+  getTextes() {
     // récupération du json en ligne
     this.subscribeService.initTextes(this.id).then((results: JsonResultsModel) => {
       this.json = results;

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {Platform} from '@ionic/angular';
 import {App} from '@capacitor/app';
 import {Router} from '@angular/router';
@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+  @ViewChild('pageComponent') pageComponent;
   constructor(
       private platform: Platform,
       private route: Router
@@ -28,6 +29,10 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.playLogo();
+  }
+
+  ionViewWillEnter() {
+    this.pageComponent.getTextes();
   }
 
   // lance l'event du click sur le logo
