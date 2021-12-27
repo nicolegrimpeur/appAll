@@ -31,8 +31,12 @@ body {
 }
 
 // permet de surélever la page pour s'afficher au dessus du tabs
-section{
+.md section{
   margin: 86px 0;
+}
+
+.ios section {
+  margin: 0 !important;
 }
 
 p {
@@ -41,6 +45,6 @@ p {
   text-align: left;
 }
 
-ion-router-outlet {
+.md ion-router-outlet {
   height: calc(var(--vh, 1vh) * 100);
 }
