@@ -3,7 +3,7 @@ import {JsonResultsModel} from '../../models/json-results.model';
 import {Router} from '@angular/router';
 import {SubscribeService} from '../../../core/subscribe/subscribe.service';
 import {Network} from '@capacitor/network';
-import {BaseUrl} from '../../baseUrl';
+import {environment} from '../../../../environments/environment';
 
 @Component({
   selector: 'app-page',
@@ -59,7 +59,7 @@ export class PageComponent {
   async initMasthead() {
     if (this.status.connected) {
       this.masthead.el.style.height = '100vh';
-      this.masthead.el.style.background = 'linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(' + BaseUrl + 'get/residence' + this.id + ')';
+      this.masthead.el.style.background = 'linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(' + environment.base + 'get/residence' + this.id + ')';
       this.masthead.el.style.backgroundSize = 'cover';
     }
   }
