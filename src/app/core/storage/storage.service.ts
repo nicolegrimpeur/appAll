@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Storage} from '@capacitor/storage';
+import {Preferences} from '@capacitor/preferences';
 import {Language} from '../../shared/langue';
 
 @Injectable({
@@ -11,7 +11,7 @@ export class StorageService {
 
   // stocke en local les json
   async set(id: string, valeur: any) {
-    await Storage.set({
+    await Preferences.set({
         key: id,
         value: JSON.stringify(valeur)
       }
@@ -20,12 +20,12 @@ export class StorageService {
 
   // récupère les json à partir de l'id
   async get(id: string) {
-    return Storage.get({key: id});
+    return Preferences.get({key: id});
   }
 
   // stocke en local la langue courante
   async setLangue() {
-    await Storage.set({
+    await Preferences.set({
       key: 'langue',
       value: Language.value
     });
@@ -33,11 +33,11 @@ export class StorageService {
 
   // récupère la langue courante en local
   async getLangue() {
-    return Storage.get({key: 'langue'});
+    return Preferences.get({key: 'langue'});
   }
 
   // récupère toutes les clés
   async getKeys() {
-    return Storage.keys();
+    return Preferences.keys();
   }
 }

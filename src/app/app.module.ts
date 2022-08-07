@@ -12,14 +12,13 @@ import {NgxMatomoTrackerModule} from '@ngx-matomo/tracker';
 import {NgxMatomoRouterModule} from '@ngx-matomo/router';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, HttpClientModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot(), NgxMatomoTrackerModule.forRoot({
-    trackerUrl: 'https://nicob.ovh/matomo/',
-    siteId: '2'
-  }), NgxMatomoRouterModule],
-  providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent],
+    imports: [BrowserModule, HttpClientModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot(), NgxMatomoTrackerModule.forRoot({
+            trackerUrl: 'https://nicob.ovh/matomo/',
+            siteId: '2'
+        }), NgxMatomoRouterModule],
+    providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
