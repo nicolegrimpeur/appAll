@@ -26,7 +26,6 @@
     "@capacitor/network": "^4.0.1",
     "@capacitor/preferences": "^4.0.1",
     "@ionic/angular": "^6.2.1",
-    "@ionic/storage-angular": "^3.0.6",
     "@ngx-matomo/router": "^3.2.0",
     "@ngx-matomo/tracker": "^3.2.0",
     "rxjs": "~7.5.6",
