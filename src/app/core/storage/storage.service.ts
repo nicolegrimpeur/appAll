@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Preferences} from '@capacitor/preferences';
 import {Language} from '../../shared/langue';
+import {isLangueActive} from '../../shared/isLangueActive';
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +34,7 @@ export class StorageService {
 
   // récupère la langue courante en local
   async getLangue() {
-    return Preferences.get({key: 'langue'});
+    return (isLangueActive) ? Preferences.get({key: 'langue'}) : {value: 'fr'};
   }
 
   // récupère toutes les clés

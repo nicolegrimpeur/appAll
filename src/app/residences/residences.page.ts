@@ -6,6 +6,7 @@ import {Router} from '@angular/router';
 import {StorageService} from '../core/storage/storage.service';
 import {Network} from '@capacitor/network';
 import {ListeModel} from '../shared/models/liste.model';
+import {isLangueActive} from '../shared/isLangueActive';
 
 @Component({
   selector: 'app-residences',
@@ -16,6 +17,7 @@ export class ResidencesPage {
   public langue: string;
   public status: any;
   public liste = new ListeModel();
+  public isLangueActive = isLangueActive;
 
   constructor(
     public alertController: AlertController,
@@ -29,8 +31,7 @@ export class ResidencesPage {
     this.storageService.getLangue().then(result => {
       if (result.value !== null) {
         Language.value = result.value;
-      }
-      else {
+      } else {
         this.storageService.setLangue().then();
       }
       this.langue = Language.value;
