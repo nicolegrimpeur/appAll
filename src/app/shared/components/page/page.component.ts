@@ -55,7 +55,7 @@ export class PageComponent {
     this.status = await Network.getStatus();
   }
 
-  // initialise l'image d'arrière plan
+  // initialise l'image d'arrière-plan
   async initMasthead() {
     if (this.status.connected) {
       this.masthead.el.style.height = '100vh';
